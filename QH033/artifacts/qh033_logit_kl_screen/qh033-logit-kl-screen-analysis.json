@@ -1,0 +1,79 @@
+{
+  "status": "ok",
+  "analysis": "QH033 train-only teacher-logit KL screen",
+  "verdict": "continue_to_new_c4_lock",
+  "point_nll": {
+    "base": 2.4161123549565673,
+    "sharedsvd1024": 2.416890732012689,
+    "qh033": 2.416561882942915,
+    "cc033": 2.416709043085575
+  },
+  "comparisons": {
+    "shared_minus_base": {
+      "mean_delta_nll": 0.0007783770561218262,
+      "descriptive_95_ci": [
+        9.030923247337343e-05,
+        0.0014972876291722056
+      ]
+    },
+    "qh_minus_shared": {
+      "mean_delta_nll": -0.00032884906977415085,
+      "descriptive_95_ci": [
+        -0.0007268779445439577,
+        6.207430269569136e-05
+      ]
+    },
+    "qh_minus_cc": {
+      "mean_delta_nll": -0.000147160142660141,
+      "descriptive_95_ci": [
+        -0.0005505186039954424,
+        0.00026284023188054555
+      ]
+    }
+  },
+  "screen_gates": {
+    "qh_point_better_than_own_zero": true,
+    "qh_point_better_than_cc": true,
+    "continue_to_c4": true
+  },
+  "training": {
+    "qh033": {
+      "steps": 256,
+      "kl_first32": 0.0009563991479808465,
+      "kl_last32": 0.001045175804392784,
+      "kl_min": 0.0006110771209932864,
+      "theta_grad_mean": 9.316935468017817e-06,
+      "alpha_grad_mean": 0.00017535301745752463,
+      "mean_student_step_seconds": 0.32009339742944576,
+      "simulator_calls": 512,
+      "frozen_gradient_tensor_count": 0,
+      "final_theta_norm": 0.19716863334178925,
+      "final_alpha_norm": 0.37467458844184875,
+      "final_gammas": {
+        "55": 1.13613760471344,
+        "59": 0.8945744037628174
+      }
+    },
+    "cc033": {
+      "steps": 256,
+      "kl_first32": 0.0009496466354903532,
+      "kl_last32": 0.0010401101608294994,
+      "kl_min": 0.0005880660028196871,
+      "theta_grad_mean": 5.5272389593241655e-05,
+      "alpha_grad_mean": 0.00014442239183765082,
+      "mean_student_step_seconds": 0.26564172240614425,
+      "simulator_calls": 0,
+      "frozen_gradient_tensor_count": 0,
+      "final_theta_norm": 0.6630755066871643,
+      "final_alpha_norm": 0.7594454884529114,
+      "final_gammas": {
+        "55": 1.3600764274597168,
+        "59": 0.7958284616470337
+      }
+    }
+  },
+  "claim_limit": "Train-only screen; no quality or quantum claim.",
+  "validation_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "created_at": "2026-08-29T06:28:21.642803+00:00"
+}

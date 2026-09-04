@@ -1,0 +1,61 @@
+{
+  "status": "ok",
+  "analysis": "QH044 frozen C4-128 formal evaluation",
+  "point_nll": {
+    "base": 2.6688820933923125,
+    "zero": 2.6758175436407328,
+    "qh044": 2.6733665354549885,
+    "cc044": 2.6725891549140215,
+    "qh044_noent": 2.6727340780198574,
+    "qh044_dq": 2.6733665354549885
+  },
+  "comparisons": {
+    "qh_minus_base": {
+      "mean_delta_nll": 0.004484442062675953,
+      "paired_bootstrap_95_ci": [
+        0.002360490639694035,
+        0.00665730400942266
+      ]
+    },
+    "qh_minus_zero": {
+      "mean_delta_nll": -0.0024510081857442856,
+      "paired_bootstrap_95_ci": [
+        -0.0036103417864069343,
+        -0.0012733111390843988
+      ]
+    },
+    "qh_minus_cc": {
+      "mean_delta_nll": 0.0007773805409669876,
+      "paired_bootstrap_95_ci": [
+        -0.00023661805316805838,
+        0.0017722141230478883
+      ]
+    },
+    "qh_minus_noent": {
+      "mean_delta_nll": 0.000632457435131073,
+      "paired_bootstrap_95_ci": [
+        9.638003539294005e-05,
+        0.00113187653478235
+      ]
+    },
+    "qh_minus_dq": {
+      "mean_delta_nll": 0.0,
+      "paired_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "dq_max_abs_per_block_nll": 0.0,
+  "gates": {
+    "compression_noninferiority": false,
+    "active_causality": true,
+    "equal_parameter_quantum_specific": false,
+    "entanglement_specific": false,
+    "dq_equivalence": true
+  },
+  "verdict": "not_quantum_specific_confirmed",
+  "training_steps": 0,
+  "test_rows_inspected": 0,
+  "created_at": "2026-08-29T11:04:42.740176+00:00"
+}

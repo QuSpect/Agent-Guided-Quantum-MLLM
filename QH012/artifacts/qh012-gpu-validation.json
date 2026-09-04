@@ -1,0 +1,101 @@
+{
+  "status": "pass",
+  "device": "NVIDIA A800-SXM4-80GB",
+  "config": {
+    "hidden_size": 64,
+    "register_size": 16,
+    "qubits_per_register": 4,
+    "gates_per_register": 4,
+    "init_std": 0.001
+  },
+  "equal_parameter_count": true,
+  "identity_max_absolute_error": {
+    "quantum": 2.384185791015625e-07,
+    "dequantized": 0.0,
+    "classical": 0.0,
+    "no_entanglement": 2.384185791015625e-07
+  },
+  "quantum_vs_exact_dequantized": {
+    "max_absolute_output_error": 9.5367431640625e-07,
+    "max_absolute_gradient_error": 1.4901161193847656e-08
+  },
+  "product_state_entropy_bits_01_cut": {
+    "quantum": 0.48027321696281433,
+    "no_entanglement": -0.0
+  },
+  "cpu_path_rejected": true,
+  "results": [
+    {
+      "kind": "quantum",
+      "parameter_count": 96,
+      "output_rms": 1.0165547132492065,
+      "finite": true,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norm": 0.0005483776330947876,
+      "finite_difference": -0.00013113021850585938,
+      "analytic_gradient": -0.0001332766842097044,
+      "finite_difference_index": [
+        2,
+        0,
+        5
+      ],
+      "finite_difference_absolute_error": 2.146465703845024e-06,
+      "elapsed_seconds": 0.2365744672715664,
+      "peak_allocated_bytes": 17277952
+    },
+    {
+      "kind": "dequantized",
+      "parameter_count": 96,
+      "output_rms": 1.0165547132492065,
+      "finite": true,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norm": 0.0005483705317601562,
+      "finite_difference": -0.00013709068298339844,
+      "analytic_gradient": -0.00013327552005648613,
+      "finite_difference_index": [
+        2,
+        0,
+        5
+      ],
+      "finite_difference_absolute_error": 3.815162926912308e-06,
+      "elapsed_seconds": 0.009761348366737366,
+      "peak_allocated_bytes": 17260032
+    },
+    {
+      "kind": "classical",
+      "parameter_count": 96,
+      "output_rms": 1.0165684223175049,
+      "finite": true,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norm": 0.2086862027645111,
+      "finite_difference": 0.06219148635864258,
+      "analytic_gradient": 0.062192682176828384,
+      "finite_difference_index": [
+        0,
+        2,
+        4
+      ],
+      "finite_difference_absolute_error": 1.1958181858062744e-06,
+      "elapsed_seconds": 0.002739422023296356,
+      "peak_allocated_bytes": 17226752
+    },
+    {
+      "kind": "no_entanglement",
+      "parameter_count": 96,
+      "output_rms": 1.0165547132492065,
+      "finite": true,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norm": 0.00023318194143939763,
+      "finite_difference": 6.556510925292969e-05,
+      "analytic_gradient": 6.725656567141414e-05,
+      "finite_difference_index": [
+        0,
+        0,
+        4
+      ],
+      "finite_difference_absolute_error": 1.6914564184844494e-06,
+      "elapsed_seconds": 0.023204229772090912,
+      "peak_allocated_bytes": 17343488
+    }
+  ]
+}

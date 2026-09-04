@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "cuda_device": "NVIDIA A800-SXM4-80GB",
+  "identity_errors": {
+    "quantum": 2.384185791015625e-07,
+    "dq": 2.384185791015625e-07,
+    "classical": 0.0
+  },
+  "quantum_dequantized_equivalence": {
+    "forward_max_abs": 7.152557373046875e-07,
+    "input_grad_max_abs": 4.76837158203125e-07,
+    "theta_grad_max_abs": 4.76837158203125e-06
+  },
+  "small_config_trainable_parameters": 26,
+  "trainable_gradient_tensors": 3,
+  "frozen_gradient_tensors": 0,
+  "quantum_circuit_calls": 2,
+  "dequantized_circuit_calls": 2,
+  "cpu_rejected": true,
+  "full_qh031_parameter_audit": {
+    "original_parameters_removed": 10485760,
+    "frozen_replacement_parameters": 7340032,
+    "trainable_parameters": 82,
+    "total_replacement_parameters": 7340114,
+    "net_parameter_reduction": 3145646
+  }
+}

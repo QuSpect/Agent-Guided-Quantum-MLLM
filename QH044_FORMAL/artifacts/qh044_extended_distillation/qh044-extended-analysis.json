@@ -1,0 +1,58 @@
+{
+  "status": "ok",
+  "analysis": "QH044 extended equal-budget distillation train-only screen",
+  "point_nll": {
+    "base": 2.3951752614229918,
+    "zero": 2.40161675773561,
+    "qh037_start": 2.39636517316103,
+    "cc037_start": 2.3957331255078316,
+    "qh044": 2.3949430845677853,
+    "cc044": 2.3972567711025476
+  },
+  "comparisons": {
+    "qh044_minus_zero": {
+      "mean_delta_nll": -0.006673673167824745,
+      "descriptive_95_ci": [
+        -0.008982900995761156,
+        -0.004432276869192722
+      ]
+    },
+    "qh044_minus_cc044": {
+      "mean_delta_nll": -0.0023136865347623825,
+      "descriptive_95_ci": [
+        -0.004016448697075248,
+        -0.000652699358761311
+      ]
+    },
+    "qh044_minus_base": {
+      "mean_delta_nll": -0.00023217685520648956,
+      "descriptive_95_ci": [
+        -0.004229387408122421,
+        0.0036064791493117805
+      ]
+    },
+    "qh044_minus_qh037_start": {
+      "mean_delta_nll": -0.0014220885932445526,
+      "descriptive_95_ci": [
+        -0.0033664656803011894,
+        0.0005155913997441511
+      ]
+    },
+    "cc044_minus_cc037_start": {
+      "mean_delta_nll": 0.001523645594716072,
+      "descriptive_95_ci": [
+        -0.00016249162144958972,
+        0.003254580590873956
+      ]
+    }
+  },
+  "gates": {
+    "qh_point_better_than_zero": true,
+    "qh_point_better_than_cc": true,
+    "qh_within_base_plus_0p005": true,
+    "continue_to_c4": true
+  },
+  "verdict": "continue_to_new_c4",
+  "claim_limit": "train-only",
+  "created_at": "2026-08-29T10:55:21.060909+00:00"
+}

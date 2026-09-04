@@ -1,0 +1,40 @@
+{
+  "control_id": "QH-001b-no-ent-rms-matched",
+  "intervention": "delete ring-CNOT operations; calibrate one scalar gain",
+  "trainable_parameters_each": 81961,
+  "identical_state_dict_before_gain_matching": true,
+  "calibration_batch": {
+    "full_relative_delta": 0.0027379898820072412,
+    "raw_control_relative_delta": 0.006908963434398174,
+    "old_control_scale": 0.30000001192092896,
+    "calibrated_control_scale": 0.11888859421014786
+  },
+  "heldout_batch": {
+    "full_relative_delta": 0.0025002025067806244,
+    "control_relative_delta": 0.002740005264058709,
+    "relative_delta_ratio": 1.0959133336710656,
+    "relative_output_difference": 0.0037609925493597984
+  },
+  "median_forward_backward_ms": {
+    "full_ring_cnot": 36.05299070477486,
+    "rms_matched_no_entanglement": 45.11271417140961
+  },
+  "gradient_norms": {
+    "full_ring_cnot": {
+      "raw_scale": 1.0013580322265625e-05,
+      "down.weight": 0.0016937255859375,
+      "down.bias": 2.0265579223632812e-05,
+      "vqc.theta": 1.0675731573428493e-05,
+      "up.weight": 0.00060272216796875
+    },
+    "rms_matched_no_entanglement": {
+      "raw_scale": 3.22181654155429e-06,
+      "down.weight": 0.000812530517578125,
+      "down.bias": 6.288290023803711e-06,
+      "vqc.theta": 4.195406290818937e-06,
+      "up.weight": 0.000652313232421875
+    }
+  },
+  "all_parameter_groups_receive_gradient": true,
+  "device": "NVIDIA A800-SXM4-80GB"
+}

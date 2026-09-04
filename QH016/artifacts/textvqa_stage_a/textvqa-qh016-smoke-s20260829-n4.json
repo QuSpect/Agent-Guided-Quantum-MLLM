@@ -1,0 +1,444 @@
+{
+  "status": "ok",
+  "run_id": "textvqa-qh016-smoke-s20260829-n4",
+  "candidate": "qh016",
+  "seed": 20260829,
+  "model_dir": "./models/Qwen3.8-27B",
+  "base_parameter_count": 27356728560,
+  "timing_context": "shared",
+  "candidate_audit": {
+    "candidate": "QH-016",
+    "parent": "QH-015 + CCG-VQC/staged compositional relation hypothesis",
+    "injection_path": "model.model.visual.pooler_output",
+    "execution_scope": "six batched relation states per image during visual prefill",
+    "quantum_compute_dtype": "torch.float32/torch.complex64",
+    "adapter": {
+      "candidate": "QH-016",
+      "config": {
+        "hidden_size": 5120,
+        "token_rank": 64,
+        "object_rank": 16,
+        "n_qubits": 6,
+        "depth": 2,
+        "regions_per_side": 2,
+        "routing_temperature": 0.5,
+        "gate_strength": 1.0,
+        "scale_init": 0.05,
+        "scale_max": 1.0,
+        "token_up_init_std": 0.001
+      },
+      "core_kind": "quantum",
+      "frozen_objects": "2x2 pooled regions from frozen Qwen vision tokens",
+      "relations": "six deterministic directed spatial-region pairs",
+      "routing": "prompt-only question anchor softmax over relation pairs",
+      "readout": "6 local-Z + 6 adjacent-ZZ observables per relation",
+      "execution": "six relation states batched per image on GPU simulator",
+      "current_scale": 0.05000000074505806,
+      "trainable_parameters": 820675
+    },
+    "trainable_parameter_count": 820675,
+    "trainable_tensors": [
+      [
+        "model.visual.adapter.pair_position",
+        36
+      ],
+      [
+        "model.visual.adapter.raw_scale",
+        1
+      ],
+      [
+        "model.visual.adapter.token_down.weight",
+        327680
+      ],
+      [
+        "model.visual.adapter.token_down.bias",
+        64
+      ],
+      [
+        "model.visual.adapter.object_down.weight",
+        81920
+      ],
+      [
+        "model.visual.adapter.object_down.bias",
+        16
+      ],
+      [
+        "model.visual.adapter.text_down.weight",
+        81920
+      ],
+      [
+        "model.visual.adapter.text_down.bias",
+        16
+      ],
+      [
+        "model.visual.adapter.relation_down.weight",
+        480
+      ],
+      [
+        "model.visual.adapter.relation_down.bias",
+        6
+      ],
+      [
+        "model.visual.adapter.core.theta",
+        24
+      ],
+      [
+        "model.visual.adapter.gate_up.weight",
+        768
+      ],
+      [
+        "model.visual.adapter.gate_up.bias",
+        64
+      ],
+      [
+        "model.visual.adapter.token_up.weight",
+        327680
+      ]
+    ]
+  },
+  "anchor_control": "normal",
+  "loaded_adapter": null,
+  "trainable_parameters": 820675,
+  "trainable_tensors": [
+    [
+      "model.visual.adapter.pair_position",
+      36
+    ],
+    [
+      "model.visual.adapter.raw_scale",
+      1
+    ],
+    [
+      "model.visual.adapter.token_down.weight",
+      327680
+    ],
+    [
+      "model.visual.adapter.token_down.bias",
+      64
+    ],
+    [
+      "model.visual.adapter.object_down.weight",
+      81920
+    ],
+    [
+      "model.visual.adapter.object_down.bias",
+      16
+    ],
+    [
+      "model.visual.adapter.text_down.weight",
+      81920
+    ],
+    [
+      "model.visual.adapter.text_down.bias",
+      16
+    ],
+    [
+      "model.visual.adapter.relation_down.weight",
+      480
+    ],
+    [
+      "model.visual.adapter.relation_down.bias",
+      6
+    ],
+    [
+      "model.visual.adapter.core.theta",
+      24
+    ],
+    [
+      "model.visual.adapter.gate_up.weight",
+      768
+    ],
+    [
+      "model.visual.adapter.gate_up.bias",
+      64
+    ],
+    [
+      "model.visual.adapter.token_up.weight",
+      327680
+    ]
+  ],
+  "dataset": {
+    "name": "TextVQA pilot shards",
+    "source": "facebook/textvqa refs/convert/parquet",
+    "source_revision": "adeddaaa993f9f09c7ba460762c03628f37aa298",
+    "license": "CC BY 4.0",
+    "train_rows": 1900,
+    "validation_rows": 1800,
+    "eligible_train_rows": 1899,
+    "min_consensus": 2,
+    "train_sha256": "f875ce0efa318d76e394f3e86e96ffed8b97f28fd0def74a6452b66ea8119a14",
+    "validation_sha256": "3f75f0e35b170329406744290fd8abd0732e2fdbe8d7cb2424400a156de13095",
+    "train_indices": [
+      660,
+      1198,
+      1054,
+      1868
+    ],
+    "train_indices_source": null,
+    "train_indices_sha256": null,
+    "curriculum_tag": null,
+    "eval_indices": [
+      595,
+      1548,
+      1094,
+      1264,
+      306,
+      149,
+      531,
+      1502
+    ],
+    "test_rows_read": 0
+  },
+  "training": {
+    "steps": 4,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "losses": [
+      0.3704302906990051,
+      0.17929114401340485,
+      0.33536496758461,
+      0.008595959283411503
+    ],
+    "loss_first_16_mean": 0.22342059039510787,
+    "loss_last_16_mean": 0.22342059039510787,
+    "gradient_norm_mean": 0.136271781695541,
+    "mean_step_seconds": 5.431155478581786,
+    "total_step_seconds": 21.724621914327145,
+    "frozen_parameter_grad_tensor_count": 0
+  },
+  "evaluation_after": {
+    "metrics": {
+      "n": 8,
+      "counterfactual_n": 4,
+      "vqa_soft_accuracy": 0.7124999999999999,
+      "exact_any_accuracy": 0.75,
+      "mean_generation_seconds_per_call": 4.44520552828908,
+      "counterfactual_original_vqa_soft_accuracy": 0.7,
+      "shuffled_vqa_soft_accuracy": 0.0,
+      "blank_vqa_soft_accuracy": 0.0,
+      "original_minus_shuffled": 0.7,
+      "multimodal_gain_original_minus_blank": 0.7,
+      "mean_positive_visual_rescue": 0.7,
+      "prediction_change_on_blank": 1.0
+    },
+    "predictions": [
+      {
+        "dataset_index": 595,
+        "question_id": 35197,
+        "answers": [
+          "robson",
+          "mr. robson",
+          "mr. rohson",
+          "mr. roheon",
+          "charleston",
+          "mr. robson",
+          "mr. robson",
+          "mr robson",
+          "robson",
+          "unanswerable"
+        ],
+        "original_raw": "mr. robon",
+        "original_normalized": "mr robon",
+        "original_soft_score": 0.0,
+        "original_exact_any": false,
+        "original_seconds": 7.208080645650625,
+        "anchor_control": "normal",
+        "anchor_question_index": 595,
+        "shuffled_image_index": 1094,
+        "shuffled_normalized": "6",
+        "shuffled_soft_score": 0.0,
+        "shuffled_seconds": 3.622877787798643,
+        "blank_normalized": "future",
+        "blank_soft_score": 0.0,
+        "blank_seconds": 4.00819755345583
+      },
+      {
+        "dataset_index": 1548,
+        "question_id": 36150,
+        "answers": [
+          "8:42",
+          "8:42",
+          "8:41",
+          "08.42",
+          "8:43",
+          "8:41",
+          "8:42",
+          "8:41",
+          "8:41",
+          "8:41"
+        ],
+        "original_raw": "8:42",
+        "original_normalized": "8:42",
+        "original_soft_score": 0.9,
+        "original_exact_any": true,
+        "original_seconds": 6.847557190805674,
+        "anchor_control": "normal",
+        "anchor_question_index": 1548,
+        "shuffled_image_index": 1264,
+        "shuffled_normalized": "0",
+        "shuffled_soft_score": 0.0,
+        "shuffled_seconds": 2.7386257015168667,
+        "blank_normalized": "12:00",
+        "blank_soft_score": 0.0,
+        "blank_seconds": 8.650970574468374
+      },
+      {
+        "dataset_index": 1094,
+        "question_id": 35696,
+        "answers": [
+          "cn",
+          "nc",
+          "cn",
+          "6",
+          "nc",
+          "nc",
+          "nc",
+          "nc",
+          "nc",
+          "cn"
+        ],
+        "original_raw": "nc",
+        "original_normalized": "nc",
+        "original_soft_score": 1.0,
+        "original_exact_any": true,
+        "original_seconds": 2.695409320294857,
+        "anchor_control": "normal",
+        "anchor_question_index": 1094,
+        "shuffled_image_index": 306,
+        "shuffled_normalized": "stop",
+        "shuffled_soft_score": 0.0,
+        "shuffled_seconds": 3.0601687096059322,
+        "blank_normalized": "ch",
+        "blank_soft_score": 0.0,
+        "blank_seconds": 3.5136698484420776
+      },
+      {
+        "dataset_index": 1264,
+        "question_id": 35866,
+        "answers": [
+          "shiner",
+          "shiner bock",
+          "shiner bock",
+          "shiner ",
+          "shiner rock",
+          "shiner bock",
+          "shiner",
+          "shiner",
+          "shiner rock",
+          "shiner"
+        ],
+        "original_raw": "shiner bock",
+        "original_normalized": "shiner bock",
+        "original_soft_score": 0.9,
+        "original_exact_any": true,
+        "original_seconds": 6.594341456890106,
+        "anchor_control": "normal",
+        "anchor_question_index": 1264,
+        "shuffled_image_index": 149,
+        "shuffled_normalized": "pwm",
+        "shuffled_soft_score": 0.0,
+        "shuffled_seconds": 3.524787962436676,
+        "blank_normalized": "bud light",
+        "blank_soft_score": 0.0,
+        "blank_seconds": 4.196556709706783
+      },
+      {
+        "dataset_index": 306,
+        "question_id": 34908,
+        "answers": [
+          "p",
+          "p",
+          "p",
+          "p",
+          "chicago",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p"
+        ],
+        "original_raw": "p",
+        "original_normalized": "p",
+        "original_soft_score": 1.0,
+        "original_exact_any": true,
+        "original_seconds": 2.955260284245014,
+        "anchor_control": "normal",
+        "anchor_question_index": 306
+      },
+      {
+        "dataset_index": 149,
+        "question_id": 34751,
+        "answers": [
+          "eyes",
+          "cycle",
+          "cycle",
+          "circle peroid",
+          "cycle",
+          "cycle",
+          "cycle",
+          "cycle ",
+          "cycle",
+          "cycle"
+        ],
+        "original_raw": "cycle",
+        "original_normalized": "cycle",
+        "original_soft_score": 1.0,
+        "original_exact_any": true,
+        "original_seconds": 2.791983425617218,
+        "anchor_control": "normal",
+        "anchor_question_index": 149
+      },
+      {
+        "dataset_index": 531,
+        "question_id": 35133,
+        "answers": [
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "original_raw": "no",
+        "original_normalized": "no",
+        "original_soft_score": 0.0,
+        "original_exact_any": false,
+        "original_seconds": 3.0086292065680027,
+        "anchor_control": "normal",
+        "anchor_question_index": 531
+      },
+      {
+        "dataset_index": 1502,
+        "question_id": 36104,
+        "answers": [
+          "italian",
+          "look beyond",
+          "pepperidge farm ",
+          "sun",
+          "unanswerable",
+          "pepperridge farm",
+          "sara lee",
+          "arnold",
+          "arnold",
+          "arnold"
+        ],
+        "original_raw": "arnold",
+        "original_normalized": "arnold",
+        "original_soft_score": 0.9,
+        "original_exact_any": true,
+        "original_seconds": 5.706172075122595,
+        "anchor_control": "normal",
+        "anchor_question_index": 1502
+      }
+    ]
+  },
+  "adapter_checkpoint": "./artifacts/textvqa_stage_a/textvqa-qh016-smoke-s20260829-n4-adapter.pt",
+  "gpu_peak_allocated_bytes": [
+    49372819968
+  ],
+  "checked_at": "2026-08-28T21:27:06.801162+00:00"
+}

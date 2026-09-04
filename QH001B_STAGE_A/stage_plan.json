@@ -1,0 +1,39 @@
+{
+  "preprocess": [],
+  "stage": [
+    [
+      "code/scripts/run_scienceqa_stage_a.py",
+      "--candidate",
+      "base"
+    ],
+    [
+      "code/scripts/run_scienceqa_stage_a.py",
+      "--candidate",
+      "qh006e"
+    ],
+    [
+      "code/scripts/run_scienceqa_stage_a.py",
+      "--candidate",
+      "qh006d"
+    ],
+    [
+      "code/scripts/run_scienceqa_stage_a.py",
+      "--candidate",
+      "qh001b"
+    ],
+    [
+      "code/scripts/run_scienceqa_stage_a.py",
+      "--candidate",
+      "qh007"
+    ],
+    [
+      "code/scripts/run_scienceqa_stage_a.py",
+      "--candidate",
+      "cc001"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_scienceqa_stage_a.py"
+  ],
+  "entrypoint": "run_scienceqa_stage_a.py"
+}

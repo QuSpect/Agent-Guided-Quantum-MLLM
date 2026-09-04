@@ -1,0 +1,31 @@
+{
+  "base": "quantum_qwen38_agent\\artifacts\\clevr_relations\\clevr-relations-cc019-hard-second-holdout-s20260829-n256.json",
+  "candidate": "quantum_qwen38_agent\\artifacts\\clevr_relations\\clevr-relations-qh019-hard-second-holdout-s20260829-n256.json",
+  "base_sha256": "d4c8a67fbfc4f7e41777774dad192650592767260988b95acf0a8a343fcd8b84",
+  "candidate_sha256": "1519dbd01aa64773969667110da3e82011063115d860d5ca597ff9d5538eb756",
+  "paired_n": 256,
+  "image_clusters": 256,
+  "base_exact_accuracy": 0.94921875,
+  "candidate_exact_accuracy": 0.9453125,
+  "candidate_minus_base": -0.00390625,
+  "image_cluster_bootstrap_95_ci": [
+    -0.01953125,
+    0.0078125
+  ],
+  "bootstrap_probability_delta_gt_zero": 0.1803,
+  "candidate_wins": 1,
+  "base_wins": 2,
+  "ties": 253,
+  "visual_gain_comparison": {
+    "n": 128,
+    "image_clusters": 128,
+    "delta": -0.015625,
+    "bootstrap_95_ci": [
+      -0.0625,
+      0.0234375
+    ]
+  },
+  "bootstrap_samples": 20000,
+  "seed": 20260829,
+  "created_at": "2026-08-29T00:03:16.443993+00:00"
+}

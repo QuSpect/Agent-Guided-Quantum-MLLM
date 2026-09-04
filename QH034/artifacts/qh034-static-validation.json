@@ -1,0 +1,89 @@
+{
+  "status": "pass",
+  "candidate": "QH-034 quantum shared-SVD spectral modulation",
+  "small_config": {
+    "hidden_size": 128,
+    "output_size": 64,
+    "rank": 64,
+    "layer_indices": [
+      0,
+      1
+    ],
+    "num_qubits": 6,
+    "depth": 2,
+    "entangling_offsets": [
+      1,
+      2,
+      3
+    ]
+  },
+  "small_parameter_count_per_core": 48,
+  "zero_angle_identity_max_abs": {
+    "qh": 0.0,
+    "dq": 0.0,
+    "cc": 0.0,
+    "no_ent": 0.0
+  },
+  "dequantization_checks": {
+    "forward_max_abs": 2.1457672119140625e-06,
+    "forward_relative_l2": 3.4945276183862006e-07,
+    "input_gradient_max_abs": 2.86102294921875e-06,
+    "input_gradient_relative_l2": 3.512897990276542e-07,
+    "theta_gradient_max_abs": 1.33514404296875e-05,
+    "theta_gradient_relative_l2": 2.867964212782681e-07
+  },
+  "gradient_audit": {
+    "qh": {
+      "norm": 2.803748369216919,
+      "nonzero_elements": 48,
+      "all_finite": true
+    },
+    "dq": {
+      "norm": 2.8326869010925293,
+      "nonzero_elements": 48,
+      "all_finite": true
+    },
+    "cc": {
+      "norm": 0.15713977813720703,
+      "nonzero_elements": 48,
+      "all_finite": true
+    },
+    "no_ent": {
+      "norm": 1.3091593980789185,
+      "nonzero_elements": 12,
+      "all_finite": true
+    }
+  },
+  "positive_mean_one_scale_audit": {
+    "qh": {
+      "minimum": 0.05267392843961716,
+      "mean": 0.9999997615814209,
+      "maximum": 3.4650931358337402
+    },
+    "dq": {
+      "minimum": 0.07448043674230576,
+      "mean": 0.9999998807907104,
+      "maximum": 4.127047061920166
+    },
+    "cc": {
+      "minimum": 0.7329978942871094,
+      "mean": 1.0,
+      "maximum": 1.3076907396316528
+    },
+    "no_ent": {
+      "minimum": 0.292514830827713,
+      "mean": 1.0000001192092896,
+      "maximum": 2.643740177154541
+    }
+  },
+  "cpu_quantum_path_rejected": true,
+  "full_parameter_audit": {
+    "original_parameters_removed": 10485760,
+    "frozen_replacement_parameters": 7340032,
+    "trainable_parameters": 82,
+    "total_replacement_parameters": 7340114,
+    "net_parameter_reduction": 3145646,
+    "spectral_scale_count": 1024
+  },
+  "created_at": "2026-08-29T06:47:46.381291+00:00"
+}

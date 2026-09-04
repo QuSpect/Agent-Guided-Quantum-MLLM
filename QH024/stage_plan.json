@@ -1,0 +1,31 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/run_wikitext_qh024.py",
+      "--candidate",
+      "base"
+    ],
+    [
+      "code/scripts/run_wikitext_qh024.py",
+      "--candidate",
+      "svd512"
+    ],
+    [
+      "code/scripts/run_wikitext_qh024.py",
+      "--candidate",
+      "qh024"
+    ],
+    [
+      "code/scripts/run_wikitext_qh024.py",
+      "--candidate",
+      "cc024"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_wikitext_qh024.py"
+  ],
+  "entrypoint": "run_wikitext_qh024.py"
+}

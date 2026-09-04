@@ -1,0 +1,23 @@
+{
+  "status": "ok",
+  "base_run_id": "wikitext-base-qh022-unused-complement-s20260829-n256-l256",
+  "candidate_run_id": "wikitext-qh022-unused-complement-s20260829-n256-l256",
+  "paired_sequences": 128,
+  "mean_token_nll_reduction": {
+    "estimate": 1.6176141798496246e-05,
+    "ci95": [
+      -0.00037627348210662604,
+      0.00042175306007266003
+    ],
+    "probability_gt_zero": 0.5217,
+    "base": 2.4304957846179605,
+    "candidate": 2.430479608476162
+  },
+  "token_perplexity": {
+    "base": 11.364515035264851,
+    "candidate": 11.364331202745024,
+    "relative_reduction": 1.6176010965374132e-05
+  },
+  "single_seed_exploratory": true,
+  "confirmatory_claim_allowed": false
+}

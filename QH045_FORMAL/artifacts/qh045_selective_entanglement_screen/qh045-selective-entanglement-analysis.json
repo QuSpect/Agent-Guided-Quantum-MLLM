@@ -1,0 +1,68 @@
+{
+  "status": "ok",
+  "analysis": "QH045 selective entanglement train-only screen",
+  "point_nll": {
+    "base": 2.3212896585464478,
+    "noent": 2.3187458589673042,
+    "qh045": 2.317988332360983,
+    "cc045": 2.3186170514672995
+  },
+  "comparisons": {
+    "qh_minus_noent": {
+      "mean_delta_nll": -0.0007575266063213348,
+      "descriptive_95_ci": [
+        -0.0014907799661159516,
+        -7.357927970588247e-05
+      ]
+    },
+    "qh_minus_cc": {
+      "mean_delta_nll": -0.0006287191063165665,
+      "descriptive_95_ci": [
+        -0.0012226262595504522,
+        -2.549230121076122e-05
+      ]
+    },
+    "qh_minus_base": {
+      "mean_delta_nll": -0.003301326185464859,
+      "descriptive_95_ci": [
+        -0.006876637879759073,
+        0.0003384243696927954
+      ]
+    }
+  },
+  "gate_diagnostics": {
+    "qh": {
+      "steps": 512,
+      "kl_first64": 0.014322641640319489,
+      "kl_last64": 0.014934651080693584,
+      "mean_step_seconds": 0.35717487637884915,
+      "simulator_calls": 512,
+      "frozen_gradient_tensor_count": 0,
+      "gate_l2": 4.589664459228516,
+      "gate_max_abs": 0.8912523984909058,
+      "gate_abs_below_0p05": 2,
+      "gate_count": 64
+    },
+    "cc": {
+      "steps": 512,
+      "kl_first64": 0.01445677834271919,
+      "kl_last64": 0.015230138378683478,
+      "mean_step_seconds": 0.3454319762386149,
+      "simulator_calls": 512,
+      "frozen_gradient_tensor_count": 0,
+      "gate_l2": 4.859075546264648,
+      "gate_max_abs": 0.9324418902397156,
+      "gate_abs_below_0p05": 5,
+      "gate_count": 64
+    }
+  },
+  "gates": {
+    "qh_better_than_noent": true,
+    "qh_better_than_cc": true,
+    "qh_within_base_plus_0p005": true,
+    "promote_to_new_c4": true
+  },
+  "verdict": "promote_to_new_c4",
+  "claim_limit": "train-only; both arms share frozen QH044 no-ent simulator scaffold",
+  "created_at": "2026-08-29T11:35:34.563664+00:00"
+}

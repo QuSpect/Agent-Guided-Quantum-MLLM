@@ -1,0 +1,14 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/lock_qh041_signed_x_screen.py"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_qh041_signed_x_screen.py"
+  ],
+  "entrypoint": "lock_qh041_signed_x_screen.py"
+}

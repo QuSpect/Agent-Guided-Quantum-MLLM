@@ -1,0 +1,1326 @@
+{
+  "status": "ok",
+  "candidate_id": "QH-031-shared-v-basis-feasibility",
+  "scope": "weight-only; no train, validation, or test data loaded",
+  "source_motivation": "Basis Sharing, arXiv:2410.03765",
+  "model_dir": "./models/Qwen3.8-27B",
+  "target": "self_attn.v_proj",
+  "full_attention_layers": [
+    3,
+    7,
+    11,
+    15,
+    19,
+    23,
+    27,
+    31,
+    35,
+    39,
+    43,
+    47,
+    51,
+    55,
+    59,
+    63
+  ],
+  "weight_shape": [
+    1024,
+    5120
+  ],
+  "pair_rows": [
+    {
+      "layers": [
+        3,
+        7
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5185754705203959,
+          "shared_basis_retained_energy_fraction": 0.364695195534735,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.5281943869389918
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.6687248047356785,
+          "shared_basis_retained_energy_fraction": 0.484660329221281,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.6729404595254093
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.780561083187647,
+          "shared_basis_retained_energy_fraction": 0.5821773914104114,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.7781096876033698
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8643519357170429,
+          "shared_basis_retained_energy_fraction": 0.6627565750306436,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.8556616492994757
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9265765634092119,
+          "shared_basis_retained_energy_fraction": 0.7298175583528742,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9118654893823714
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9713931264957788,
+          "shared_basis_retained_energy_fraction": 0.785791627864246,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9521887641784976
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8325541994467054,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9795640380544526
+        }
+      ]
+    },
+    {
+      "layers": [
+        7,
+        11
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5417765313567171,
+          "shared_basis_retained_energy_fraction": 0.40650774192725947,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.566793311602543
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.6882532304844322,
+          "shared_basis_retained_energy_fraction": 0.5247295336786437,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7037977800245997
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.7947311620405373,
+          "shared_basis_retained_energy_fraction": 0.6184566359954917,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8006326506400508
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8732893716745186,
+          "shared_basis_retained_energy_fraction": 0.6943070994250863,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.8708126975216504
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9311822450838227,
+          "shared_basis_retained_energy_fraction": 0.7564035353078763,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9212397972465554
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9729440702016794,
+          "shared_basis_retained_energy_fraction": 0.8076275604795643,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9572285284474652
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8499998735849917,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9817080336577608
+        }
+      ]
+    },
+    {
+      "layers": [
+        11,
+        15
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.572450183310179,
+          "shared_basis_retained_energy_fraction": 0.4423904506135396,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.6024479446615945
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.7147364898677614,
+          "shared_basis_retained_energy_fraction": 0.5613395364457964,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7326904655579627
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.8149976032626274,
+          "shared_basis_retained_energy_fraction": 0.6522189162616283,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8218969382573177
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8870628587471681,
+          "shared_basis_retained_energy_fraction": 0.7238459186166342,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.8854452324190071
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9391837688358707,
+          "shared_basis_retained_energy_fraction": 0.7814248745929223,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9305656070145637
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9762854060660893,
+          "shared_basis_retained_energy_fraction": 0.8282686917579134,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9624812724777912
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8666777771692638,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9840322036935424
+        }
+      ]
+    },
+    {
+      "layers": [
+        15,
+        19
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.528757251116883,
+          "shared_basis_retained_energy_fraction": 0.4152057940209937,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.5739922714848014
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.6757677225091075,
+          "shared_basis_retained_energy_fraction": 0.5326142292820057,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7084449814660356
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.7844831288390228,
+          "shared_basis_retained_energy_fraction": 0.6247038566129635,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8038909737450773
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8658001303241042,
+          "shared_basis_retained_energy_fraction": 0.6991216769570655,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.8736032821707039
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.926744664181712,
+          "shared_basis_retained_energy_fraction": 0.7602054793600325,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9236257347109441
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9710859477042505,
+          "shared_basis_retained_energy_fraction": 0.8108289636821673,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9588971848460223
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.852894738371748,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9825351715027828
+        }
+      ]
+    },
+    {
+      "layers": [
+        19,
+        23
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.4746028645992236,
+          "shared_basis_retained_energy_fraction": 0.3687923241443418,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.5361946802963161
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.6315611015070236,
+          "shared_basis_retained_energy_fraction": 0.49151604764847384,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.6838478004421971
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.7535796157011645,
+          "shared_basis_retained_energy_fraction": 0.5915769878783008,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.7885302919740449
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.847447913809795,
+          "shared_basis_retained_energy_fraction": 0.6735746267719147,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.8640581458992088
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9180638693183597,
+          "shared_basis_retained_energy_fraction": 0.740818157581696,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9179549919435215
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9685448780515473,
+          "shared_basis_retained_energy_fraction": 0.7960780007549364,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9558783497902905
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8417098716260486,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9812568726416917
+        }
+      ]
+    },
+    {
+      "layers": [
+        23,
+        27
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5091863186835003,
+          "shared_basis_retained_energy_fraction": 0.4056809227193315,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.5770517668233087
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.6699004183078172,
+          "shared_basis_retained_energy_fraction": 0.5320328790326384,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7217046559400476
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.7896282751832049,
+          "shared_basis_retained_energy_fraction": 0.6320700609900293,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8200374936594081
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8763311362343722,
+          "shared_basis_retained_energy_fraction": 0.7118542986801858,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.8879829956618308
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9370989185853301,
+          "shared_basis_retained_energy_fraction": 0.7756768158170421,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9344178062459165
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9774463716311759,
+          "shared_basis_retained_energy_fraction": 0.8269569418657226,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9659136335253106
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8681802479163153,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9861566865121663
+        }
+      ]
+    },
+    {
+      "layers": [
+        27,
+        31
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5673583415170005,
+          "shared_basis_retained_energy_fraction": 0.46567462394239634,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.6368396363383894
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.7240334374432936,
+          "shared_basis_retained_energy_fraction": 0.5933695957419438,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7707723788248477
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.832547458076739,
+          "shared_basis_retained_energy_fraction": 0.6888527270598701,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.856492887723691
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.9058023601153691,
+          "shared_basis_retained_energy_fraction": 0.7619344788256045,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.9130000103263078
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9540233841154797,
+          "shared_basis_retained_energy_fraction": 0.8184186631106579,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9502201163146782
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.984309594654972,
+          "shared_basis_retained_energy_fraction": 0.8623570533869049,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9746889393552135
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8967705367011001,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9899740876910692
+        }
+      ]
+    },
+    {
+      "layers": [
+        31,
+        35
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5485138823458929,
+          "shared_basis_retained_energy_fraction": 0.4414316485103313,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.6121731714403101
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.7054061193146055,
+          "shared_basis_retained_energy_fraction": 0.5684154051337398,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7494220722717798
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.8166951909018382,
+          "shared_basis_retained_energy_fraction": 0.6649046698386378,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8409364779382182
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8946387647728578,
+          "shared_basis_retained_energy_fraction": 0.7401919232518656,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.9031711789897422
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.947851482150966,
+          "shared_basis_retained_energy_fraction": 0.7998422805711148,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9446710718410349
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9820838140146915,
+          "shared_basis_retained_energy_fraction": 0.8473193459939757,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9720580251302664
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8851702066475274,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9890537239342521
+        }
+      ]
+    },
+    {
+      "layers": [
+        35,
+        39
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5025067377278353,
+          "shared_basis_retained_energy_fraction": 0.40905598601031257,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.5801808688398055
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.662683685488319,
+          "shared_basis_retained_energy_fraction": 0.5354188331199916,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7259368333943951
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.7836719031106515,
+          "shared_basis_retained_energy_fraction": 0.6351950918332817,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8260805523174013
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8730121089501208,
+          "shared_basis_retained_energy_fraction": 0.7159105374521585,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.8942037951890938
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.936530202919269,
+          "shared_basis_retained_energy_fraction": 0.7809761536745272,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9394355415877184
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9783676425074739,
+          "shared_basis_retained_energy_fraction": 0.8330932633412078,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9691793226579667
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8745329225455418,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9877585772942581
+        }
+      ]
+    },
+    {
+      "layers": [
+        39,
+        43
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5164510011035778,
+          "shared_basis_retained_energy_fraction": 0.409698203910511,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.5766991620058046
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.6767431113353681,
+          "shared_basis_retained_energy_fraction": 0.5327183508960245,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7215286685812794
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.7970275688571443,
+          "shared_basis_retained_energy_fraction": 0.6311558524036364,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8222690289696846
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8841191692844433,
+          "shared_basis_retained_energy_fraction": 0.7114942711292257,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.8920819976621558
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9441812741836285,
+          "shared_basis_retained_energy_fraction": 0.7767164749356884,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9391227336460322
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9820452232678588,
+          "shared_basis_retained_energy_fraction": 0.8293947507435825,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9699449845654834
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8717884089645593,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9886725724379595
+        }
+      ]
+    },
+    {
+      "layers": [
+        43,
+        47
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5367765932901686,
+          "shared_basis_retained_energy_fraction": 0.43448152139589796,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.6101309767429431
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.6969699767838732,
+          "shared_basis_retained_energy_fraction": 0.5646824203533336,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.752428752448772
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.8140678865200931,
+          "shared_basis_retained_energy_fraction": 0.664840867477238,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8459362366631835
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8966561816068844,
+          "shared_basis_retained_energy_fraction": 0.7428950911079037,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.9079723718984534
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9518517177147272,
+          "shared_basis_retained_energy_fraction": 0.8041426308630265,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9485672858710827
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9852262845130396,
+          "shared_basis_retained_energy_fraction": 0.8523736489309692,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.974701910884735
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8901798380366491,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9905284930001937
+        }
+      ]
+    },
+    {
+      "layers": [
+        47,
+        51
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5314545084536806,
+          "shared_basis_retained_energy_fraction": 0.4053956774776991,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.5791809834500923
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.6923338684053343,
+          "shared_basis_retained_energy_fraction": 0.5339088164508552,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7234527722038695
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.8087337654724898,
+          "shared_basis_retained_energy_fraction": 0.634226277377652,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8215729357085529
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.8916717813581525,
+          "shared_basis_retained_energy_fraction": 0.7136470647402686,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.8904554142173713
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9483351155522128,
+          "shared_basis_retained_energy_fraction": 0.777162640738875,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9376050453869201
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.983429347927189,
+          "shared_basis_retained_energy_fraction": 0.828537229433587,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.96882607720737
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.8702874963562179,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9880496958659146
+        }
+      ]
+    },
+    {
+      "layers": [
+        51,
+        55
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.5931419811225154,
+          "shared_basis_retained_energy_fraction": 0.44478621589795014,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.632323775748059
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.7530544281105452,
+          "shared_basis_retained_energy_fraction": 0.5842996682645425,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.7775210807143005
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.8539055617379868,
+          "shared_basis_retained_energy_fraction": 0.6893779314996031,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.8665655405991247
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.9187072406325268,
+          "shared_basis_retained_energy_fraction": 0.7681267486148159,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.9227056788887698
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9608592348424164,
+          "shared_basis_retained_energy_fraction": 0.827471733990254,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9576303076653132
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9867571985918532,
+          "shared_basis_retained_energy_fraction": 0.8725020404595468,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9791598347034548
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.9068964765128874,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9918951583397974
+        }
+      ]
+    },
+    {
+      "layers": [
+        55,
+        59
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.6928381583502369,
+          "shared_basis_retained_energy_fraction": 0.6228482762930729,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.8089756730150448
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.8465344010086626,
+          "shared_basis_retained_energy_fraction": 0.7709059916712454,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.8951498282959262
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.9176072377768087,
+          "shared_basis_retained_energy_fraction": 0.8469376014282151,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.9368417493642884
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.9556165475339313,
+          "shared_basis_retained_energy_fraction": 0.89043469230453,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.9617305597022172
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9782738112439041,
+          "shared_basis_retained_energy_fraction": 0.9191104227372896,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9777435641921517
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9921997344586503,
+          "shared_basis_retained_energy_fraction": 0.9394849091178559,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9883544945267639
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.9547039101533895,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9951740054764151
+        }
+      ]
+    },
+    {
+      "layers": [
+        59,
+        63
+      ],
+      "fourier_distance_in_transformer_blocks": 4,
+      "ranks": [
+        {
+          "rank": 256,
+          "separate_svd_parameter_count": 3145728,
+          "shared_basis_parameter_count": 1835008,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 8650752,
+          "separate_svd_retained_energy_fraction": 0.6667976049500647,
+          "shared_basis_retained_energy_fraction": 0.5603043202840556,
+          "equal_separate_parameter_budget_shared_rank": 438,
+          "equal_budget_shared_retained_energy_fraction": 0.7344207760827006
+        },
+        {
+          "rank": 384,
+          "separate_svd_parameter_count": 4718592,
+          "shared_basis_parameter_count": 2752512,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 7733248,
+          "separate_svd_retained_energy_fraction": 0.8150958705106675,
+          "shared_basis_retained_energy_fraction": 0.6940648600168433,
+          "equal_separate_parameter_budget_shared_rank": 658,
+          "equal_budget_shared_retained_energy_fraction": 0.8465344727552133
+        },
+        {
+          "rank": 512,
+          "separate_svd_parameter_count": 6291456,
+          "shared_basis_parameter_count": 3670016,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 6815744,
+          "separate_svd_retained_energy_fraction": 0.8937522805967377,
+          "shared_basis_retained_energy_fraction": 0.7800426107060913,
+          "equal_separate_parameter_budget_shared_rank": 877,
+          "equal_budget_shared_retained_energy_fraction": 0.909143954682851
+        },
+        {
+          "rank": 640,
+          "separate_svd_parameter_count": 7864320,
+          "shared_basis_parameter_count": 4587520,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 5898240,
+          "separate_svd_retained_energy_fraction": 0.9407974937911595,
+          "shared_basis_retained_energy_fraction": 0.839671787404125,
+          "equal_separate_parameter_budget_shared_rank": 1097,
+          "equal_budget_shared_retained_energy_fraction": 0.9466900647623477
+        },
+        {
+          "rank": 768,
+          "separate_svd_parameter_count": 9437184,
+          "shared_basis_parameter_count": 5505024,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4980736,
+          "separate_svd_retained_energy_fraction": 0.9706001142529591,
+          "shared_basis_retained_energy_fraction": 0.8822096317478764,
+          "equal_separate_parameter_budget_shared_rank": 1316,
+          "equal_budget_shared_retained_energy_fraction": 0.9700204795083726
+        },
+        {
+          "rank": 896,
+          "separate_svd_parameter_count": 11010048,
+          "shared_basis_parameter_count": 6422528,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 4063232,
+          "separate_svd_retained_energy_fraction": 0.9895939937339682,
+          "shared_basis_retained_energy_fraction": 0.9131662122634935,
+          "equal_separate_parameter_budget_shared_rank": 1536,
+          "equal_budget_shared_retained_energy_fraction": 0.9848226218080764
+        },
+        {
+          "rank": 1024,
+          "separate_svd_parameter_count": 12582912,
+          "shared_basis_parameter_count": 7340032,
+          "dense_pair_parameter_count": 10485760,
+          "shared_basis_net_reduction": 3145728,
+          "separate_svd_retained_energy_fraction": 1.0,
+          "shared_basis_retained_energy_fraction": 0.9361853660963761,
+          "equal_separate_parameter_budget_shared_rank": 1755,
+          "equal_budget_shared_retained_energy_fraction": 0.9939223223272481
+        }
+      ]
+    }
+  ],
+  "decision_rule": "Weight energy only selects candidates. Promotion requires activation-aware action fidelity, positive net parameter reduction including the persistent quantum circuit, exact CUDA simulator execution, and locked language controls.",
+  "proposed_quantum_role": "Run an identity-initialized 10-qubit unitary in the shared rank space, preserving the activation norm; compare against an equal-parameter classical orthogonal butterfly and branch-off control.",
+  "test_rows_inspected_or_used_for_fitness": 0,
+  "created_at": "2026-08-29T04:47:09.026479+00:00"
+}

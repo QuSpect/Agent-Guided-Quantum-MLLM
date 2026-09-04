@@ -1,0 +1,87 @@
+{
+  "status": "pass",
+  "candidate": "QH-023-static-full-model-smoke",
+  "model_parameter_count": 27356728769,
+  "audit": {
+    "candidate": "QH-023-static",
+    "injection_path": "model.model.language_model.layers.7.self_attn.v_proj.input",
+    "adapter": {
+      "candidate": "QH-023",
+      "config": {
+        "hidden_size": 5120,
+        "register_widths": [
+          4096,
+          1024
+        ],
+        "rank": 4,
+        "depth": 2,
+        "layer_index": 7,
+        "target_projection": "v_proj",
+        "gamma_init": 0.05,
+        "singular_init": 0.01,
+        "angle_seed": 20260835
+      },
+      "trainable_parameters": 209,
+      "angle_parameters": 204,
+      "factorization": "delta_W = U diag(lambda) V^T",
+      "simulator_calls_per_forward": 4,
+      "statevector_registers": [
+        "12q",
+        "10q",
+        "12q",
+        "10q"
+      ],
+      "inference_simulator_required": true,
+      "claim_limit": "static simulator prototype; no task benefit or speedup claim"
+    },
+    "trainable_parameter_count": 209,
+    "trainable_tensors": [
+      [
+        "model.language_model.layers.7.self_attn.v_proj.adapter.singular_values",
+        4
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.adapter.gamma",
+        1
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.u_high.theta",
+        56
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.u_low.theta",
+        46
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.v_high.theta",
+        56
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.v_low.theta",
+        46
+      ]
+    ]
+  },
+  "steps": 4,
+  "train_sequences_only": true,
+  "validation_rows_read": 0,
+  "test_rows_read": 0,
+  "losses_for_health_check_only": [
+    1.7919299602508545,
+    2.6694982051849365,
+    3.713425397872925,
+    2.918332576751709
+  ],
+  "gradient_norms": [
+    9.63774618867319e-06,
+    4.706509571406059e-05,
+    2.013991070271004e-05,
+    9.49192326515913e-06
+  ],
+  "all_gradient_norms_finite_nonzero": true,
+  "frozen_parameter_grad_tensor_count": 0,
+  "training_simulator_calls": 32,
+  "eight_forward_simulator_calls": 32,
+  "orthogonality_max_error": 4.172325134277344e-07,
+  "task_effect_claimed": false
+}

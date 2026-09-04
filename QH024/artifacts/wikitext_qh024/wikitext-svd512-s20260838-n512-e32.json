@@ -1,0 +1,350 @@
+{
+  "status": "ok",
+  "run_id": "wikitext-svd512-s20260838-n512-e32",
+  "candidate": "svd512",
+  "model_dir": "./models/Qwen3.8-27B",
+  "timing_context": "shared",
+  "dataset_lock": "./artifacts/wikitext-qh024-distillation-lock.json",
+  "dataset_lock_sha256": "fc2750b0e793f1a9eea204ee2d642d0209076438ed53c45c636f71a522aad04a",
+  "dataset": {
+    "name": "Salesforce/wikitext wikitext-2-raw-v1",
+    "source_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "license": "CC BY-SA 4.0",
+    "sequence_length": 256,
+    "train_indices": [],
+    "eval_indices": [
+      129,
+      299,
+      302,
+      223,
+      815,
+      269,
+      584,
+      710,
+      961,
+      331,
+      488,
+      329,
+      995,
+      586,
+      270,
+      1016,
+      616,
+      720,
+      124,
+      571,
+      4,
+      71,
+      177,
+      889,
+      1017,
+      356,
+      57,
+      258,
+      204,
+      846,
+      477,
+      1014
+    ],
+    "train_tokens_sha256": "a7a63176fe5e6712e8c49b1708f2ae8a8850191595603660adfe08d20f6c6f64",
+    "validation_tokens_sha256": "8d111ebb5cd5f7cced54fb455aa6f3e047567e16ee6d1e281e66db8522d7ec31",
+    "test_rows_inspected_or_used_for_fitness": 0
+  },
+  "injection": {
+    "candidate": "QH-024",
+    "replacement_path": "model.model.language_model.layers.7.self_attn.v_proj",
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27354744109,
+    "net_model_parameter_reduction": 1984451,
+    "replacement": {
+      "candidate": "QH-024",
+      "config": {
+        "hidden_size": 5120,
+        "output_size": 1024,
+        "svd_rank": 512,
+        "n_qubits": 10,
+        "depth": 2,
+        "layer_index": 7,
+        "target_projection": "v_proj",
+        "gamma_init": 0.1,
+        "parameter_seed": 20260838
+      },
+      "architecture": "frozen rank-r SVD backbone + trainable HyQuT residual",
+      "original_projection_parameters": 5242880,
+      "deployed_replacement_parameters": 3258429,
+      "removed_projection_parameters": 1984451,
+      "trainable_parameters": 112701,
+      "teacher_is_nonpersistent_training_buffer": true,
+      "original_dense_projection_in_deployed_parameter_set": false,
+      "simulator_calls_per_student_forward": 1,
+      "residual_enabled": true,
+      "inference_simulator_required": true,
+      "statevector_qubits": 10,
+      "claim_limit": "GPU-simulated executable structure; no hardware or speed advantage claim"
+    },
+    "trainable_parameter_count": 112701,
+    "trainable_tensors": [
+      [
+        "model.language_model.layers.7.self_attn.v_proj.gamma",
+        1
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.down.weight",
+        102400
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.up.weight",
+        10240
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.core.theta",
+        60
+      ]
+    ]
+  },
+  "training": {
+    "steps": 0,
+    "role": "untrained causal zero-residual control"
+  },
+  "evaluation_active": {
+    "metrics": {
+      "sequence_count": 32,
+      "predicted_token_count": 8160,
+      "mean_token_nll": 2.354116402566433,
+      "token_perplexity": 10.528821510659983,
+      "mean_sequence_seconds": 0.20307307376060635,
+      "p95_sequence_seconds": 0.19004041310399772
+    },
+    "rows": [
+      {
+        "block_index": 129,
+        "mean_token_nll": 2.1030259132385254,
+        "predicted_tokens": 255,
+        "seconds": 0.6509333476424217
+      },
+      {
+        "block_index": 299,
+        "mean_token_nll": 2.6338627338409424,
+        "predicted_tokens": 255,
+        "seconds": 0.18463582545518875
+      },
+      {
+        "block_index": 302,
+        "mean_token_nll": 2.3173372745513916,
+        "predicted_tokens": 255,
+        "seconds": 0.18417120724916458
+      },
+      {
+        "block_index": 223,
+        "mean_token_nll": 1.754469871520996,
+        "predicted_tokens": 255,
+        "seconds": 0.1841205470263958
+      },
+      {
+        "block_index": 815,
+        "mean_token_nll": 2.357189178466797,
+        "predicted_tokens": 255,
+        "seconds": 0.18409250304102898
+      },
+      {
+        "block_index": 269,
+        "mean_token_nll": 2.285968542098999,
+        "predicted_tokens": 255,
+        "seconds": 0.1841491237282753
+      },
+      {
+        "block_index": 584,
+        "mean_token_nll": 2.124584197998047,
+        "predicted_tokens": 255,
+        "seconds": 0.1840752214193344
+      },
+      {
+        "block_index": 710,
+        "mean_token_nll": 2.6840691566467285,
+        "predicted_tokens": 255,
+        "seconds": 0.18418742716312408
+      },
+      {
+        "block_index": 961,
+        "mean_token_nll": 1.9393500089645386,
+        "predicted_tokens": 255,
+        "seconds": 0.1899564228951931
+      },
+      {
+        "block_index": 331,
+        "mean_token_nll": 2.124755382537842,
+        "predicted_tokens": 255,
+        "seconds": 0.18996251747012138
+      },
+      {
+        "block_index": 488,
+        "mean_token_nll": 2.420811176300049,
+        "predicted_tokens": 255,
+        "seconds": 0.18999367579817772
+      },
+      {
+        "block_index": 329,
+        "mean_token_nll": 2.635139226913452,
+        "predicted_tokens": 255,
+        "seconds": 0.19004551693797112
+      },
+      {
+        "block_index": 995,
+        "mean_token_nll": 2.4571216106414795,
+        "predicted_tokens": 255,
+        "seconds": 0.1898878924548626
+      },
+      {
+        "block_index": 586,
+        "mean_token_nll": 2.4924230575561523,
+        "predicted_tokens": 255,
+        "seconds": 0.1899099051952362
+      },
+      {
+        "block_index": 270,
+        "mean_token_nll": 2.1970396041870117,
+        "predicted_tokens": 255,
+        "seconds": 0.1899927742779255
+      },
+      {
+        "block_index": 1016,
+        "mean_token_nll": 2.6399476528167725,
+        "predicted_tokens": 255,
+        "seconds": 0.19003623723983765
+      },
+      {
+        "block_index": 616,
+        "mean_token_nll": 2.927083730697632,
+        "predicted_tokens": 255,
+        "seconds": 0.1900346577167511
+      },
+      {
+        "block_index": 720,
+        "mean_token_nll": 2.2421936988830566,
+        "predicted_tokens": 255,
+        "seconds": 0.18987475708127022
+      },
+      {
+        "block_index": 124,
+        "mean_token_nll": 2.1385815143585205,
+        "predicted_tokens": 255,
+        "seconds": 0.18981937319040298
+      },
+      {
+        "block_index": 571,
+        "mean_token_nll": 3.2453460693359375,
+        "predicted_tokens": 255,
+        "seconds": 0.18992652371525764
+      },
+      {
+        "block_index": 4,
+        "mean_token_nll": 2.231642723083496,
+        "predicted_tokens": 255,
+        "seconds": 0.18991726636886597
+      },
+      {
+        "block_index": 71,
+        "mean_token_nll": 2.678382635116577,
+        "predicted_tokens": 255,
+        "seconds": 0.18989749252796173
+      },
+      {
+        "block_index": 177,
+        "mean_token_nll": 1.9350072145462036,
+        "predicted_tokens": 255,
+        "seconds": 0.18975886702537537
+      },
+      {
+        "block_index": 889,
+        "mean_token_nll": 2.8440237045288086,
+        "predicted_tokens": 255,
+        "seconds": 0.18985150754451752
+      },
+      {
+        "block_index": 1017,
+        "mean_token_nll": 2.6616156101226807,
+        "predicted_tokens": 255,
+        "seconds": 0.18978729471564293
+      },
+      {
+        "block_index": 356,
+        "mean_token_nll": 2.2623558044433594,
+        "predicted_tokens": 255,
+        "seconds": 0.18990422040224075
+      },
+      {
+        "block_index": 57,
+        "mean_token_nll": 1.8277721405029297,
+        "predicted_tokens": 255,
+        "seconds": 0.18988321349024773
+      },
+      {
+        "block_index": 258,
+        "mean_token_nll": 2.296576499938965,
+        "predicted_tokens": 255,
+        "seconds": 0.18991582468152046
+      },
+      {
+        "block_index": 204,
+        "mean_token_nll": 2.0571951866149902,
+        "predicted_tokens": 255,
+        "seconds": 0.1899186410009861
+      },
+      {
+        "block_index": 846,
+        "mean_token_nll": 2.0328681468963623,
+        "predicted_tokens": 255,
+        "seconds": 0.18997766077518463
+      },
+      {
+        "block_index": 477,
+        "mean_token_nll": 2.2089781761169434,
+        "predicted_tokens": 255,
+        "seconds": 0.18982015177607536
+      },
+      {
+        "block_index": 1014,
+        "mean_token_nll": 2.575007438659668,
+        "predicted_tokens": 255,
+        "seconds": 0.18990076333284378
+      }
+    ]
+  },
+  "evaluation_zero_residual": null,
+  "simulator_calls_before_zero_evaluation": null,
+  "simulator_calls_after_zero_evaluation": null,
+  "replacement_audit_after_teacher_strip": {
+    "candidate": "QH-024",
+    "config": {
+      "hidden_size": 5120,
+      "output_size": 1024,
+      "svd_rank": 512,
+      "n_qubits": 10,
+      "depth": 2,
+      "layer_index": 7,
+      "target_projection": "v_proj",
+      "gamma_init": 0.1,
+      "parameter_seed": 20260838
+    },
+    "architecture": "frozen rank-r SVD backbone + trainable HyQuT residual",
+    "original_projection_parameters": 5242880,
+    "deployed_replacement_parameters": 3258429,
+    "removed_projection_parameters": 1984451,
+    "trainable_parameters": 112701,
+    "teacher_is_nonpersistent_training_buffer": false,
+    "original_dense_projection_in_deployed_parameter_set": false,
+    "simulator_calls_per_student_forward": 1,
+    "residual_enabled": false,
+    "inference_simulator_required": true,
+    "statevector_qubits": 10,
+    "claim_limit": "GPU-simulated executable structure; no hardware or speed advantage claim"
+  },
+  "checkpoint": null,
+  "gpu_peak_allocated_bytes": [
+    11995654144,
+    14566888448,
+    14567805952,
+    14600894976
+  ],
+  "checked_at": "2026-08-29T03:00:21.042679+00:00"
+}

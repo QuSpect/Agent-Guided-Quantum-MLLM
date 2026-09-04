@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "purpose": "adapter_checkpoint_parameter_utilization_audit",
+  "checkpoint_count": 2,
+  "checkpoints": [
+    {
+      "path": "artifacts/editclevr/editclevr-qh023-stage-a-s20260836-n512-e256-adapter.pt",
+      "sha256": "03ebcbba7c787a7e589dd7c532fc3fbda271627f5e761fccd592a02767091d63",
+      "tensor_count": 6,
+      "trainable_numel": 209,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 2,
+          "numel": 5,
+          "l2_norm": 0.0746141846903548
+        },
+        "residual_or_quantum_router": {
+          "tensor_count": 4,
+          "numel": 204,
+          "l2_norm": 0.21799160897537245
+        }
+      },
+      "scalar_mix_or_scale": {
+        "model.language_model.layers.7.self_attn.v_proj.adapter.gamma": 0.06410938501358032
+      },
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {},
+      "mix_branch_activity": "no_mix_parameter_found",
+      "tensors": {
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.u_high.theta": {
+          "shape": [
+            56
+          ],
+          "numel": 56,
+          "l2_norm": 0.10908193071343505,
+          "max_abs": 0.02709479257464409,
+          "mean": -0.0005711320388529982,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.u_low.theta": {
+          "shape": [
+            46
+          ],
+          "numel": 46,
+          "l2_norm": 0.10843618898473645,
+          "max_abs": 0.03053652122616768,
+          "mean": 0.0004816189452274399,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.v_high.theta": {
+          "shape": [
+            56
+          ],
+          "numel": 56,
+          "l2_norm": 0.11600791355571212,
+          "max_abs": 0.03297511860728264,
+          "mean": -0.001720737743848336,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.v_low.theta": {
+          "shape": [
+            46
+          ],
+          "numel": 46,
+          "l2_norm": 0.10200603357849959,
+          "max_abs": 0.037541214376688004,
+          "mean": -0.005204558266205308,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.gamma": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.06410938501358032,
+          "max_abs": 0.06410938501358032,
+          "mean": 0.06410938501358032,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.singular_values": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.038174118328874344,
+          "max_abs": 0.02689696103334427,
+          "mean": 0.015114129870198667,
+          "all_finite": true
+        }
+      }
+    },
+    {
+      "path": "artifacts/editclevr/editclevr-cc023-stage-a-s20260836-n512-e256-adapter.pt",
+      "sha256": "72ec84735444d120187328c65615e775f4e610ca94b5cab99954b1a87902dd60",
+      "tensor_count": 6,
+      "trainable_numel": 209,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 2,
+          "numel": 5,
+          "l2_norm": 0.05796358967278677
+        },
+        "residual_or_quantum_router": {
+          "tensor_count": 4,
+          "numel": 204,
+          "l2_norm": 0.09469243738228555
+        }
+      },
+      "scalar_mix_or_scale": {
+        "model.language_model.layers.7.self_attn.v_proj.adapter.gamma": 0.053192880004644394
+      },
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {},
+      "mix_branch_activity": "no_mix_parameter_found",
+      "tensors": {
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.u_high.theta": {
+          "shape": [
+            56
+          ],
+          "numel": 56,
+          "l2_norm": 0.05068560017949943,
+          "max_abs": 0.01553841307759285,
+          "mean": 0.00025193847328150047,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.u_low.theta": {
+          "shape": [
+            46
+          ],
+          "numel": 46,
+          "l2_norm": 0.05724092935957152,
+          "max_abs": 0.016987135633826256,
+          "mean": 0.0018591415615525836,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.v_high.theta": {
+          "shape": [
+            56
+          ],
+          "numel": 56,
+          "l2_norm": 0.0423264493800124,
+          "max_abs": 0.012064723297953606,
+          "mean": 0.0006597463650125844,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.circuits.v_low.theta": {
+          "shape": [
+            46
+          ],
+          "numel": 46,
+          "l2_norm": 0.03646334215038153,
+          "max_abs": 0.012933262623846531,
+          "mean": -0.0012484894288481091,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.gamma": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.053192880004644394,
+          "max_abs": 0.053192880004644394,
+          "mean": 0.053192880004644394,
+          "all_finite": true
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.singular_values": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.023028140275903632,
+          "max_abs": 0.017011165618896484,
+          "mean": 0.010804002173244953,
+          "all_finite": true
+        }
+      }
+    }
+  ]
+}

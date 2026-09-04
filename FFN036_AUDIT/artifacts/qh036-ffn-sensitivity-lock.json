@@ -1,0 +1,45 @@
+{
+  "status": "locked_before_qh036_ffn_sensitivity_results",
+  "candidate": "QH-036 activation-aware FFN replacement feasibility",
+  "stage": "train-only destructive ablation; no optimization; no validation/test",
+  "dataset": "Salesforce/wikitext wikitext-2-raw-v1 train only",
+  "tokens_sha256": "a7a63176fe5e6712e8c49b1708f2ae8a8850191595603660adfe08d20f6c6f64",
+  "sequence_length": 256,
+  "seed": 20260863,
+  "block_indices": [
+    5981,
+    8938,
+    6547,
+    3925,
+    6351,
+    5641,
+    2970,
+    3063,
+    7187,
+    8789,
+    6914,
+    2602
+  ],
+  "count": 12,
+  "excluded_prior_indices_count": 6980,
+  "available_before_selection": 2816,
+  "prior_json_parsed": 275,
+  "overlap": 0,
+  "source": {
+    "path": "./scripts/audit_qh036_ffn_sensitivity.py",
+    "sha256": "d606c592a8f46941389ccd022b6918e214d51825805c78ab0498d2ad29ad46af"
+  },
+  "screen_protocol": {
+    "arms": [
+      "base",
+      "zero one complete FFN at each of 64 layers"
+    ],
+    "metric": "paired token NLL delta",
+    "selection": "rank layers by smallest mean deletion delta; this only chooses candidates for a later independent activation-recoverability audit",
+    "claim_limit": "No quantum or quality claim from 12 train blocks"
+  },
+  "next_gate": "Only top deletion-tolerant layers may enter closed-form affine/reduced-rank activation distillation on a new train-only split",
+  "validation_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "created_at": "2026-08-29T07:56:22.338794+00:00"
+}

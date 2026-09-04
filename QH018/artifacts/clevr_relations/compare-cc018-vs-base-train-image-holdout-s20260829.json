@@ -1,0 +1,31 @@
+{
+  "base": "artifacts/clevr_relations/clevr-relations-base-train-image-holdout-s20260829-n0.json",
+  "candidate": "artifacts/clevr_relations/clevr-relations-cc018-hard-train-image-holdout-s20260829-n256.json",
+  "base_sha256": "291760a039586284ac33b4d4a4036b5c57018d5d97a797e2f8c9e0cae381982d",
+  "candidate_sha256": "de44d4418ef536b8c41dc4e9681f37102bbe4fd001f1823f3edb0d71f05ea3a1",
+  "paired_n": 128,
+  "image_clusters": 128,
+  "base_exact_accuracy": 0.9296875,
+  "candidate_exact_accuracy": 0.921875,
+  "candidate_minus_base": -0.0078125,
+  "image_cluster_bootstrap_95_ci": [
+    -0.03925781249999982,
+    0.0234375
+  ],
+  "bootstrap_probability_delta_gt_zero": 0.2462,
+  "candidate_wins": 2,
+  "base_wins": 3,
+  "ties": 123,
+  "visual_gain_comparison": {
+    "n": 64,
+    "image_clusters": 64,
+    "delta": 0.0,
+    "bootstrap_95_ci": [
+      -0.046875,
+      0.046875
+    ]
+  },
+  "bootstrap_samples": 10000,
+  "seed": 20260829,
+  "created_at": "2026-08-28T22:29:46.687469+00:00"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "config": {
+    "hidden_size": 16,
+    "intermediate_size": 24,
+    "target_layer": 0,
+    "latent_size": 8,
+    "group_size": 4,
+    "num_qubits": 4,
+    "depth": 2,
+    "eps": 1e-06,
+    "init_seed": 20260868,
+    "residual_alpha_init": 0.001
+  },
+  "q_dq_max_abs": {
+    "forward": 0.0,
+    "input_grad": 0.0,
+    "theta_grad": 1.8189894035458565e-12,
+    "alpha_grad": 0.0
+  },
+  "alpha_zero_vs_branch_off_max_abs": 0.0,
+  "cc_dead_trainables": false,
+  "frozen_scaffold_gradient_tensor_count": 0,
+  "cpu_rejected": true,
+  "parameter_audit": {
+    "original_parameters_removed": 1152,
+    "low_rank_parameters": 256,
+    "frozen_classical_core_parameters": 32,
+    "residual_circuit_or_control_parameters": 32,
+    "residual_alpha_parameters": 8,
+    "trainable_parameters": 40,
+    "total_replacement_parameters": 328,
+    "net_parameter_reduction": 824
+  },
+  "created_at": "2026-08-29T08:42:22.191381+00:00"
+}

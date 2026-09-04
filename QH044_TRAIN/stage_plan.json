@@ -1,0 +1,12 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/prepare_wikitext.py"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "prepare_wikitext.py"
+}

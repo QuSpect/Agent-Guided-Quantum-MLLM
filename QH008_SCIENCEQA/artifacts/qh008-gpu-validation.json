@@ -1,0 +1,102 @@
+{
+  "status": "pass",
+  "candidate": "QH-008",
+  "parameter_counts": {
+    "quantum": 696937,
+    "classical": 696937,
+    "no_entanglement": 696937
+  },
+  "outputs": {
+    "quantum": {
+      "changed_fraction": 0.435464471578598,
+      "relative_residual_rms": 0.00234640552662313,
+      "finite": true
+    },
+    "classical": {
+      "changed_fraction": 0.43518906831741333,
+      "relative_residual_rms": 0.002344696782529354,
+      "finite": true
+    },
+    "no_entanglement": {
+      "changed_fraction": 0.4405326843261719,
+      "relative_residual_rms": 0.002388688735663891,
+      "finite": true
+    }
+  },
+  "gradient_group_norm_sums": {
+    "quantum": {
+      "raw_scale": 1.5535353668383323e-05,
+      "local_down": 0.00021547608230321202,
+      "quantum_down": 9.205192654349048e-06,
+      "core": 7.194321938186476e-08,
+      "gate_up": 1.8216687749372795e-06,
+      "local_up": 0.001361524104140699
+    },
+    "classical": {
+      "raw_scale": 1.5363692000391893e-05,
+      "local_down": 0.00021551118175011652,
+      "quantum_down": 8.441303862127825e-06,
+      "core": 1.044216162426892e-07,
+      "gate_up": 3.2492685022589285e-06,
+      "local_up": 0.0013605387648567557
+    },
+    "no_entanglement": {
+      "raw_scale": 5.192756361793727e-06,
+      "local_down": 0.00021642712454195134,
+      "quantum_down": 1.1353883294873413e-05,
+      "core": 8.909221094199893e-08,
+      "gate_up": 4.339272891229484e-06,
+      "local_up": 0.0013770670630037785
+    }
+  },
+  "nonzero_gradient_groups": {
+    "quantum": [
+      "core",
+      "gate_up",
+      "local_down",
+      "local_up",
+      "quantum_down",
+      "raw_scale"
+    ],
+    "classical": [
+      "core",
+      "gate_up",
+      "local_down",
+      "local_up",
+      "quantum_down",
+      "raw_scale"
+    ],
+    "no_entanglement": [
+      "core",
+      "gate_up",
+      "local_down",
+      "local_up",
+      "quantum_down",
+      "raw_scale"
+    ]
+  },
+  "median_forward_backward_ms": {
+    "quantum": 35.40060669183731,
+    "classical": 4.184596240520477
+  },
+  "peak_allocated_bytes": {
+    "quantum": 90811904,
+    "classical": 69007872
+  },
+  "cpu_quantum_path_rejected": true,
+  "finite_difference": {
+    "theta": {
+      "analytic": -2.1465830286615528e-05,
+      "numeric": -2.153683453798294e-05,
+      "relative_error": 0.001651159332962931
+    },
+    "quantum_down": {
+      "analytic": 8.603357127867639e-05,
+      "numeric": 8.565257303416729e-05,
+      "relative_error": 0.0022191554597140476
+    }
+  },
+  "finite_difference_relative_error_max": 0.02,
+  "device": "NVIDIA A800-SXM4-80GB",
+  "torch": "2.8.0+cu128"
+}

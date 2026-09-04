@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "candidate": "QH-032 Pauli-observable nonlinear shared-basis replacement",
+  "small_config": {
+    "hidden_size": 32,
+    "output_size": 16,
+    "rank": 16,
+    "layer_indices": [
+      0,
+      1
+    ],
+    "num_qubits": 4,
+    "observable_offsets": [
+      1,
+      2
+    ],
+    "eps": 1e-12
+  },
+  "small_parameter_count_per_core": 32,
+  "zero_alpha_identity_max_abs": 0.0,
+  "dequantization_checks": {
+    "forward_max_abs": 5.960464477539063e-08,
+    "forward_relative_l2": 7.9594482116363e-09,
+    "input_gradient_max_abs": 1.1920928955078125e-07,
+    "input_gradient_relative_l2": 1.7458578582818518e-08,
+    "theta_gradient_max_abs": 2.2351741790771484e-08,
+    "theta_gradient_relative_l2": 1.833961675856699e-07,
+    "alpha_gradient_max_abs": 2.980232238769531e-07,
+    "alpha_gradient_relative_l2": 1.8248888977723254e-07
+  },
+  "gradient_audit": {
+    "qh": {
+      "theta_norm": 0.011904257349669933,
+      "alpha_norm": 0.17457370460033417,
+      "all_finite": true
+    },
+    "dq": {
+      "theta_norm": 0.01813167706131935,
+      "alpha_norm": 0.2978648841381073,
+      "all_finite": true
+    },
+    "cc": {
+      "theta_norm": 0.017979949712753296,
+      "alpha_norm": 0.3087335526943207,
+      "all_finite": true
+    },
+    "no_ent": {
+      "theta_norm": 0.022243492305278778,
+      "alpha_norm": 0.16626428067684174,
+      "all_finite": true
+    }
+  },
+  "cpu_quantum_path_rejected": true,
+  "full_parameter_audit": {
+    "original_parameters_removed": 10485760,
+    "frozen_replacement_parameters": 7340032,
+    "trainable_parameters": 82,
+    "total_replacement_parameters": 7340114,
+    "net_parameter_reduction": 3145646,
+    "observable_count": 60
+  },
+  "simulator_calls": 3,
+  "created_at": "2026-08-29T05:58:37.792904+00:00"
+}

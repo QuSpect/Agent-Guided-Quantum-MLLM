@@ -1,0 +1,89 @@
+{
+  "status": "ok",
+  "intervention": "router_mix_zero_branch_off",
+  "interpretation": "positive means enabled branch helps; negative means branch-off helps",
+  "seed_count": 3,
+  "quality": {
+    "enabled_minus_disabled": -0.005208333333333333,
+    "ci95": [
+      -0.018229166666666668,
+      0.0
+    ],
+    "probability_enabled_better": 0.0,
+    "probability_disabled_better": 0.64055
+  },
+  "multimodal_gain": {
+    "enabled_minus_disabled": -0.015625,
+    "ci95": [
+      -0.046875,
+      0.005208333333333333
+    ],
+    "probability_enabled_better": 0.059,
+    "probability_disabled_better": 0.8231
+  },
+  "causal_intervention_passed": false,
+  "decision": "fails_to_support_branch",
+  "seed_summaries": [
+    {
+      "seed": 20260829,
+      "paired_n": 128,
+      "counterfactual_paired_n": 64,
+      "enabled_accuracy": 0.9375,
+      "disabled_accuracy": 0.9375,
+      "enabled_minus_disabled": 0.0,
+      "enabled_only_correct": 0,
+      "disabled_only_correct": 0,
+      "normalized_prediction_changes": 0
+    },
+    {
+      "seed": 20260830,
+      "paired_n": 128,
+      "counterfactual_paired_n": 64,
+      "enabled_accuracy": 0.9453125,
+      "disabled_accuracy": 0.9453125,
+      "enabled_minus_disabled": 0.0,
+      "enabled_only_correct": 0,
+      "disabled_only_correct": 0,
+      "normalized_prediction_changes": 0
+    },
+    {
+      "seed": 20260831,
+      "paired_n": 128,
+      "counterfactual_paired_n": 64,
+      "enabled_accuracy": 0.9375,
+      "disabled_accuracy": 0.953125,
+      "enabled_minus_disabled": -0.015625,
+      "enabled_only_correct": 0,
+      "disabled_only_correct": 2,
+      "normalized_prediction_changes": 2
+    }
+  ],
+  "bootstrap_samples": 20000,
+  "bootstrap_seed": 20260829,
+  "immutable_inputs": [
+    {
+      "path": "quantum_qwen38_agent\\artifacts\\clevr_relations\\clevr-relations-qh018-hard-train-image-holdout-s20260829-n256.json",
+      "sha256": "b63c6656db51679200cfda3f2725ace43e2d8753188d4429b78304e1604ec230"
+    },
+    {
+      "path": "quantum_qwen38_agent\\artifacts\\clevr_relations\\clevr-relations-qh018-mix0-hard-train-image-holdout-s20260829-n256.json",
+      "sha256": "3e3e04bbcf50dca2916b9b316cd90035e2d287431e7ea266bed6f87e72242f3f"
+    },
+    {
+      "path": "quantum_qwen38_agent\\artifacts\\clevr_relations\\clevr-relations-qh018-hard-train-image-holdout-s20260830-n256.json",
+      "sha256": "8fdd67a3c98c3cf5c18f2117eeed8607a07b6b7c33169e2d1784c36f1153ff19"
+    },
+    {
+      "path": "quantum_qwen38_agent\\artifacts\\clevr_relations\\clevr-relations-qh018-mix0-hard-train-image-holdout-s20260830-n256.json",
+      "sha256": "7f4c674c45f12fc74b9765172e0ba231025b2f86d037d92617ee554881f1cbce"
+    },
+    {
+      "path": "quantum_qwen38_agent\\artifacts\\clevr_relations\\clevr-relations-qh018-hard-train-image-holdout-s20260831-n256.json",
+      "sha256": "73897ce75166911d7979603791da7ef312c4dae93c89aba5f183bfffb842e1ff"
+    },
+    {
+      "path": "quantum_qwen38_agent\\artifacts\\clevr_relations\\clevr-relations-qh018-mix0-hard-train-image-holdout-s20260831-n256.json",
+      "sha256": "6aadefb58dada7129caa0ba722380a824f15d913952e77a44cdc96b9183b9bbb"
+    }
+  ]
+}

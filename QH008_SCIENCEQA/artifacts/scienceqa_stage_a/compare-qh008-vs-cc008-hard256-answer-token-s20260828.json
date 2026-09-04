@@ -1,0 +1,49 @@
+{
+  "status": "ok",
+  "base_run_id": "scienceqa-cc008-s20260828-n256-hard-cfw0.5-m0.5-answer-token",
+  "candidate_run_id": "scienceqa-qh008-s20260828-n256-hard-cfw0.5-m0.5-answer-token",
+  "paired_n": 128,
+  "counterfactual_paired_n": 64,
+  "accuracy": {
+    "estimate": 0.0,
+    "ci95": [
+      -0.0390625,
+      0.0390625
+    ],
+    "bootstrap_probability_gt_zero": 0.4264,
+    "base_accuracy": 0.90625,
+    "candidate_accuracy": 0.90625,
+    "delta_percentage_points": 0.0,
+    "ci95_percentage_points": [
+      -3.90625,
+      3.90625
+    ]
+  },
+  "mcnemar": {
+    "base_only_correct": 3,
+    "candidate_only_correct": 3,
+    "discordant": 6,
+    "exact_two_sided_p": 1.0
+  },
+  "multimodal_gain_original_minus_blank": {
+    "estimate": 0.015625,
+    "ci95": [
+      -0.046875,
+      0.078125
+    ],
+    "bootstrap_probability_gt_zero": 0.5888,
+    "base_multimodal_gain": 0.078125,
+    "candidate_multimodal_gain": 0.09375,
+    "delta_percentage_points": 1.5625,
+    "ci95_percentage_points": [
+      -4.6875,
+      7.8125
+    ]
+  },
+  "interpretation": {
+    "accuracy_ci_excludes_zero": false,
+    "multimodal_gain_ci_excludes_zero": false,
+    "confirmatory_claim_allowed": false,
+    "reason": "single-seed Stage-A remains exploratory"
+  }
+}

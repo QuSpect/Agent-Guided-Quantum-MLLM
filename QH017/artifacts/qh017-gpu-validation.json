@@ -1,0 +1,131 @@
+{
+  "status": "pass",
+  "device": "NVIDIA A800-SXM4-80GB",
+  "config": {
+    "hidden_size": 64,
+    "token_rank": 12,
+    "object_rank": 8,
+    "n_qubits": 4,
+    "depth": 2,
+    "regions_per_side": 2,
+    "routing_temperature": 0.25,
+    "gate_strength": 1.0,
+    "scale_init": 0.05,
+    "scale_max": 1.0,
+    "token_up_init_std": 0.001
+  },
+  "equal_parameter_count": true,
+  "all_gradient_groups_nonzero": true,
+  "finite_difference_ok": true,
+  "routing_and_fidelity_valid": true,
+  "seven_states_per_image": true,
+  "missing_anchor_rejected": true,
+  "cpu_path_rejected": true,
+  "results": [
+    {
+      "kind": "quantum",
+      "parameter_count": 3209,
+      "finite": true,
+      "circuit_evaluations": 14,
+      "routing_row_sums": [
+        1.0,
+        1.0000001192092896
+      ],
+      "routing_min": 0.023927345871925354,
+      "fidelity_min": 3.359350739629008e-05,
+      "fidelity_max": 0.43646490573883057,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "pair_position": 0.0002908709575422108,
+        "raw_scale": 0.0007945498800836504,
+        "token_down.weight": 0.019637662917375565,
+        "token_down.bias": 0.002468676073476672,
+        "object_down.weight": 0.005893079563975334,
+        "object_down.bias": 0.0006227022968232632,
+        "text_down.weight": 0.003737041028216481,
+        "text_down.bias": 0.0001449775736546144,
+        "key_down.weight": 0.0013673945795744658,
+        "key_down.bias": 0.0002046328881988302,
+        "query_down.weight": 0.001542616286315024,
+        "query_down.bias": 0.00021664991800207645,
+        "pair_content.weight": 0.002976992167532444,
+        "pair_content.bias": 0.0007044592057354748,
+        "router.theta": 0.00017059437232092023,
+        "token_up.weight": 3.711714029312134
+      },
+      "finite_difference": -9.705254342406988e-05,
+      "analytic_gradient": -9.704503463581204e-05,
+      "finite_difference_absolute_error": 7.508788257837296e-09
+    },
+    {
+      "kind": "classical",
+      "parameter_count": 3209,
+      "finite": true,
+      "circuit_evaluations": 14,
+      "routing_row_sums": [
+        1.0,
+        1.0
+      ],
+      "routing_min": 0.0017969117034226656,
+      "fidelity_min": 0.0011788852280005813,
+      "fidelity_max": 0.8914592266082764,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "pair_position": 0.0009228592389263213,
+        "raw_scale": 0.0016968175768852234,
+        "token_down.weight": 0.023563845083117485,
+        "token_down.bias": 0.0023249939549714327,
+        "object_down.weight": 0.018124103546142578,
+        "object_down.bias": 0.0023072927724570036,
+        "text_down.weight": 0.014855027198791504,
+        "text_down.bias": 0.001857628347352147,
+        "key_down.weight": 0.004035172518342733,
+        "key_down.bias": 0.0013977015623822808,
+        "query_down.weight": 0.010295012965798378,
+        "query_down.bias": 0.0025838122237473726,
+        "pair_content.weight": 0.008548078127205372,
+        "pair_content.bias": 0.0024799511302262545,
+        "router.affine": 0.001744009554386139,
+        "token_up.weight": 3.5987863540649414
+      },
+      "finite_difference": 0.0010839838068932295,
+      "analytic_gradient": 0.0010843335185199976,
+      "finite_difference_absolute_error": 3.497116267681122e-07
+    },
+    {
+      "kind": "no_entanglement",
+      "parameter_count": 3209,
+      "finite": true,
+      "circuit_evaluations": 14,
+      "routing_row_sums": [
+        0.9999999403953552,
+        1.0
+      ],
+      "routing_min": 0.012337746098637581,
+      "fidelity_min": 8.143156833284593e-07,
+      "fidelity_max": 0.5414485335350037,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "pair_position": 0.0005785245448350906,
+        "raw_scale": 0.0005755126476287842,
+        "token_down.weight": 0.02006937749683857,
+        "token_down.bias": 0.001402068417519331,
+        "object_down.weight": 0.008077111095190048,
+        "object_down.bias": 0.001553536974824965,
+        "text_down.weight": 0.006938181351870298,
+        "text_down.bias": 0.0009659231291152537,
+        "key_down.weight": 0.0025503055658191442,
+        "key_down.bias": 0.0005586542538367212,
+        "query_down.weight": 0.0021337897051125765,
+        "query_down.bias": 0.0008558834088034928,
+        "pair_content.weight": 0.004581321030855179,
+        "pair_content.bias": 0.001337051740847528,
+        "router.theta": 0.0007894439622759819,
+        "token_up.weight": 3.132472276687622
+      },
+      "finite_difference": -0.0002780579961836338,
+      "analytic_gradient": -0.00027801384567283094,
+      "finite_difference_absolute_error": 4.415051080286503e-08
+    }
+  ]
+}

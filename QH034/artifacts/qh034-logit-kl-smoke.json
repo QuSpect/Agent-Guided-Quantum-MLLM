@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "candidate": "QH-034 zero-init output KL",
+  "train_block_index": 8749,
+  "sequence_length": 256,
+  "teacher_logits_shape": [
+    1,
+    255,
+    248320
+  ],
+  "mean_token_teacher_to_student_kl": 0.0008429943700321019,
+  "theta_gradient_norm": 0.004817961249500513,
+  "theta_nonzero_gradient_elements": 80,
+  "gamma_gradient_norm": 0.0,
+  "total_gradient_norm": 0.0048179617151618,
+  "post_step_theta_norm": 0.008938930928707123,
+  "step_seconds": 0.4714038111269474,
+  "simulator_calls": 2,
+  "frozen_gradient_tensor_count": 0,
+  "parameter_audit": {
+    "original_parameters_removed": 10485760,
+    "frozen_replacement_parameters": 7340032,
+    "trainable_parameters": 82,
+    "total_replacement_parameters": 7340114,
+    "net_parameter_reduction": 3145646,
+    "spectral_scale_count": 1024,
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27353582914,
+    "net_model_parameter_reduction": 3145646,
+    "trainable_parameter_count": 82,
+    "branch": "quantum",
+    "layer_indices": [
+      55,
+      59
+    ],
+    "rank": 1024,
+    "num_qubits": 10,
+    "depth": 2,
+    "entangling_offsets": [
+      1,
+      2,
+      4
+    ],
+    "runtime_scale_generation": true,
+    "gpu_exact_statevector_required": true
+  },
+  "validation_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "gpu_peak_allocated_bytes": [
+    13385408512,
+    14566888448,
+    14567805952,
+    15305738752
+  ]
+}

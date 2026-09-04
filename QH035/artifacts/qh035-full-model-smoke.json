@@ -1,0 +1,83 @@
+{
+  "status": "pass",
+  "mode": "two-step already-consumed-train-only full-model integration smoke",
+  "candidate": "QH-035 shared RMSNorm quantum residual",
+  "model_dir": "./models/Qwen3.8-27B",
+  "source_lock": "./artifacts/qh031-shared-basis-lock.json",
+  "source_lock_sha256": "7491a0f8f5cb76756840adec62c4624a6595b04295af262a0e0cd4e16955bf14",
+  "train_tokens_sha256": "a7a63176fe5e6712e8c49b1708f2ae8a8850191595603660adfe08d20f6c6f64",
+  "sequence_length": 256,
+  "train_block_indices": [
+    8749,
+    5724
+  ],
+  "holdout_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "parameter_audit": {
+    "original_parameters_removed": 20480,
+    "frozen_replacement_parameters": 5120,
+    "trainable_parameters": 108,
+    "total_replacement_parameters": 5228,
+    "net_parameter_reduction": 15252,
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27356713308,
+    "net_model_parameter_reduction": 15252,
+    "trainable_parameter_count": 108,
+    "branch": "quantum",
+    "layer_indices": [
+      11,
+      12,
+      13,
+      15
+    ],
+    "norm_name": "post_attention_layernorm",
+    "hidden_size": 5120,
+    "state_dimension": 8192,
+    "num_qubits": 13,
+    "depth": 2,
+    "entangling_offsets": [
+      1,
+      2,
+      4
+    ]
+  },
+  "steps": [
+    {
+      "step": 1,
+      "train_block_index": 8749,
+      "relative_final_hidden_mse": 0.004385063890367746,
+      "gradient_norm_before_clip": 0.030137935653328896,
+      "theta_gradient_norm": 0.030137933790683746,
+      "theta_nonzero_gradient_elements": 100,
+      "gamma_gradient_norm": 0.0,
+      "step_seconds": 1.0829572305083275
+    },
+    {
+      "step": 2,
+      "train_block_index": 5724,
+      "relative_final_hidden_mse": 0.0004091641749255359,
+      "gradient_norm_before_clip": 0.015735771507024765,
+      "theta_gradient_norm": 0.01573575660586357,
+      "theta_nonzero_gradient_elements": 104,
+      "gamma_gradient_norm": 2.2592288587475196e-05,
+      "step_seconds": 0.7003155648708344
+    }
+  ],
+  "final_theta_l2_norm": 0.016421927139163017,
+  "final_gammas": {
+    "11": 1.000742793083191,
+    "12": 1.0007432699203491,
+    "13": 1.0007399320602417,
+    "15": 0.9992564916610718
+  },
+  "unique_trainable_parameter_count": 108,
+  "frozen_gradient_tensor_count": 0,
+  "simulator_calls": 8,
+  "gpu_peak_allocated_bytes": [
+    11967953920,
+    21602546176,
+    17174528000,
+    16116411392
+  ],
+  "created_at": "2026-08-29T07:25:49.623499+00:00"
+}

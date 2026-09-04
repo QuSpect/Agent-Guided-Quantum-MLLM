@@ -1,0 +1,58 @@
+{
+  "status": "ok",
+  "base_run_id": "textvqa-cc010-s20260829-n256",
+  "candidate_run_id": "textvqa-qh010-s20260829-n256",
+  "paired_n": 128,
+  "counterfactual_paired_n": 64,
+  "vqa_soft_accuracy": {
+    "estimate": 0.0007812499999999998,
+    "ci95": [
+      0.0,
+      0.0023437499999999995
+    ],
+    "bootstrap_probability_gt_zero": 0.6338,
+    "base": 0.840625,
+    "candidate": 0.8414062499999999,
+    "delta_percentage_points": 0.07812499999999999,
+    "ci95_percentage_points": [
+      0.0,
+      0.23437499999999994
+    ]
+  },
+  "multimodal_gain_original_minus_blank": {
+    "estimate": 0.0171875,
+    "ci95": [
+      0.0,
+      0.05
+    ],
+    "bootstrap_probability_gt_zero": 0.8665,
+    "base": 0.825,
+    "candidate": 0.8421875000000001,
+    "delta_percentage_points": 1.7187500000000002,
+    "ci95_percentage_points": [
+      0.0,
+      5.0
+    ]
+  },
+  "exact_any_mcnemar": {
+    "base_only_exact_any": 0,
+    "candidate_only_exact_any": 0,
+    "discordant": 0,
+    "exact_two_sided_p": 1.0
+  },
+  "latency": {
+    "base_timing_context": "shared",
+    "candidate_timing_context": "shared",
+    "valid_for_claim": false,
+    "base_p95_seconds": 1.1302925130352377,
+    "candidate_p95_seconds": 1.125726366788149,
+    "p95_increase_fraction_debug": -0.004039791641923696,
+    "p95_increase_fraction_for_claim": null
+  },
+  "interpretation": {
+    "single_seed_exploratory": true,
+    "quality_ci_excludes_zero": false,
+    "multimodal_gain_not_degraded": true,
+    "confirmatory_claim_allowed": false
+  }
+}

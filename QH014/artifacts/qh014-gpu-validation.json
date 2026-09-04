@@ -1,0 +1,77 @@
+{
+  "status": "pass",
+  "device": "NVIDIA A800-SXM4-80GB",
+  "config": {
+    "hidden_size": 64,
+    "n_qubits": 4,
+    "depth": 2,
+    "scale_init": 0.05,
+    "scale_max": 1.0,
+    "up_init_std": 0.001
+  },
+  "equal_parameter_count": true,
+  "all_gradient_groups_nonzero": true,
+  "finite_difference_ok": true,
+  "one_call_per_image": true,
+  "missing_anchor_rejected": true,
+  "cpu_path_rejected": true,
+  "results": [
+    {
+      "kind": "quantum",
+      "parameter_count": 1049,
+      "finite": true,
+      "circuit_calls": 2,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "raw_scale": 0.007191017270088196,
+        "visual_down.weight": 0.05175045505166054,
+        "visual_down.bias": 0.003575514070689678,
+        "text_down.weight": 0.02860400080680847,
+        "text_down.bias": 0.003575514070689678,
+        "core.theta": 0.005481466185301542,
+        "up.weight": 3.6429977416992188
+      },
+      "finite_difference": -0.00458934810012579,
+      "analytic_gradient": -0.004589371848851442,
+      "finite_difference_absolute_error": 2.3748725652694702e-08
+    },
+    {
+      "kind": "classical",
+      "parameter_count": 1049,
+      "finite": true,
+      "circuit_calls": 2,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "raw_scale": 0.0020098171662539244,
+        "visual_down.weight": 0.00797147024422884,
+        "visual_down.bias": 0.0011918420204892755,
+        "text_down.weight": 0.009534677490592003,
+        "text_down.bias": 0.0011918420204892755,
+        "core.affine": 0.003688271390274167,
+        "up.weight": 3.35383677482605
+      },
+      "finite_difference": 0.0021554995328187943,
+      "analytic_gradient": 0.002155526075512171,
+      "finite_difference_absolute_error": 2.6542693376541138e-08
+    },
+    {
+      "kind": "no_entanglement",
+      "parameter_count": 1049,
+      "finite": true,
+      "circuit_calls": 2,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "raw_scale": 0.008017444983124733,
+        "visual_down.weight": 0.06412753462791443,
+        "visual_down.bias": 0.009885541163384914,
+        "text_down.weight": 0.07908392697572708,
+        "text_down.bias": 0.009885541163384914,
+        "core.theta": 0.01282968744635582,
+        "up.weight": 3.8738656044006348
+      },
+      "finite_difference": -0.008683651685714722,
+      "analytic_gradient": -0.00868366938084364,
+      "finite_difference_absolute_error": 1.7695128917694092e-08
+    }
+  ]
+}

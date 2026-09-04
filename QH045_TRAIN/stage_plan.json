@@ -1,0 +1,29 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/qh045_selective_entanglement_screen.py",
+      "--candidate",
+      "base"
+    ],
+    [
+      "code/scripts/qh045_selective_entanglement_screen.py",
+      "--candidate",
+      "noent"
+    ],
+    [
+      "code/scripts/qh045_selective_entanglement_screen.py",
+      "--candidate",
+      "qh045"
+    ],
+    [
+      "code/scripts/qh045_selective_entanglement_screen.py",
+      "--candidate",
+      "cc045"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "qh045_selective_entanglement_screen.py"
+}

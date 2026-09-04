@@ -1,0 +1,209 @@
+{
+  "status": "pass",
+  "candidate": "QH-023-static",
+  "device": "NVIDIA A800-SXM4-80GB",
+  "cpu_path_rejected": true,
+  "records": [
+    {
+      "kind": "quantum",
+      "audit": {
+        "candidate": "QH-023",
+        "config": {
+          "hidden_size": 5120,
+          "register_widths": [
+            4096,
+            1024
+          ],
+          "rank": 4,
+          "depth": 2,
+          "layer_index": 7,
+          "target_projection": "v_proj",
+          "gamma_init": 0.05,
+          "singular_init": 0.01,
+          "angle_seed": 20260835
+        },
+        "trainable_parameters": 209,
+        "angle_parameters": 204,
+        "factorization": "delta_W = U diag(lambda) V^T",
+        "simulator_calls_per_forward": 4,
+        "statevector_registers": [
+          "12q",
+          "10q",
+          "12q",
+          "10q"
+        ],
+        "inference_simulator_required": true,
+        "claim_limit": "static simulator prototype; no task benefit or speedup claim"
+      },
+      "finite": true,
+      "circuit_calls_per_forward": 4,
+      "orthogonality_max_error": 7.748603820800781e-07,
+      "gradient_norms": {
+        "singular_values": 0.20587857067584991,
+        "gamma": 0.03522564098238945,
+        "circuits.u_high.theta": 0.009777950122952461,
+        "circuits.u_low.theta": 0.005051169078797102,
+        "circuits.v_high.theta": 0.0038482777308672667,
+        "circuits.v_low.theta": 0.005940544884651899
+      },
+      "all_six_gradient_groups_nonzero": true,
+      "finite_difference_absolute_error": 1.0384246706962585e-07,
+      "gamma_zero_max_difference": 0.0
+    },
+    {
+      "kind": "dequantized",
+      "audit": {
+        "candidate": "DQ-023",
+        "config": {
+          "hidden_size": 5120,
+          "register_widths": [
+            4096,
+            1024
+          ],
+          "rank": 4,
+          "depth": 2,
+          "layer_index": 7,
+          "target_projection": "v_proj",
+          "gamma_init": 0.05,
+          "singular_init": 0.01,
+          "angle_seed": 20260835
+        },
+        "trainable_parameters": 209,
+        "angle_parameters": 204,
+        "factorization": "delta_W = U diag(lambda) V^T",
+        "simulator_calls_per_forward": 4,
+        "statevector_registers": [
+          "12q",
+          "10q",
+          "12q",
+          "10q"
+        ],
+        "inference_simulator_required": false,
+        "claim_limit": "exactly dequantized control; bounds claims to executable structure",
+        "generator": "independent exact tensor-axis contraction of RY and diagonal CZ"
+      },
+      "finite": true,
+      "circuit_calls_per_forward": 4,
+      "orthogonality_max_error": 7.152557373046875e-07,
+      "gradient_norms": {
+        "singular_values": 0.25619158148765564,
+        "gamma": 0.051135383546352386,
+        "circuits.u_high.theta": 0.004208235070109367,
+        "circuits.u_low.theta": 0.009447485208511353,
+        "circuits.v_high.theta": 0.006332107353955507,
+        "circuits.v_low.theta": 0.0065306671895086765
+      },
+      "all_six_gradient_groups_nonzero": true,
+      "finite_difference_absolute_error": 3.812601789832115e-07,
+      "gamma_zero_max_difference": 0.0
+    },
+    {
+      "kind": "classical",
+      "audit": {
+        "candidate": "CC-023",
+        "config": {
+          "hidden_size": 5120,
+          "register_widths": [
+            4096,
+            1024
+          ],
+          "rank": 4,
+          "depth": 2,
+          "layer_index": 7,
+          "target_projection": "v_proj",
+          "gamma_init": 0.05,
+          "singular_init": 0.01,
+          "angle_seed": 20260835
+        },
+        "trainable_parameters": 209,
+        "angle_parameters": 204,
+        "factorization": "delta_W = U diag(lambda) V^T",
+        "simulator_calls_per_forward": 4,
+        "statevector_registers": [
+          "12q",
+          "10q",
+          "12q",
+          "10q"
+        ],
+        "inference_simulator_required": false,
+        "claim_limit": "equal-trainable-parameter classical structural control",
+        "generator": "dense classical tangent dictionary followed by thin QR"
+      },
+      "finite": true,
+      "circuit_calls_per_forward": 4,
+      "orthogonality_max_error": 2.384185791015625e-07,
+      "gradient_norms": {
+        "singular_values": 0.2923482060432434,
+        "gamma": 0.011494389735162258,
+        "circuits.u_high.theta": 0.0010052499128505588,
+        "circuits.u_low.theta": 0.0008316523744724691,
+        "circuits.v_high.theta": 0.0009190723649226129,
+        "circuits.v_low.theta": 0.0008704620413482189
+      },
+      "all_six_gradient_groups_nonzero": true,
+      "finite_difference_absolute_error": 2.446467988193035e-07,
+      "gamma_zero_max_difference": 0.0
+    },
+    {
+      "kind": "no_entanglement",
+      "audit": {
+        "candidate": "QH-023-no-ent",
+        "config": {
+          "hidden_size": 5120,
+          "register_widths": [
+            4096,
+            1024
+          ],
+          "rank": 4,
+          "depth": 2,
+          "layer_index": 7,
+          "target_projection": "v_proj",
+          "gamma_init": 0.05,
+          "singular_init": 0.01,
+          "angle_seed": 20260835
+        },
+        "trainable_parameters": 209,
+        "angle_parameters": 204,
+        "factorization": "delta_W = U diag(lambda) V^T",
+        "simulator_calls_per_forward": 4,
+        "statevector_registers": [
+          "12q",
+          "10q",
+          "12q",
+          "10q"
+        ],
+        "inference_simulator_required": true,
+        "claim_limit": "static simulator prototype; no task benefit or speedup claim"
+      },
+      "finite": true,
+      "circuit_calls_per_forward": 4,
+      "orthogonality_max_error": 5.960464477539062e-07,
+      "gradient_norms": {
+        "singular_values": 0.5304752588272095,
+        "gamma": 0.146312415599823,
+        "circuits.u_high.theta": 0.005866460036486387,
+        "circuits.u_low.theta": 0.006686402950435877,
+        "circuits.v_high.theta": 0.005088523030281067,
+        "circuits.v_low.theta": 0.005175198428332806
+      },
+      "all_six_gradient_groups_nonzero": true,
+      "finite_difference_absolute_error": 2.3283064365386963e-08,
+      "gamma_zero_max_difference": 0.0
+    }
+  ],
+  "qh_dq_equivalence": {
+    "forward_max_absolute_error": 1.1641532182693481e-10,
+    "input_gradient_max_absolute_error": 1.1641532182693481e-10,
+    "parameter_gradient_max_absolute_error": 2.9802322387695312e-08,
+    "parameter_gradient_errors": {
+      "singular_values": 2.9802322387695312e-08,
+      "gamma": 5.3551048040390015e-09,
+      "circuits.u_high.theta": 4.656612873077393e-10,
+      "circuits.u_low.theta": 1.3969838619232178e-09,
+      "circuits.v_high.theta": 3.4924596548080444e-10,
+      "circuits.v_low.theta": 1.1641532182693481e-09
+    }
+  },
+  "performance_data_read": false,
+  "claim": "static feasibility only"
+}

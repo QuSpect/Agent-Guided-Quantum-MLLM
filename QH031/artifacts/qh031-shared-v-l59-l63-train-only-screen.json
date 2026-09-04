@@ -1,0 +1,192 @@
+{
+  "status": "ok",
+  "candidate_id": "QH-031-shared-v-train-only-screen",
+  "scope": "reuses already-consumed QH026 WikiText training blocks; no validation or test data read",
+  "model_dir": "./models/Qwen3.8-27B",
+  "layers": [
+    59,
+    63
+  ],
+  "sequence_length": 256,
+  "train_indices": [
+    5903,
+    1158,
+    2916,
+    5337,
+    5957,
+    5044,
+    6897,
+    6648,
+    8644,
+    2610,
+    1146,
+    1516,
+    9733,
+    8977,
+    7673,
+    2573
+  ],
+  "source_lock": "./artifacts/qh026-butterfly-lock.json",
+  "source_lock_sha256": "aba5f54bbf9b9b5004a0d246fa7f0a8883ce8668d5dc0176253e4c928930ae7e",
+  "train_tokens_sha256": "a7a63176fe5e6712e8c49b1708f2ae8a8850191595603660adfe08d20f6c6f64",
+  "base_model_parameters": 27356728560,
+  "base_train_only_evaluation": {
+    "mean_token_nll": 2.389919988811016,
+    "token_perplexity": 10.91262077634764,
+    "rows": [
+      {
+        "block_index": 5903,
+        "mean_token_nll": 2.35876202583313
+      },
+      {
+        "block_index": 1158,
+        "mean_token_nll": 1.8838971853256226
+      },
+      {
+        "block_index": 2916,
+        "mean_token_nll": 1.8003867864608765
+      },
+      {
+        "block_index": 5337,
+        "mean_token_nll": 2.297260284423828
+      },
+      {
+        "block_index": 5957,
+        "mean_token_nll": 2.2295103073120117
+      },
+      {
+        "block_index": 5044,
+        "mean_token_nll": 1.9951092004776
+      },
+      {
+        "block_index": 6897,
+        "mean_token_nll": 3.1156647205352783
+      },
+      {
+        "block_index": 6648,
+        "mean_token_nll": 2.3236963748931885
+      },
+      {
+        "block_index": 8644,
+        "mean_token_nll": 2.6069045066833496
+      },
+      {
+        "block_index": 2610,
+        "mean_token_nll": 2.163372755050659
+      },
+      {
+        "block_index": 1146,
+        "mean_token_nll": 2.152641534805298
+      },
+      {
+        "block_index": 1516,
+        "mean_token_nll": 2.514949083328247
+      },
+      {
+        "block_index": 9733,
+        "mean_token_nll": 2.5941295623779297
+      },
+      {
+        "block_index": 8977,
+        "mean_token_nll": 3.3377771377563477
+      },
+      {
+        "block_index": 7673,
+        "mean_token_nll": 2.5680079460144043
+      },
+      {
+        "block_index": 2573,
+        "mean_token_nll": 2.2966504096984863
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate": "shared-v-l59-l63-r896",
+      "rank": 896,
+      "shared_basis_parameters": 6422528,
+      "dense_pair_parameters": 10485760,
+      "net_model_parameter_reduction": 4063232,
+      "stacked_weight_energy_fraction": 0.9131423234939575,
+      "train_only_evaluation": {
+        "mean_token_nll": 2.40191088616848,
+        "token_perplexity": 11.044260554232215,
+        "rows": [
+          {
+            "block_index": 5903,
+            "mean_token_nll": 2.372375249862671
+          },
+          {
+            "block_index": 1158,
+            "mean_token_nll": 1.8890206813812256
+          },
+          {
+            "block_index": 2916,
+            "mean_token_nll": 1.8041093349456787
+          },
+          {
+            "block_index": 5337,
+            "mean_token_nll": 2.3060762882232666
+          },
+          {
+            "block_index": 5957,
+            "mean_token_nll": 2.239818572998047
+          },
+          {
+            "block_index": 5044,
+            "mean_token_nll": 2.0066566467285156
+          },
+          {
+            "block_index": 6897,
+            "mean_token_nll": 3.1261348724365234
+          },
+          {
+            "block_index": 6648,
+            "mean_token_nll": 2.346374750137329
+          },
+          {
+            "block_index": 8644,
+            "mean_token_nll": 2.6267101764678955
+          },
+          {
+            "block_index": 2610,
+            "mean_token_nll": 2.1717605590820312
+          },
+          {
+            "block_index": 1146,
+            "mean_token_nll": 2.1645474433898926
+          },
+          {
+            "block_index": 1516,
+            "mean_token_nll": 2.5293211936950684
+          },
+          {
+            "block_index": 9733,
+            "mean_token_nll": 2.6049206256866455
+          },
+          {
+            "block_index": 8977,
+            "mean_token_nll": 3.3528177738189697
+          },
+          {
+            "block_index": 7673,
+            "mean_token_nll": 2.578662157058716
+          },
+          {
+            "block_index": 2573,
+            "mean_token_nll": 2.311267852783203
+          }
+        ]
+      },
+      "paired_train_nll_delta_vs_base": {
+        "estimate": 0.011990897357463837,
+        "min": 0.003722548484802246,
+        "max": 0.022678375244140625
+      }
+    }
+  ],
+  "validation_rows_inspected_or_used_for_fitness": 0,
+  "test_rows_inspected_or_used_for_fitness": 0,
+  "decision_rule": "This train-only result may reject a destructive factorization but cannot promote language quality. Any promoted architecture needs a fresh locked C4 partition and quantum/classical causal controls.",
+  "created_at": "2026-08-29T04:53:06.345545+00:00"
+}

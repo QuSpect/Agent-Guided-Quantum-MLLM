@@ -1,0 +1,10 @@
+{
+  "preprocess": [],
+  "stage": [
+    [
+      "code/scripts/smoke_train_qh001b_full_model.py"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "smoke_train_qh001b_full_model.py"
+}

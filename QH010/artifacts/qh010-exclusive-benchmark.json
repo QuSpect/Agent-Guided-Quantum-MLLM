@@ -1,0 +1,50 @@
+{
+  "status": "ok",
+  "device": "NVIDIA A800-SXM4-80GB",
+  "timing_context": "exclusive",
+  "batch_elements": 256,
+  "hidden_size": 5120,
+  "results": [
+    {
+      "kind": "quantum",
+      "median_ms": 7.240848615765572,
+      "p95_ms": 9.344439953565598,
+      "mean_ms": 7.132619544863701,
+      "peak_allocated_bytes": 103026176,
+      "measured_iterations": 50,
+      "warmup_iterations": 10
+    },
+    {
+      "kind": "dequantized",
+      "median_ms": 8.542180061340332,
+      "p95_ms": 8.722727932035923,
+      "mean_ms": 8.634425848722458,
+      "peak_allocated_bytes": 77630976,
+      "measured_iterations": 50,
+      "warmup_iterations": 10
+    },
+    {
+      "kind": "classical",
+      "median_ms": 5.671225488185883,
+      "p95_ms": 5.762550234794617,
+      "mean_ms": 5.6983014196157455,
+      "peak_allocated_bytes": 61718016,
+      "measured_iterations": 50,
+      "warmup_iterations": 10
+    },
+    {
+      "kind": "no_entanglement",
+      "median_ms": 10.315584018826485,
+      "p95_ms": 10.937227681279182,
+      "mean_ms": 9.906082153320312,
+      "peak_allocated_bytes": 102934016,
+      "measured_iterations": 50,
+      "warmup_iterations": 10
+    }
+  ],
+  "ratios": {
+    "quantum_vs_dequantized_median": 0.8476581579608412,
+    "quantum_vs_classical_median": 1.2767696560204629
+  },
+  "scope": "adapter-only forward+backward; not end-to-end TTFT or decode throughput"
+}

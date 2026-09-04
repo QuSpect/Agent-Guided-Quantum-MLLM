@@ -1,0 +1,358 @@
+{
+  "status": "ok",
+  "candidate_id": "QH-031-shared-v-train-only-screen",
+  "scope": "reuses already-consumed QH026 WikiText training blocks; no validation or test data read",
+  "model_dir": "./models/Qwen3.8-27B",
+  "layers": [
+    55,
+    59
+  ],
+  "sequence_length": 256,
+  "train_indices": [
+    5903,
+    1158,
+    2916,
+    5337,
+    5957,
+    5044,
+    6897,
+    6648,
+    8644,
+    2610,
+    1146,
+    1516,
+    9733,
+    8977,
+    7673,
+    2573
+  ],
+  "source_lock": "./artifacts/qh026-butterfly-lock.json",
+  "source_lock_sha256": "aba5f54bbf9b9b5004a0d246fa7f0a8883ce8668d5dc0176253e4c928930ae7e",
+  "train_tokens_sha256": "a7a63176fe5e6712e8c49b1708f2ae8a8850191595603660adfe08d20f6c6f64",
+  "base_model_parameters": 27356728560,
+  "base_train_only_evaluation": {
+    "mean_token_nll": 2.389919988811016,
+    "token_perplexity": 10.91262077634764,
+    "rows": [
+      {
+        "block_index": 5903,
+        "mean_token_nll": 2.35876202583313
+      },
+      {
+        "block_index": 1158,
+        "mean_token_nll": 1.8838971853256226
+      },
+      {
+        "block_index": 2916,
+        "mean_token_nll": 1.8003867864608765
+      },
+      {
+        "block_index": 5337,
+        "mean_token_nll": 2.297260284423828
+      },
+      {
+        "block_index": 5957,
+        "mean_token_nll": 2.2295103073120117
+      },
+      {
+        "block_index": 5044,
+        "mean_token_nll": 1.9951092004776
+      },
+      {
+        "block_index": 6897,
+        "mean_token_nll": 3.1156647205352783
+      },
+      {
+        "block_index": 6648,
+        "mean_token_nll": 2.3236963748931885
+      },
+      {
+        "block_index": 8644,
+        "mean_token_nll": 2.6069045066833496
+      },
+      {
+        "block_index": 2610,
+        "mean_token_nll": 2.163372755050659
+      },
+      {
+        "block_index": 1146,
+        "mean_token_nll": 2.152641534805298
+      },
+      {
+        "block_index": 1516,
+        "mean_token_nll": 2.514949083328247
+      },
+      {
+        "block_index": 9733,
+        "mean_token_nll": 2.5941295623779297
+      },
+      {
+        "block_index": 8977,
+        "mean_token_nll": 3.3377771377563477
+      },
+      {
+        "block_index": 7673,
+        "mean_token_nll": 2.5680079460144043
+      },
+      {
+        "block_index": 2573,
+        "mean_token_nll": 2.2966504096984863
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidate": "shared-v-l55-l59-r768",
+      "rank": 768,
+      "shared_basis_parameters": 5505024,
+      "dense_pair_parameters": 10485760,
+      "net_model_parameter_reduction": 4980736,
+      "stacked_weight_energy_fraction": 0.9190829396247864,
+      "train_only_evaluation": {
+        "mean_token_nll": 2.3908743485808372,
+        "token_perplexity": 10.92304031380274,
+        "rows": [
+          {
+            "block_index": 5903,
+            "mean_token_nll": 2.3551976680755615
+          },
+          {
+            "block_index": 1158,
+            "mean_token_nll": 1.8832846879959106
+          },
+          {
+            "block_index": 2916,
+            "mean_token_nll": 1.7982020378112793
+          },
+          {
+            "block_index": 5337,
+            "mean_token_nll": 2.294118881225586
+          },
+          {
+            "block_index": 5957,
+            "mean_token_nll": 2.2342629432678223
+          },
+          {
+            "block_index": 5044,
+            "mean_token_nll": 2.0018844604492188
+          },
+          {
+            "block_index": 6897,
+            "mean_token_nll": 3.1158719062805176
+          },
+          {
+            "block_index": 6648,
+            "mean_token_nll": 2.3261537551879883
+          },
+          {
+            "block_index": 8644,
+            "mean_token_nll": 2.606642484664917
+          },
+          {
+            "block_index": 2610,
+            "mean_token_nll": 2.1644930839538574
+          },
+          {
+            "block_index": 1146,
+            "mean_token_nll": 2.1539385318756104
+          },
+          {
+            "block_index": 1516,
+            "mean_token_nll": 2.5208017826080322
+          },
+          {
+            "block_index": 9733,
+            "mean_token_nll": 2.5944037437438965
+          },
+          {
+            "block_index": 8977,
+            "mean_token_nll": 3.342090368270874
+          },
+          {
+            "block_index": 7673,
+            "mean_token_nll": 2.566896438598633
+          },
+          {
+            "block_index": 2573,
+            "mean_token_nll": 2.2957468032836914
+          }
+        ]
+      },
+      "paired_train_nll_delta_vs_base": {
+        "estimate": 0.000954359769821167,
+        "min": -0.0035643577575683594,
+        "max": 0.006775259971618652
+      }
+    },
+    {
+      "candidate": "shared-v-l55-l59-r896",
+      "rank": 896,
+      "shared_basis_parameters": 6422528,
+      "dense_pair_parameters": 10485760,
+      "net_model_parameter_reduction": 4063232,
+      "stacked_weight_energy_fraction": 0.9394606351852417,
+      "train_only_evaluation": {
+        "mean_token_nll": 2.3899978399276733,
+        "token_perplexity": 10.913470369131181,
+        "rows": [
+          {
+            "block_index": 5903,
+            "mean_token_nll": 2.350555896759033
+          },
+          {
+            "block_index": 1158,
+            "mean_token_nll": 1.8833084106445312
+          },
+          {
+            "block_index": 2916,
+            "mean_token_nll": 1.7960642576217651
+          },
+          {
+            "block_index": 5337,
+            "mean_token_nll": 2.2968127727508545
+          },
+          {
+            "block_index": 5957,
+            "mean_token_nll": 2.231294631958008
+          },
+          {
+            "block_index": 5044,
+            "mean_token_nll": 1.9984105825424194
+          },
+          {
+            "block_index": 6897,
+            "mean_token_nll": 3.1146459579467773
+          },
+          {
+            "block_index": 6648,
+            "mean_token_nll": 2.3257994651794434
+          },
+          {
+            "block_index": 8644,
+            "mean_token_nll": 2.606492757797241
+          },
+          {
+            "block_index": 2610,
+            "mean_token_nll": 2.1633381843566895
+          },
+          {
+            "block_index": 1146,
+            "mean_token_nll": 2.148965358734131
+          },
+          {
+            "block_index": 1516,
+            "mean_token_nll": 2.522836208343506
+          },
+          {
+            "block_index": 9733,
+            "mean_token_nll": 2.594721555709839
+          },
+          {
+            "block_index": 8977,
+            "mean_token_nll": 3.344627618789673
+          },
+          {
+            "block_index": 7673,
+            "mean_token_nll": 2.5679268836975098
+          },
+          {
+            "block_index": 2573,
+            "mean_token_nll": 2.2941648960113525
+          }
+        ]
+      },
+      "paired_train_nll_delta_vs_base": {
+        "estimate": 7.785111665725708e-05,
+        "min": -0.00820612907409668,
+        "max": 0.007887125015258789
+      }
+    },
+    {
+      "candidate": "shared-v-l55-l59-r1024",
+      "rank": 1024,
+      "shared_basis_parameters": 7340032,
+      "dense_pair_parameters": 10485760,
+      "net_model_parameter_reduction": 3145728,
+      "stacked_weight_energy_fraction": 0.9546844363212585,
+      "train_only_evaluation": {
+        "mean_token_nll": 2.390419661998749,
+        "token_perplexity": 10.918074882879397,
+        "rows": [
+          {
+            "block_index": 5903,
+            "mean_token_nll": 2.353295087814331
+          },
+          {
+            "block_index": 1158,
+            "mean_token_nll": 1.883244514465332
+          },
+          {
+            "block_index": 2916,
+            "mean_token_nll": 1.7984540462493896
+          },
+          {
+            "block_index": 5337,
+            "mean_token_nll": 2.295581817626953
+          },
+          {
+            "block_index": 5957,
+            "mean_token_nll": 2.23171329498291
+          },
+          {
+            "block_index": 5044,
+            "mean_token_nll": 1.998528003692627
+          },
+          {
+            "block_index": 6897,
+            "mean_token_nll": 3.115313768386841
+          },
+          {
+            "block_index": 6648,
+            "mean_token_nll": 2.3317461013793945
+          },
+          {
+            "block_index": 8644,
+            "mean_token_nll": 2.607736349105835
+          },
+          {
+            "block_index": 2610,
+            "mean_token_nll": 2.1657283306121826
+          },
+          {
+            "block_index": 1146,
+            "mean_token_nll": 2.1483449935913086
+          },
+          {
+            "block_index": 1516,
+            "mean_token_nll": 2.5198988914489746
+          },
+          {
+            "block_index": 9733,
+            "mean_token_nll": 2.595709800720215
+          },
+          {
+            "block_index": 8977,
+            "mean_token_nll": 3.335594415664673
+          },
+          {
+            "block_index": 7673,
+            "mean_token_nll": 2.567971706390381
+          },
+          {
+            "block_index": 2573,
+            "mean_token_nll": 2.297853469848633
+          }
+        ]
+      },
+      "paired_train_nll_delta_vs_base": {
+        "estimate": 0.0004996731877326965,
+        "min": -0.005466938018798828,
+        "max": 0.008049726486206055
+      }
+    }
+  ],
+  "validation_rows_inspected_or_used_for_fitness": 0,
+  "test_rows_inspected_or_used_for_fitness": 0,
+  "decision_rule": "This train-only result may reject a destructive factorization but cannot promote language quality. Any promoted architecture needs a fresh locked C4 partition and quantum/classical causal controls.",
+  "created_at": "2026-08-29T04:51:04.850819+00:00"
+}

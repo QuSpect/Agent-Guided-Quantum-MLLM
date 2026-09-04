@@ -1,0 +1,31 @@
+{
+  "base": "artifacts/clevr_relations/clevr-relations-base-relation-val-s20260829-n0.json",
+  "candidate": "artifacts/clevr_relations/clevr-relations-cc016-hard-relation-val-s20260829-n256.json",
+  "base_sha256": "be513d9a116a379cfc50217b974078279675d572f650041a176a2d6f1c561376",
+  "candidate_sha256": "e8fa042c0560a7182af395f003d089e60390689396b2ce4f0401c61f8fc26e52",
+  "paired_n": 128,
+  "image_clusters": 128,
+  "base_exact_accuracy": 0.875,
+  "candidate_exact_accuracy": 0.8671875,
+  "candidate_minus_base": -0.0078125,
+  "image_cluster_bootstrap_95_ci": [
+    -0.03125,
+    0.015625
+  ],
+  "bootstrap_probability_delta_gt_zero": 0.1893,
+  "candidate_wins": 1,
+  "base_wins": 2,
+  "ties": 125,
+  "visual_gain_comparison": {
+    "n": 64,
+    "image_clusters": 64,
+    "delta": -0.015625,
+    "bootstrap_95_ci": [
+      -0.046875,
+      0.0
+    ]
+  },
+  "bootstrap_samples": 10000,
+  "seed": 20260829,
+  "created_at": "2026-08-28T21:54:19.276217+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "config": {
+    "hidden_size": 16,
+    "intermediate_size": 24,
+    "target_layer": 0,
+    "latent_size": 8,
+    "group_size": 4,
+    "num_qubits": 4,
+    "depth": 2,
+    "eps": 1e-06,
+    "init_seed": 20260864
+  },
+  "q_dq_max_abs": {
+    "forward": 0.0,
+    "input_grad": 0.0,
+    "theta_grad": 4.76837158203125e-07
+  },
+  "q_theta_nonzero_grad": 32,
+  "cc_theta_nonzero_grad": 32,
+  "branch_off_max_abs": 0.0,
+  "cpu_rejected": true,
+  "parameter_audit": {
+    "original_parameters_removed": 1152,
+    "low_rank_parameters": 256,
+    "circuit_or_control_parameters": 32,
+    "trainable_parameters": 288,
+    "total_replacement_parameters": 288,
+    "net_parameter_reduction": 864
+  },
+  "created_at": "2026-08-29T08:04:37.772901+00:00"
+}

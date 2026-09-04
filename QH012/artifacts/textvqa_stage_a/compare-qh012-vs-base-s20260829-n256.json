@@ -1,0 +1,58 @@
+{
+  "status": "ok",
+  "base_run_id": "textvqa-base-s20260829-n128",
+  "candidate_run_id": "textvqa-qh012-s20260829-n256",
+  "paired_n": 128,
+  "counterfactual_paired_n": 64,
+  "vqa_soft_accuracy": {
+    "estimate": -0.00859375,
+    "ci95": [
+      -0.025,
+      0.0
+    ],
+    "bootstrap_probability_gt_zero": 0.0,
+    "base": 0.8414062499999999,
+    "candidate": 0.8328125,
+    "delta_percentage_points": -0.8593750000000001,
+    "ci95_percentage_points": [
+      -2.5,
+      0.0
+    ]
+  },
+  "multimodal_gain_original_minus_blank": {
+    "estimate": -0.0015624999999999997,
+    "ci95": [
+      -0.004687499999999999,
+      0.0
+    ],
+    "bootstrap_probability_gt_zero": 0.0,
+    "base": 0.846875,
+    "candidate": 0.8453125,
+    "delta_percentage_points": -0.15624999999999997,
+    "ci95_percentage_points": [
+      -0.4687499999999999,
+      0.0
+    ]
+  },
+  "exact_any_mcnemar": {
+    "base_only_exact_any": 1,
+    "candidate_only_exact_any": 0,
+    "discordant": 1,
+    "exact_two_sided_p": 1.0
+  },
+  "latency": {
+    "base_timing_context": null,
+    "candidate_timing_context": "shared",
+    "valid_for_claim": false,
+    "base_p95_seconds": 1.3230564523488282,
+    "candidate_p95_seconds": 1.163371152989566,
+    "p95_increase_fraction_debug": -0.12069424481152868,
+    "p95_increase_fraction_for_claim": null
+  },
+  "interpretation": {
+    "single_seed_exploratory": true,
+    "quality_ci_excludes_zero": false,
+    "multimodal_gain_not_degraded": false,
+    "confirmatory_claim_allowed": false
+  }
+}

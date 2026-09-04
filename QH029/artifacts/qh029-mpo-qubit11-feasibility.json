@@ -1,0 +1,753 @@
+{
+  "status": "ok",
+  "candidate_id": "QH-029-feasibility",
+  "scope": "weight-only; no train, validation, or test data loaded",
+  "model_dir": "./models/Qwen3.8-27B",
+  "layer": 7,
+  "target": "v_proj",
+  "factor_plan": "qubit11",
+  "weight_shape": [
+    1024,
+    5120
+  ],
+  "dense_parameter_count": 5242880,
+  "mpo_output_dims": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "mpo_input_dims": [
+    5,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "mpo_physical_dims": [
+    5,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "mpo_rows": [
+    {
+      "bond_cap": 16,
+      "realized_tt_ranks": [
+        1,
+        5,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 7785,
+      "compression_ratio_dense_over_mpo": 673.4592164418754,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.9990103243422362,
+      "retained_frobenius_energy_fraction": 0.001978371857619954,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            5,
+            1048576
+          ],
+          "available_rank": 5,
+          "kept_rank": 5,
+          "leading_singular_value": 17.611177444458008,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            20,
+            262144
+          ],
+          "available_rank": 20,
+          "kept_rank": 16,
+          "leading_singular_value": 9.25494384765625,
+          "discarded_squared_norm": 183.4668584768906
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            64,
+            65536
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 4.978877067565918,
+          "discarded_squared_norm": 777.2159333616778
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            64,
+            16384
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 2.5722386837005615,
+          "discarded_squared_norm": 248.91465582233144
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            64,
+            4096
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 1.3961989879608154,
+          "discarded_squared_norm": 69.92731281630573
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            64,
+            1024
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 0.8329381942749023,
+          "discarded_squared_norm": 19.35452657990021
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            64,
+            256
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 0.5786592960357666,
+          "discarded_squared_norm": 5.586272856785636
+        },
+        {
+          "site": 7,
+          "unfolding_shape": [
+            64,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 0.48552846908569336,
+          "discarded_squared_norm": 1.5533153514348856
+        },
+        {
+          "site": 8,
+          "unfolding_shape": [
+            64,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 0.5632253885269165,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 9,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 0.8747391104698181,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 68165223,
+      "deployment_count_with_generic_real_orthogonals": 34081897,
+      "net_reduction_with_generic_unitaries": -62922343,
+      "net_reduction_with_generic_real_orthogonals": -28839017
+    },
+    {
+      "bond_cap": 32,
+      "realized_tt_ranks": [
+        1,
+        5,
+        20,
+        32,
+        32,
+        32,
+        32,
+        32,
+        32,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 25785,
+      "compression_ratio_dense_over_mpo": 203.33061857669188,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.9966901786018808,
+      "retained_frobenius_energy_fraction": 0.006608687878550956,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            5,
+            1048576
+          ],
+          "available_rank": 5,
+          "kept_rank": 5,
+          "leading_singular_value": 17.611177444458008,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            20,
+            262144
+          ],
+          "available_rank": 20,
+          "kept_rank": 20,
+          "leading_singular_value": 9.25494384765625,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            80,
+            65536
+          ],
+          "available_rank": 80,
+          "kept_rank": 32,
+          "leading_singular_value": 4.979396343231201,
+          "discarded_squared_norm": 676.7334281570529
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            128,
+            16384
+          ],
+          "available_rank": 128,
+          "kept_rank": 32,
+          "leading_singular_value": 2.581857204437256,
+          "discarded_squared_norm": 441.6357542574759
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            128,
+            4096
+          ],
+          "available_rank": 128,
+          "kept_rank": 32,
+          "leading_singular_value": 1.4350993633270264,
+          "discarded_squared_norm": 130.95079230470907
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            128,
+            1024
+          ],
+          "available_rank": 128,
+          "kept_rank": 32,
+          "leading_singular_value": 0.9023236036300659,
+          "discarded_squared_norm": 37.436493779133
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            128,
+            256
+          ],
+          "available_rank": 128,
+          "kept_rank": 32,
+          "leading_singular_value": 0.6890283226966858,
+          "discarded_squared_norm": 10.887292615873305
+        },
+        {
+          "site": 7,
+          "unfolding_shape": [
+            128,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 32,
+          "leading_singular_value": 0.6741191744804382,
+          "discarded_squared_norm": 2.3158465447925756
+        },
+        {
+          "site": 8,
+          "unfolding_shape": [
+            128,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 0.8991978764533997,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 9,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 1.5817793607711792,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 68183223,
+      "deployment_count_with_generic_real_orthogonals": 34099897,
+      "net_reduction_with_generic_unitaries": -62940343,
+      "net_reduction_with_generic_real_orthogonals": -28857017
+    },
+    {
+      "bond_cap": 64,
+      "realized_tt_ranks": [
+        1,
+        5,
+        20,
+        64,
+        64,
+        64,
+        64,
+        64,
+        64,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 91833,
+      "compression_ratio_dense_over_mpo": 57.091459497130664,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.9878689570688463,
+      "retained_frobenius_energy_fraction": 0.02411492365971002,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            5,
+            1048576
+          ],
+          "available_rank": 5,
+          "kept_rank": 5,
+          "leading_singular_value": 17.611177444458008,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            20,
+            262144
+          ],
+          "available_rank": 20,
+          "kept_rank": 20,
+          "leading_singular_value": 9.25494384765625,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            80,
+            65536
+          ],
+          "available_rank": 80,
+          "kept_rank": 64,
+          "leading_singular_value": 4.979396343231201,
+          "discarded_squared_norm": 182.8027124518618
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            256,
+            16384
+          ],
+          "available_rank": 256,
+          "kept_rank": 64,
+          "leading_singular_value": 2.595581293106079,
+          "discarded_squared_norm": 763.6489945804427
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            256,
+            4096
+          ],
+          "available_rank": 256,
+          "kept_rank": 64,
+          "leading_singular_value": 1.4854196310043335,
+          "discarded_squared_norm": 239.91311475136456
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            256,
+            1024
+          ],
+          "available_rank": 256,
+          "kept_rank": 64,
+          "leading_singular_value": 1.0194655656814575,
+          "discarded_squared_norm": 70.60222466068345
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            256,
+            256
+          ],
+          "available_rank": 256,
+          "kept_rank": 64,
+          "leading_singular_value": 0.8703806400299072,
+          "discarded_squared_norm": 20.083764731390758
+        },
+        {
+          "site": 7,
+          "unfolding_shape": [
+            256,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 64,
+          "leading_singular_value": 0.9977050423622131,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 8,
+          "unfolding_shape": [
+            256,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 1.557185411453247,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 9,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 2.8975257873535156,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 68249271,
+      "deployment_count_with_generic_real_orthogonals": 34165945,
+      "net_reduction_with_generic_unitaries": -63006391,
+      "net_reduction_with_generic_real_orthogonals": -28923065
+    },
+    {
+      "bond_cap": 128,
+      "realized_tt_ranks": [
+        1,
+        5,
+        20,
+        80,
+        128,
+        128,
+        128,
+        128,
+        64,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 281529,
+      "compression_ratio_dense_over_mpo": 18.622877216911935,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.9623052974400971,
+      "retained_frobenius_energy_fraction": 0.07396851451872632,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            5,
+            1048576
+          ],
+          "available_rank": 5,
+          "kept_rank": 5,
+          "leading_singular_value": 17.611177444458008,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            20,
+            262144
+          ],
+          "available_rank": 20,
+          "kept_rank": 20,
+          "leading_singular_value": 9.25494384765625,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            80,
+            65536
+          ],
+          "available_rank": 80,
+          "kept_rank": 80,
+          "leading_singular_value": 4.979396343231201,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            320,
+            16384
+          ],
+          "available_rank": 320,
+          "kept_rank": 128,
+          "leading_singular_value": 2.59980845451355,
+          "discarded_squared_norm": 649.8850572882616
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            512,
+            4096
+          ],
+          "available_rank": 512,
+          "kept_rank": 128,
+          "leading_singular_value": 1.5484646558761597,
+          "discarded_squared_norm": 410.3145005821384
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            512,
+            1024
+          ],
+          "available_rank": 512,
+          "kept_rank": 128,
+          "leading_singular_value": 1.1675013303756714,
+          "discarded_squared_norm": 124.3276634083839
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            512,
+            256
+          ],
+          "available_rank": 256,
+          "kept_rank": 128,
+          "leading_singular_value": 1.142410397529602,
+          "discarded_squared_norm": 27.284792634800713
+        },
+        {
+          "site": 7,
+          "unfolding_shape": [
+            512,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 64,
+          "leading_singular_value": 1.5456347465515137,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 8,
+          "unfolding_shape": [
+            256,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 2.606261968612671,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 9,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 4.987861633300781,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 68438967,
+      "deployment_count_with_generic_real_orthogonals": 34355641,
+      "net_reduction_with_generic_unitaries": -63196087,
+      "net_reduction_with_generic_real_orthogonals": -29112761
+    },
+    {
+      "bond_cap": 256,
+      "realized_tt_ranks": [
+        1,
+        5,
+        20,
+        80,
+        256,
+        256,
+        256,
+        256,
+        64,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 945081,
+      "compression_ratio_dense_over_mpo": 5.54754566010744,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.8758471134639798,
+      "retained_frobenius_energy_fraction": 0.23289183383681444,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            5,
+            1048576
+          ],
+          "available_rank": 5,
+          "kept_rank": 5,
+          "leading_singular_value": 17.611177444458008,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            20,
+            262144
+          ],
+          "available_rank": 20,
+          "kept_rank": 20,
+          "leading_singular_value": 9.25494384765625,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            80,
+            65536
+          ],
+          "available_rank": 80,
+          "kept_rank": 80,
+          "leading_singular_value": 4.979396343231201,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            320,
+            16384
+          ],
+          "available_rank": 320,
+          "kept_rank": 256,
+          "leading_singular_value": 2.59980845451355,
+          "discarded_squared_norm": 172.64077518565975
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            1024,
+            4096
+          ],
+          "available_rank": 1024,
+          "kept_rank": 256,
+          "leading_singular_value": 1.6163452863693237,
+          "discarded_squared_norm": 640.3712697184468
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            1024,
+            1024
+          ],
+          "available_rank": 1024,
+          "kept_rank": 256,
+          "leading_singular_value": 1.3583943843841553,
+          "discarded_squared_norm": 190.8316756413593
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            1024,
+            256
+          ],
+          "available_rank": 256,
+          "kept_rank": 256,
+          "leading_singular_value": 1.551002860069275,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 7,
+          "unfolding_shape": [
+            1024,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 64,
+          "leading_singular_value": 2.41910457611084,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 8,
+          "unfolding_shape": [
+            256,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 4.496804714202881,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 9,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 8.782333374023438,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 69102519,
+      "deployment_count_with_generic_real_orthogonals": 35019193,
+      "net_reduction_with_generic_unitaries": -63859639,
+      "net_reduction_with_generic_real_orthogonals": -29776313
+    }
+  ],
+  "quantum_circuit_storage_ledger": {
+    "input_qubits_after_padding": 13,
+    "input_padded_amplitudes": 8192,
+    "input_padding_fraction": 0.375,
+    "output_qubits": 10,
+    "output_padded_amplitudes": 1024,
+    "two_generic_complex_unitaries_real_dof": 68157438,
+    "two_generic_real_orthogonals_dof": 34074112,
+    "warning": "These are storage lower-ledgers for generic full gates, not a claim that a shallow VQC needs this many angles. A shallow local-gate circuit uses fewer angles but no longer exactly encodes an arbitrary pretrained matrix."
+  },
+  "decision_rule": "MPO fidelity alone cannot promote QH029. A later local-gate disentangler must jointly beat the original dense parameter count, satisfy an explicit matrix/action fidelity threshold, and pass GPU simulator latency before language fitness.",
+  "claim_limit": "TT-SVD is classical. Generic-unitary degrees of freedom are a conservative accounting bound for exact arbitrary re-expression, not a measured shallow-circuit requirement or a quantum advantage claim.",
+  "created_at": "2026-08-29T04:01:15.408493+00:00"
+}

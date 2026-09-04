@@ -1,0 +1,32 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_c4_validation_shard.py",
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/run_c4_qh026.py",
+      "--candidate",
+      "base"
+    ],
+    [
+      "code/scripts/run_c4_qh026.py",
+      "--candidate",
+      "svd512"
+    ],
+    [
+      "code/scripts/run_c4_qh026.py",
+      "--candidate",
+      "qh026"
+    ],
+    [
+      "code/scripts/run_c4_qh026.py",
+      "--candidate",
+      "cc026"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_c4_qh026.py"
+  ],
+  "entrypoint": "run_c4_qh026.py"
+}

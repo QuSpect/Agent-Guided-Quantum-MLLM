@@ -1,0 +1,83 @@
+{
+  "status": "ok",
+  "analysis": "QH042 signed-XZ bounded residual train-only screen",
+  "verdict": "reject_or_mutate_before_c4",
+  "point_nll": {
+    "base": 2.4465546924620867,
+    "scaffold": 2.445938965305686,
+    "qh042": 2.4458540733903646,
+    "cc042": 2.4458269607275724
+  },
+  "comparisons": {
+    "scaffold_minus_base": {
+      "mean_delta_nll": -0.0006157271564006805,
+      "descriptive_95_ci": [
+        -0.003542167879641056,
+        0.002374797081574795
+      ]
+    },
+    "qh_minus_scaffold": {
+      "mean_delta_nll": -8.48919153213501e-05,
+      "descriptive_95_ci": [
+        -0.0004892401397228241,
+        0.0003219229169189912
+      ]
+    },
+    "qh_minus_cc": {
+      "mean_delta_nll": 2.711266279220581e-05,
+      "descriptive_95_ci": [
+        -0.0004668125882744789,
+        0.0005274877417832612
+      ]
+    },
+    "qh_minus_base": {
+      "mean_delta_nll": -0.0007006190717220306,
+      "descriptive_95_ci": [
+        -0.003692578710615635,
+        0.002267661131918429
+      ]
+    }
+  },
+  "screen_gates": {
+    "qh_point_better_than_own_scaffold": true,
+    "qh_point_better_than_cc": false,
+    "qh_within_base_plus_0p005": true,
+    "continue_to_c4": false
+  },
+  "training": {
+    "qh042": {
+      "steps": 512,
+      "kl_first32": 0.012139204860432073,
+      "kl_last32": 0.0136413338186685,
+      "kl_min": 0.007385191507637501,
+      "theta_grad_mean": 1.5266554426074386e-05,
+      "alpha_grad_mean": 3.703471982952067e-05,
+      "final_alpha_norm": 3.256162166595459,
+      "final_theta_norm": 3.626434564590454,
+      "mean_student_step_seconds": 0.3509575673742802,
+      "simulator_calls": 512,
+      "frozen_gradient_tensor_count": 0,
+      "final_effective_alpha_norm": 0.14617370069026947,
+      "final_max_abs_effective_alpha": 0.034995853900909424
+    },
+    "cc042": {
+      "steps": 512,
+      "kl_first32": 0.012126378860557452,
+      "kl_last32": 0.013519366533728316,
+      "kl_min": 0.007545028813183308,
+      "theta_grad_mean": 6.8850095074901585e-06,
+      "alpha_grad_mean": 5.5384158940796624e-05,
+      "final_alpha_norm": 4.877077579498291,
+      "final_theta_norm": 7.868560791015625,
+      "mean_student_step_seconds": 0.33463633168139495,
+      "simulator_calls": 0,
+      "frozen_gradient_tensor_count": 0,
+      "final_effective_alpha_norm": 0.2116573601961136,
+      "final_max_abs_effective_alpha": 0.0374026857316494
+    }
+  },
+  "claim_limit": "Train-only screen",
+  "validation_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "created_at": "2026-08-29T09:56:39.075559+00:00"
+}

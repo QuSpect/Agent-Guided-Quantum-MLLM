@@ -1,0 +1,18 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_c4_validation_shard.py",
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/c4_qh045_formal.py",
+      "run-all"
+    ],
+    [
+      "code/scripts/c4_qh045_formal.py",
+      "analyze"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "c4_qh045_formal.py"
+}

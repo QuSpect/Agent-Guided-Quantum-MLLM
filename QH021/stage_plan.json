@@ -1,0 +1,12 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_clevr_relations.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/prepare_clevr_relations.py"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "prepare_clevr_relations.py"
+}

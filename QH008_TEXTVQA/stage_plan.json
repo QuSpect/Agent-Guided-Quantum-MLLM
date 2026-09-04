@@ -1,0 +1,29 @@
+{
+  "preprocess": [],
+  "stage": [
+    [
+      "code/scripts/run_textvqa_stage_a.py",
+      "--candidate",
+      "base"
+    ],
+    [
+      "code/scripts/run_textvqa_stage_a.py",
+      "--candidate",
+      "qh008"
+    ],
+    [
+      "code/scripts/run_textvqa_stage_a.py",
+      "--candidate",
+      "cc008"
+    ],
+    [
+      "code/scripts/run_textvqa_stage_a.py",
+      "--candidate",
+      "qh008_noent"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_textvqa_stage_a.py"
+  ],
+  "entrypoint": "run_textvqa_stage_a.py"
+}

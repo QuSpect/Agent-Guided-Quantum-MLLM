@@ -1,0 +1,77 @@
+{
+  "status": "ok",
+  "analysis": "QH038 shifted-ring inter-block FC-VQC full-FFN train-only screen",
+  "verdict": "reject_or_mutate_before_c4",
+  "point_nll": {
+    "base": 2.3615301083773375,
+    "zero": 2.3677956461906433,
+    "qh038": 2.367914380505681,
+    "cc038": 2.3669799622148275
+  },
+  "comparisons": {
+    "zero_minus_base": {
+      "mean_delta_nll": 0.006265537813305855,
+      "descriptive_95_ci": [
+        0.0028140938375145197,
+        0.009682520618662238
+      ]
+    },
+    "qh_minus_zero": {
+      "mean_delta_nll": 0.00011873431503772736,
+      "descriptive_95_ci": [
+        -0.0017988819628953934,
+        0.0020969939883798304
+      ]
+    },
+    "qh_minus_cc": {
+      "mean_delta_nll": 0.0009344182908535004,
+      "descriptive_95_ci": [
+        -0.0004135621711611747,
+        0.002292391145601868
+      ]
+    },
+    "qh_minus_base": {
+      "mean_delta_nll": 0.006384272128343582,
+      "descriptive_95_ci": [
+        0.0033420988824218512,
+        0.009440789511427275
+      ]
+    }
+  },
+  "screen_gates": {
+    "qh_point_better_than_own_zero": false,
+    "qh_point_better_than_cc": false,
+    "qh_within_base_plus_0p005": false,
+    "continue_to_c4": false
+  },
+  "training": {
+    "qh038": {
+      "steps": 256,
+      "kl_first32": 0.017398095020325854,
+      "kl_last32": 0.01224657664715778,
+      "kl_min": 0.0050079431384801865,
+      "theta_grad_mean": 0.001979102165670099,
+      "down_grad_mean": 0.011576867738313013,
+      "up_grad_mean": 0.026856035201490158,
+      "mean_student_step_seconds": 0.3567455046722898,
+      "simulator_calls": 512,
+      "frozen_gradient_tensor_count": 0
+    },
+    "cc038": {
+      "steps": 256,
+      "kl_first32": 0.01522704670787789,
+      "kl_last32": 0.013646693667396903,
+      "kl_min": 0.0050099375657737255,
+      "theta_grad_mean": 0.000868195665990612,
+      "down_grad_mean": 0.020677711211646965,
+      "up_grad_mean": 0.04715816510361037,
+      "mean_student_step_seconds": 0.33884286574902944,
+      "simulator_calls": 0,
+      "frozen_gradient_tensor_count": 0
+    }
+  },
+  "claim_limit": "Train-only screen; no quality or quantum claim.",
+  "validation_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "created_at": "2026-08-29T08:37:27.287908+00:00"
+}

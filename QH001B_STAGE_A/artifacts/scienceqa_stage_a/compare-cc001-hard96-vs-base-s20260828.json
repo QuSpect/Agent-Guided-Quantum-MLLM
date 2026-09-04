@@ -1,0 +1,49 @@
+{
+  "status": "ok",
+  "base_run_id": "scienceqa-base-s20260828-n0",
+  "candidate_run_id": "scienceqa-cc001-s20260828-n96-hard",
+  "paired_n": 128,
+  "counterfactual_paired_n": 64,
+  "accuracy": {
+    "estimate": 0.0078125,
+    "ci95": [
+      0.0,
+      0.0234375
+    ],
+    "bootstrap_probability_gt_zero": 0.6238,
+    "base_accuracy": 0.9296875,
+    "candidate_accuracy": 0.9375,
+    "delta_percentage_points": 0.78125,
+    "ci95_percentage_points": [
+      0.0,
+      2.34375
+    ]
+  },
+  "mcnemar": {
+    "base_only_correct": 0,
+    "candidate_only_correct": 1,
+    "discordant": 1,
+    "exact_two_sided_p": 1.0
+  },
+  "multimodal_gain_original_minus_blank": {
+    "estimate": 0.0,
+    "ci95": [
+      -0.046875,
+      0.046875
+    ],
+    "bootstrap_probability_gt_zero": 0.3431,
+    "base_multimodal_gain": 0.09375,
+    "candidate_multimodal_gain": 0.09375,
+    "delta_percentage_points": 0.0,
+    "ci95_percentage_points": [
+      -4.6875,
+      4.6875
+    ]
+  },
+  "interpretation": {
+    "accuracy_ci_excludes_zero": false,
+    "multimodal_gain_ci_excludes_zero": false,
+    "confirmatory_claim_allowed": false,
+    "reason": "single-seed Stage-A remains exploratory"
+  }
+}

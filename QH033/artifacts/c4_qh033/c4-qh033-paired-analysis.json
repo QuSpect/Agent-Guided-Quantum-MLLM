@@ -1,0 +1,99 @@
+{
+  "status": "ok",
+  "analysis": "QH033 locked 128-block C4 validation",
+  "verdict": "retain_compression_reject_qh033_quantum_specific_claim",
+  "lock_sha256": "7ae24f26dafc91cbfc8bbc2ab7273415a1e60418e63013f4ab0941d1d80dba68",
+  "point_metrics": {
+    "base": {
+      "nll": 2.7219512034207582,
+      "perplexity": 15.209971057672295
+    },
+    "sharedsvd1024": {
+      "nll": 2.722639163956046,
+      "perplexity": 15.220438517689697
+    },
+    "qh033": {
+      "nll": 2.7225554566830397,
+      "perplexity": 15.219164509610033
+    },
+    "cc033": {
+      "nll": 2.7224842309951782,
+      "perplexity": 15.218080552752406
+    },
+    "qh033_no_ent": {
+      "nll": 2.722774545662105,
+      "perplexity": 15.222499226111152
+    }
+  },
+  "comparisons": {
+    "shared_minus_base": {
+      "mean_delta_nll": 0.0006879605352878571,
+      "paired_bootstrap_95_ci": [
+        0.00021346639841794967,
+        0.0011695341672748323
+      ],
+      "sign_flip_two_sided_p": 0.004549772511374431
+    },
+    "qh_minus_base": {
+      "mean_delta_nll": 0.0006042532622814178,
+      "paired_bootstrap_95_ci": [
+        0.00014653103426098824,
+        0.0010582584189251065
+      ],
+      "sign_flip_two_sided_p": 0.00904954752262387
+    },
+    "cc_minus_base": {
+      "mean_delta_nll": 0.0005330275744199753,
+      "paired_bootstrap_95_ci": [
+        9.523294866085053e-05,
+        0.0009708597324788568
+      ],
+      "sign_flip_two_sided_p": 0.016699165041747913
+    },
+    "qh_active_minus_own_zero": {
+      "mean_delta_nll": -8.370727300643921e-05,
+      "paired_bootstrap_95_ci": [
+        -0.00038842204958200455,
+        0.00022018025629222363
+      ],
+      "sign_flip_two_sided_p": 0.5868206589670516
+    },
+    "qh_minus_cc": {
+      "mean_delta_nll": 7.122568786144257e-05,
+      "paired_bootstrap_95_ci": [
+        -0.00022820972371846436,
+        0.0003685862757265564
+      ],
+      "sign_flip_two_sided_p": 0.6512674366281686
+    },
+    "qh_active_minus_no_ent": {
+      "mean_delta_nll": -0.00021908897906541824,
+      "paired_bootstrap_95_ci": [
+        -0.0004924742272123695,
+        5.8078742586076054e-05
+      ],
+      "sign_flip_two_sided_p": 0.11939403029848508
+    }
+  },
+  "gates": {
+    "compression_noninferior": true,
+    "strict_better_base": false,
+    "active_better_own_zero": false,
+    "quantum_better_cc": false,
+    "entanglement_causal": false,
+    "net_reduction_positive": true,
+    "quantum_specific_promotion": false
+  },
+  "parameter_audit": {
+    "net_model_parameter_reduction": 3145646,
+    "prior_trainable_parameters": 82,
+    "evaluation_trainable_parameters": 0
+  },
+  "claim_limits": [
+    "C4 development validation, not final external test",
+    "Exact GPU statevector is classically reproducible",
+    "All three attribution gates required"
+  ],
+  "test_rows_inspected_or_used_for_fitness": 0,
+  "created_at": "2026-08-29T06:36:32.558051+00:00"
+}

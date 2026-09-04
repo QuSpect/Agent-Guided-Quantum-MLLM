@@ -1,0 +1,135 @@
+{
+  "status": "ok",
+  "analysis": "QH-024 paired locked evaluation",
+  "verdict": "retain_svd_compression_route_reject_qh024_quantum_residual",
+  "metric": "mean token negative log likelihood; lower is better",
+  "lock": "E:\\\u4e0a\u6d77\u4eea\u7535\\quantum_qwen38_agent\\artifacts\\wikitext-qh024-distillation-lock.json",
+  "lock_sha256": "fc2750b0e793f1a9eea204ee2d642d0209076438ed53c45c636f71a522aad04a",
+  "input_sha256": {
+    "base": "76f127f1fda3c3f4f5bb2bb231983e5238bb1cd1ef66d746cac95f06facfec5a",
+    "svd512": "cffa90ae6c29e905ee78b8f7a444ddc564f3913e47a5816d3d472dc2ca00f212",
+    "qh024": "1b1839af4a50487f87fed3e9b1d85d6a15b873694debb48a7af78c656a223b97",
+    "cc024": "ba64a0c6893dea7125d1ad96a8a138d88fda4226701584e91da7e55f04e661e5"
+  },
+  "bootstrap_samples": 20000,
+  "sign_flip_samples": 20000,
+  "seed": 20260838,
+  "compression_noninferiority_margin_nll": 0.005,
+  "test_rows_inspected_or_used_for_fitness": 0,
+  "point_metrics": {
+    "base": {
+      "mean_token_nll": 2.352907333523035,
+      "token_perplexity": 10.516099131175427
+    },
+    "svd512": {
+      "mean_token_nll": 2.354116402566433,
+      "token_perplexity": 10.528821510659983
+    },
+    "qh024": {
+      "mean_token_nll": 2.3547669760882854,
+      "token_perplexity": 10.535673511774704
+    },
+    "cc024": {
+      "mean_token_nll": 2.354760780930519,
+      "token_perplexity": 10.535608241817302
+    },
+    "qh024_zero": {
+      "mean_token_nll": 2.354116402566433,
+      "token_perplexity": 10.528821510659983
+    }
+  },
+  "comparisons": {
+    "svd512_minus_base": {
+      "definition": "mean token NLL(svd512) - mean token NLL(base); lower is better",
+      "mean_delta_nll": 0.0012090690433979034,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.001121794618666172,
+        0.003315859567373982
+      ],
+      "paired_sign_flip_two_sided_p": 0.30253487325633716,
+      "block_count": 32
+    },
+    "qh024_minus_base": {
+      "definition": "mean token NLL(qh024) - mean token NLL(base); lower is better",
+      "mean_delta_nll": 0.0018596425652503967,
+      "paired_percentile_bootstrap_95_ci": [
+        0.0001334197819232941,
+        0.003598352335393428
+      ],
+      "paired_sign_flip_two_sided_p": 0.0463976801159942,
+      "block_count": 32
+    },
+    "cc024_minus_base": {
+      "definition": "mean token NLL(cc024) - mean token NLL(base); lower is better",
+      "mean_delta_nll": 0.0018534474074840546,
+      "paired_percentile_bootstrap_95_ci": [
+        0.0001540694385766983,
+        0.0035820795223116815
+      ],
+      "paired_sign_flip_two_sided_p": 0.04154792260386981,
+      "block_count": 32
+    },
+    "qh024_minus_svd512": {
+      "definition": "mean token NLL(qh024) - mean token NLL(svd512); lower is better",
+      "mean_delta_nll": 0.0006505735218524933,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0021312301978468895,
+        0.0038514889776706685
+      ],
+      "paired_sign_flip_two_sided_p": 0.6819159042047898,
+      "block_count": 32
+    },
+    "cc024_minus_svd512": {
+      "definition": "mean token NLL(cc024) - mean token NLL(svd512); lower is better",
+      "mean_delta_nll": 0.0006443783640861511,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0021977641619741915,
+        0.003907129075378178
+      ],
+      "paired_sign_flip_two_sided_p": 0.6916154192290386,
+      "block_count": 32
+    },
+    "qh024_minus_cc024": {
+      "definition": "mean token NLL(qh024) - mean token NLL(cc024); lower is better",
+      "mean_delta_nll": 6.195157766342163e-06,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0007517741061747075,
+        0.0007671561092138272
+      ],
+      "paired_sign_flip_two_sided_p": 0.9876506174691265,
+      "block_count": 32
+    },
+    "qh024_active_minus_own_zero": {
+      "definition": "mean token NLL(qh024) - mean token NLL(qh024_zero); lower is better",
+      "mean_delta_nll": 0.0006505735218524933,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0021312301978468895,
+        0.0038514889776706685
+      ],
+      "paired_sign_flip_two_sided_p": 0.6819159042047898,
+      "block_count": 32
+    }
+  },
+  "gates": {
+    "svd_compression_noninferior_to_base": true,
+    "qh024_compression_noninferior_to_base": true,
+    "qh024_causal_active_better_than_own_zero": false,
+    "qh024_quantum_better_than_equal_parameter_classical": false,
+    "net_model_parameter_reduction_positive": true,
+    "quantum_specific_promotion": false
+  },
+  "parameter_audit": {
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27354744109,
+    "net_model_parameter_reduction": 1984451,
+    "trainable_parameter_count_qh024": 112701,
+    "trainable_parameter_count_cc024": 112701
+  },
+  "interpretation_limits": [
+    "The exact 10-qubit circuit is classically dequantizable at this scale.",
+    "A compression noninferiority pass is not evidence that the quantum residual caused the result.",
+    "The quantum-specific claim requires both active-vs-zero and QH-vs-equal-parameter-classical gates.",
+    "This formal evaluation uses 32 locked WikiText validation blocks and no test rows."
+  ],
+  "created_at": "2026-08-29T03:09:13.449091+00:00"
+}

@@ -1,0 +1,31 @@
+{
+  "base": "artifacts\\clevr_relations\\clevr-relations-cc021-exact-shared-trunk-third-holdout-s20260829-n256.json",
+  "candidate": "artifacts\\clevr_relations\\clevr-relations-qh021-exact-shared-trunk-third-holdout-s20260829-n256.json",
+  "base_sha256": "9eee45aedd5e9b5c22c63885233b4c07d813a30cc91c9c2c17f5f6e5260041f5",
+  "candidate_sha256": "be67db1e08167b15d0494fb0fc3081371d0d5e74184b23f6e094d5babfca6f38",
+  "paired_n": 256,
+  "image_clusters": 256,
+  "base_exact_accuracy": 0.94140625,
+  "candidate_exact_accuracy": 0.9375,
+  "candidate_minus_base": -0.00390625,
+  "image_cluster_bootstrap_95_ci": [
+    -0.01171875,
+    0.0
+  ],
+  "bootstrap_probability_delta_gt_zero": 0.0,
+  "candidate_wins": 0,
+  "base_wins": 1,
+  "ties": 255,
+  "visual_gain_comparison": {
+    "n": 128,
+    "image_clusters": 128,
+    "delta": 0.0,
+    "bootstrap_95_ci": [
+      -0.0234375,
+      0.0234375
+    ]
+  },
+  "bootstrap_samples": 20000,
+  "seed": 20260829,
+  "created_at": "2026-08-29T00:53:49.528602+00:00"
+}

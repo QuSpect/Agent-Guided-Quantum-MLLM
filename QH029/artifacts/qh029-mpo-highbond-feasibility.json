@@ -1,0 +1,283 @@
+{
+  "status": "ok",
+  "candidate_id": "QH-029-feasibility",
+  "scope": "weight-only; no train, validation, or test data loaded",
+  "model_dir": "./models/Qwen3.8-27B",
+  "layer": 7,
+  "target": "v_proj",
+  "weight_shape": [
+    1024,
+    5120
+  ],
+  "dense_parameter_count": 5242880,
+  "mpo_output_dims": [
+    1,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "mpo_input_dims": [
+    5,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "mpo_physical_dims": [
+    5,
+    16,
+    16,
+    16,
+    16,
+    16
+  ],
+  "mpo_rows": [
+    {
+      "bond_cap": 256,
+      "realized_tt_ranks": [
+        1,
+        5,
+        80,
+        256,
+        256,
+        16,
+        1
+      ],
+      "mpo_parameter_count": 1448473,
+      "compression_ratio_dense_over_mpo": 3.6195911142285704,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.7801221884392887,
+      "retained_frobenius_energy_fraction": 0.39140937110469487,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            5,
+            1048576
+          ],
+          "available_rank": 5,
+          "kept_rank": 5,
+          "leading_singular_value": 17.611181259155273,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            80,
+            65536
+          ],
+          "available_rank": 80,
+          "kept_rank": 80,
+          "leading_singular_value": 4.979442119598389,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            1280,
+            4096
+          ],
+          "available_rank": 1280,
+          "kept_rank": 256,
+          "leading_singular_value": 1.6366562843322754,
+          "discarded_squared_norm": 796.4064367285148
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            4096,
+            256
+          ],
+          "available_rank": 256,
+          "kept_rank": 256,
+          "leading_singular_value": 1.762718677520752,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            4096,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 5.778061389923096,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 69605911,
+      "deployment_count_with_generic_real_orthogonals": 35522585,
+      "net_reduction_with_generic_unitaries": -64363031,
+      "net_reduction_with_generic_real_orthogonals": -30279705
+    },
+    {
+      "bond_cap": 384,
+      "realized_tt_ranks": [
+        1,
+        5,
+        80,
+        384,
+        256,
+        16,
+        1
+      ],
+      "mpo_parameter_count": 2136601,
+      "compression_ratio_dense_over_mpo": 2.4538414051102664,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.6835943231752672,
+      "retained_frobenius_energy_fraction": 0.5326988013225482,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            5,
+            1048576
+          ],
+          "available_rank": 5,
+          "kept_rank": 5,
+          "leading_singular_value": 17.611181259155273,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            80,
+            65536
+          ],
+          "available_rank": 80,
+          "kept_rank": 80,
+          "leading_singular_value": 4.979442119598389,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            1280,
+            4096
+          ],
+          "available_rank": 1280,
+          "kept_rank": 384,
+          "leading_singular_value": 1.6366562843322754,
+          "discarded_squared_norm": 611.5139879712073
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            6144,
+            256
+          ],
+          "available_rank": 256,
+          "kept_rank": 256,
+          "leading_singular_value": 1.9778352975845337,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            4096,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 6.715541839599609,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 70294039,
+      "deployment_count_with_generic_real_orthogonals": 36210713,
+      "net_reduction_with_generic_unitaries": -65051159,
+      "net_reduction_with_generic_real_orthogonals": -30967833
+    },
+    {
+      "bond_cap": 512,
+      "realized_tt_ranks": [
+        1,
+        5,
+        80,
+        512,
+        256,
+        16,
+        1
+      ],
+      "mpo_parameter_count": 2824729,
+      "compression_ratio_dense_over_mpo": 1.856064776479443,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.592036896618501,
+      "retained_frobenius_energy_fraction": 0.6494923130423343,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            5,
+            1048576
+          ],
+          "available_rank": 5,
+          "kept_rank": 5,
+          "leading_singular_value": 17.611181259155273,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            80,
+            65536
+          ],
+          "available_rank": 80,
+          "kept_rank": 80,
+          "leading_singular_value": 4.979442119598389,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            1280,
+            4096
+          ],
+          "available_rank": 1280,
+          "kept_rank": 512,
+          "leading_singular_value": 1.6366562843322754,
+          "discarded_squared_norm": 458.677088936789
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            8192,
+            256
+          ],
+          "available_rank": 256,
+          "kept_rank": 256,
+          "leading_singular_value": 2.12919282913208,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            4096,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 7.40576696395874,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 70982167,
+      "deployment_count_with_generic_real_orthogonals": 36898841,
+      "net_reduction_with_generic_unitaries": -65739287,
+      "net_reduction_with_generic_real_orthogonals": -31655961
+    }
+  ],
+  "quantum_circuit_storage_ledger": {
+    "input_qubits_after_padding": 13,
+    "input_padded_amplitudes": 8192,
+    "input_padding_fraction": 0.375,
+    "output_qubits": 10,
+    "output_padded_amplitudes": 1024,
+    "two_generic_complex_unitaries_real_dof": 68157438,
+    "two_generic_real_orthogonals_dof": 34074112,
+    "warning": "These are storage lower-ledgers for generic full gates, not a claim that a shallow VQC needs this many angles. A shallow local-gate circuit uses fewer angles but no longer exactly encodes an arbitrary pretrained matrix."
+  },
+  "decision_rule": "MPO fidelity alone cannot promote QH029. A later local-gate disentangler must jointly beat the original dense parameter count, satisfy an explicit matrix/action fidelity threshold, and pass GPU simulator latency before language fitness.",
+  "claim_limit": "TT-SVD is classical. Generic-unitary degrees of freedom are a conservative accounting bound for exact arbitrary re-expression, not a measured shallow-circuit requirement or a quantum advantage claim.",
+  "created_at": "2026-08-29T03:59:11.554575+00:00"
+}

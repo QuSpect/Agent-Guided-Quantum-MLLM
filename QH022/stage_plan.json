@@ -1,0 +1,51 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/run_wikitext_stage_a.py",
+      "--candidate",
+      "base"
+    ],
+    [
+      "code/scripts/run_wikitext_stage_a.py",
+      "--candidate",
+      "qh010"
+    ],
+    [
+      "code/scripts/run_wikitext_stage_a.py",
+      "--candidate",
+      "dq010"
+    ],
+    [
+      "code/scripts/run_wikitext_stage_a.py",
+      "--candidate",
+      "cc010"
+    ],
+    [
+      "code/scripts/run_wikitext_stage_a.py",
+      "--candidate",
+      "qh010_noent"
+    ],
+    [
+      "code/scripts/run_wikitext_stage_a.py",
+      "--candidate",
+      "qh022"
+    ],
+    [
+      "code/scripts/run_wikitext_stage_a.py",
+      "--candidate",
+      "cc022"
+    ],
+    [
+      "code/scripts/run_wikitext_stage_a.py",
+      "--candidate",
+      "qh022_noent"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_wikitext_stage_a.py"
+  ],
+  "entrypoint": "run_wikitext_stage_a.py"
+}

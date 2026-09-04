@@ -1,0 +1,10 @@
+{
+  "preprocess": [],
+  "stage": [
+    [
+      "code/scripts/test_quantum_analytic_gpu.py"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "test_quantum_analytic_gpu.py"
+}

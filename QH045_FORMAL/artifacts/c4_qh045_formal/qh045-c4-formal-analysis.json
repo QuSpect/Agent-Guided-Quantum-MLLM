@@ -1,0 +1,52 @@
+{
+  "status": "ok",
+  "analysis": "QH045 frozen C4-64 formal evaluation",
+  "point_nll": {
+    "base": 2.725877406075597,
+    "noent": 2.7344500366598368,
+    "qh045": 2.7351661417633295,
+    "cc045": 2.734673139639199,
+    "dq": 2.7351661417633295
+  },
+  "comparisons": {
+    "qh_minus_base": {
+      "mean_delta_nll": 0.009288735687732697,
+      "paired_bootstrap_95_ci": [
+        0.006320453900843859,
+        0.012544975895434619
+      ]
+    },
+    "qh_minus_noent": {
+      "mean_delta_nll": 0.0007161051034927368,
+      "paired_bootstrap_95_ci": [
+        0.00012896270491182804,
+        0.001302872458472848
+      ]
+    },
+    "qh_minus_cc": {
+      "mean_delta_nll": 0.0004930021241307259,
+      "paired_bootstrap_95_ci": [
+        -0.00011405544355511665,
+        0.001080893259495497
+      ]
+    },
+    "qh_minus_dq": {
+      "mean_delta_nll": 0.0,
+      "paired_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "dq_max_abs_per_block_nll": 0.0,
+  "gates": {
+    "compression_noninferiority": false,
+    "active_selective_entanglement": false,
+    "equal_parameter_quantum_specific": false,
+    "dq_equivalence": true
+  },
+  "verdict": "not_quantum_specific_confirmed",
+  "training_steps": 0,
+  "test_rows_inspected": 0,
+  "created_at": "2026-08-29T11:42:34.433880+00:00"
+}

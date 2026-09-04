@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "candidate": "QH-019",
+  "device": "cuda:0",
+  "equal_parameter_count": true,
+  "cpu_path_rejected": true,
+  "records": {
+    "quantum": {
+      "parameters": 657,
+      "missing_or_nonfinite_gradient_groups": [],
+      "routing_min": 0.0006001213332638144,
+      "routing_max": 0.7889783382415771,
+      "routing_sum": 1.0,
+      "finite_difference_absolute_error": 7.896858278400032e-09
+    },
+    "classical": {
+      "parameters": 657,
+      "missing_or_nonfinite_gradient_groups": [],
+      "routing_min": 0.037245944142341614,
+      "routing_max": 0.2382521629333496,
+      "routing_sum": 1.0,
+      "finite_difference_absolute_error": 2.3916982172522694e-08
+    },
+    "no_entanglement": {
+      "parameters": 657,
+      "missing_or_nonfinite_gradient_groups": [],
+      "routing_min": 0.0002927191089838743,
+      "routing_max": 0.348204642534256,
+      "routing_sum": 1.0,
+      "finite_difference_absolute_error": 2.152584777093125e-08
+    }
+  }
+}

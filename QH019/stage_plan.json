@@ -1,0 +1,12 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_clevr_relations.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/test_qh019_gpu.py"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "test_qh019_gpu.py"
+}

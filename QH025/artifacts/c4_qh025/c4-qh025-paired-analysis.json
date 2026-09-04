@@ -1,0 +1,164 @@
+{
+  "status": "ok",
+  "analysis": "QH-025 locked paired C4 evaluation",
+  "verdict": "retain_compressed_replacement_reject_quantum_specific_claim",
+  "metric": "mean token negative log likelihood; lower is better",
+  "lock": "E:\\\u4e0a\u6d77\u4eea\u7535\\quantum_qwen38_agent\\artifacts\\wikitext-qh025-end-to-end-lock.json",
+  "lock_sha256": "dac0d3c3ffcdbff438fa1cbdbbaecf13d9789b135f763cc922ba1f8faa3d4f57",
+  "input_sha256": {
+    "base": "949150c12c370d4286c90c87b37008966b1afc82f77b0d933e660ec73a633a60",
+    "svd512": "02fe71a961551d8d7197b7c1a9628d7d19befa1a8616e3e68b1dd36a7ec0934e",
+    "qh025": "b6cb926405c62d83127c3654fbe3aff6d596949c1764e5d33aa593c08d5f0445",
+    "cc025": "e50bb2b087f2ffcce78120f0820e2cd6abcad912f120a3f941edeb542581b25e"
+  },
+  "bootstrap_samples": 20000,
+  "sign_flip_samples": 20000,
+  "seed": 20260839,
+  "compression_noninferiority_margin_nll": 0.005,
+  "test_rows_inspected_or_used_for_fitness": 0,
+  "point_metrics": {
+    "base": {
+      "mean_token_nll": 2.6844185199588537,
+      "token_perplexity": 14.6496804063492
+    },
+    "svd512": {
+      "mean_token_nll": 2.6845130138099194,
+      "token_perplexity": 14.651064776473879
+    },
+    "qh025": {
+      "mean_token_nll": 2.6839844062924385,
+      "token_perplexity": 14.643322160076842
+    },
+    "cc025": {
+      "mean_token_nll": 2.6838634572923183,
+      "token_perplexity": 14.64155117200492
+    },
+    "qh025_zero": {
+      "mean_token_nll": 2.6845130138099194,
+      "token_perplexity": 14.651064776473879
+    }
+  },
+  "training_diagnostics": {
+    "qh025": {
+      "steps": 1024,
+      "objective": "relative MSE of final normalized hidden states after all decoder layers",
+      "learning_rate": 0.0003,
+      "loss_first_window_mean": 0.0034894958707809565,
+      "loss_last_window_mean": 0.001624970643206325,
+      "loss_min": 0.00025814076070673764,
+      "gradient_norm_mean": 0.05145331966213007,
+      "mean_student_backbone_step_seconds": 0.4924575161858229,
+      "total_student_backbone_step_seconds": 504.27649657428265,
+      "simulator_calls_during_student_training": 1024,
+      "frozen_parameter_grad_tensor_count": 0
+    },
+    "cc025": {
+      "steps": 1024,
+      "objective": "relative MSE of final normalized hidden states after all decoder layers",
+      "learning_rate": 0.0003,
+      "loss_first_window_mean": 0.0032770438801890123,
+      "loss_last_window_mean": 0.0016853824763529701,
+      "loss_min": 0.0002447812876198441,
+      "gradient_norm_mean": 0.017270158199096386,
+      "mean_student_backbone_step_seconds": 0.47331087285783724,
+      "total_student_backbone_step_seconds": 484.67033380642533,
+      "simulator_calls_during_student_training": 0,
+      "frozen_parameter_grad_tensor_count": 0
+    }
+  },
+  "comparisons": {
+    "svd512_minus_base": {
+      "definition": "mean token NLL(svd512) - mean token NLL(base); lower is better",
+      "mean_delta_nll": 9.449385106563568e-05,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0010910149198025466,
+        0.0012736442498862733
+      ],
+      "paired_sign_flip_two_sided_p": 0.8774061296935153,
+      "block_count": 64
+    },
+    "qh025_minus_base": {
+      "definition": "mean token NLL(qh025) - mean token NLL(base); lower is better",
+      "mean_delta_nll": -0.00043411366641521454,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.00128615889698267,
+        0.00043477253057062453
+      ],
+      "paired_sign_flip_two_sided_p": 0.3288835558222089,
+      "block_count": 64
+    },
+    "cc025_minus_base": {
+      "definition": "mean token NLL(cc025) - mean token NLL(base); lower is better",
+      "mean_delta_nll": -0.0005550626665353775,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0014659768436104058,
+        0.00036953403614461354
+      ],
+      "paired_sign_flip_two_sided_p": 0.24503774811259438,
+      "block_count": 64
+    },
+    "qh025_minus_svd512": {
+      "definition": "mean token NLL(qh025) - mean token NLL(svd512); lower is better",
+      "mean_delta_nll": -0.0005286075174808502,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0015712015330791474,
+        0.0005430998280644416
+      ],
+      "paired_sign_flip_two_sided_p": 0.33318334083295836,
+      "block_count": 64
+    },
+    "cc025_minus_svd512": {
+      "definition": "mean token NLL(cc025) - mean token NLL(svd512); lower is better",
+      "mean_delta_nll": -0.0006495565176010132,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0016832384746521712,
+        0.00039324774406850136
+      ],
+      "paired_sign_flip_two_sided_p": 0.2271886405679716,
+      "block_count": 64
+    },
+    "qh025_minus_cc025": {
+      "definition": "mean token NLL(qh025) - mean token NLL(cc025); lower is better",
+      "mean_delta_nll": 0.00012094900012016296,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0004363028798252344,
+        0.0006621572654694309
+      ],
+      "paired_sign_flip_two_sided_p": 0.6646167691615419,
+      "block_count": 64
+    },
+    "qh025_active_minus_own_zero": {
+      "definition": "mean token NLL(qh025) - mean token NLL(qh025_zero); lower is better",
+      "mean_delta_nll": -0.0005286075174808502,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.0015712015330791474,
+        0.0005430998280644416
+      ],
+      "paired_sign_flip_two_sided_p": 0.33318334083295836,
+      "block_count": 64
+    }
+  },
+  "gates": {
+    "svd_compression_noninferior_to_base": true,
+    "qh025_compression_noninferior_to_base": true,
+    "qh025_strictly_better_than_base": false,
+    "qh025_causal_active_better_than_own_zero": false,
+    "qh025_quantum_better_than_equal_parameter_classical": false,
+    "net_model_parameter_reduction_positive": true,
+    "quantum_specific_promotion": false
+  },
+  "parameter_audit": {
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27354744109,
+    "net_model_parameter_reduction": 1984451,
+    "trainable_parameters_qh025": 112701,
+    "trainable_parameters_cc025": 112701
+  },
+  "claim_limits": [
+    "A small exact statevector circuit is classically dequantizable.",
+    "A point estimate is not sufficient; quantum attribution requires both locked CI gates.",
+    "This is a 64-block C4 development evaluation, not a final test benchmark.",
+    "No quantum hardware or simulator speed advantage is claimed."
+  ],
+  "created_at": "2026-08-29T03:53:23.564177+00:00"
+}

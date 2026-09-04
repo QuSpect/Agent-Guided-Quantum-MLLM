@@ -1,0 +1,120 @@
+{
+  "status": "pass",
+  "device": "NVIDIA A800-SXM4-80GB",
+  "config": {
+    "hidden_size": 64,
+    "token_rank": 12,
+    "object_rank": 8,
+    "n_qubits": 4,
+    "depth": 2,
+    "regions_per_side": 2,
+    "routing_temperature": 0.5,
+    "gate_strength": 1.0,
+    "scale_init": 0.05,
+    "scale_max": 1.0,
+    "token_up_init_std": 0.001
+  },
+  "equal_parameter_count": true,
+  "all_gradient_groups_nonzero": true,
+  "finite_difference_ok": true,
+  "six_relations_per_image": true,
+  "routing_is_probability_simplex": true,
+  "missing_anchor_rejected": true,
+  "invalid_grid_rejected": true,
+  "cpu_path_rejected": true,
+  "results": [
+    {
+      "kind": "quantum",
+      "parameter_count": 2901,
+      "finite": true,
+      "circuit_evaluations": 12,
+      "routing_row_sums": [
+        1.0,
+        1.0
+      ],
+      "routing_min": 0.03343283385038376,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "pair_position": 0.0012553692795336246,
+        "raw_scale": 0.001788959838449955,
+        "token_down.weight": 0.02143986150622368,
+        "token_down.bias": 0.0009485289920121431,
+        "object_down.weight": 0.007688423153012991,
+        "object_down.bias": 0.0008808302809484303,
+        "text_down.weight": 0.005559962708503008,
+        "text_down.bias": 0.0005830200971104205,
+        "relation_down.weight": 0.00733910221606493,
+        "relation_down.bias": 0.0007369392551481724,
+        "core.theta": 0.00042623921763151884,
+        "gate_up.weight": 0.0008901625405997038,
+        "gate_up.bias": 0.0015430754283443093,
+        "token_up.weight": 2.7997710704803467
+      },
+      "finite_difference": 0.0002675747964531183,
+      "analytic_gradient": 0.00026753786369226873,
+      "finite_difference_absolute_error": 3.693276084959507e-08
+    },
+    {
+      "kind": "classical",
+      "parameter_count": 2901,
+      "finite": true,
+      "circuit_evaluations": 12,
+      "routing_row_sums": [
+        0.9999999403953552,
+        1.0
+      ],
+      "routing_min": 0.04058196023106575,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "pair_position": 0.0009994814172387123,
+        "raw_scale": 0.0005152566591277719,
+        "token_down.weight": 0.024255219846963882,
+        "token_down.bias": 0.003210377413779497,
+        "object_down.weight": 0.0067133973352611065,
+        "object_down.bias": 0.0009270785958506167,
+        "text_down.weight": 0.004074186086654663,
+        "text_down.bias": 0.00037873006658628583,
+        "relation_down.weight": 0.0049043502658605576,
+        "relation_down.bias": 0.000491471728309989,
+        "core.affine": 0.0011171413352712989,
+        "gate_up.weight": 0.001166730304248631,
+        "gate_up.bias": 0.0017770136473700404,
+        "token_up.weight": 3.0028793811798096
+      },
+      "finite_difference": 0.0006628339178860188,
+      "analytic_gradient": 0.0006628878763876855,
+      "finite_difference_absolute_error": 5.3958501666784286e-08
+    },
+    {
+      "kind": "no_entanglement",
+      "parameter_count": 2901,
+      "finite": true,
+      "circuit_evaluations": 12,
+      "routing_row_sums": [
+        1.0,
+        1.0
+      ],
+      "routing_min": 0.02027510292828083,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "pair_position": 0.0007600318640470505,
+        "raw_scale": 0.0004439010808710009,
+        "token_down.weight": 0.022296370938420296,
+        "token_down.bias": 0.0015498925931751728,
+        "object_down.weight": 0.004997135605663061,
+        "object_down.bias": 0.0011951223714277148,
+        "text_down.weight": 0.0057167233899235725,
+        "text_down.bias": 0.0006480752490460873,
+        "relation_down.weight": 0.0052216146141290665,
+        "relation_down.bias": 0.001039850409142673,
+        "core.theta": 0.0007778666913509369,
+        "gate_up.weight": 0.0019050652626901865,
+        "gate_up.bias": 0.0011064967839047313,
+        "token_up.weight": 1.9733116626739502
+      },
+      "finite_difference": 0.000490131787955761,
+      "analytic_gradient": 0.0004901408683508635,
+      "finite_difference_absolute_error": 9.080395102500916e-09
+    }
+  ]
+}

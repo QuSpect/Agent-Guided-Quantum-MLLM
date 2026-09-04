@@ -1,0 +1,56 @@
+{
+  "status": "ok",
+  "candidate": "QH-010",
+  "checkpoint": "artifacts/textvqa_stage_a/textvqa-qh010-s20260829-n256-adapter.pt",
+  "theta_key": "model.language_model.layers.7.self_attn.v_proj.transform.theta",
+  "blocks": 1280,
+  "parameters": 7680,
+  "theta_l2": 0.7040582299232483,
+  "theta_abs_max": 0.019378911703824997,
+  "unitarity_error": {
+    "mean": 9.441934167853105e-08,
+    "p50": 8.942119222865585e-08,
+    "p95": 1.4902961709140072e-07,
+    "max": 2.0863237182311423e-07
+  },
+  "identity_distance": {
+    "mean": 0.013480735011398792,
+    "p50": 0.013447139412164688,
+    "p95": 0.019182682037353516,
+    "max": 0.02396967075765133
+  },
+  "near_identity_fraction_distance_lt_1e_3": 0.0,
+  "operator_schmidt_rank_counts": {
+    "3": 3,
+    "4": 1277
+  },
+  "operator_entanglement_entropy_bits": {
+    "mean": 0.0019111052388325334,
+    "p50": 0.0017780399648472667,
+    "p95": 0.003909536637365818,
+    "max": 0.007363535463809967
+  },
+  "entangling_power_linear_entropy": {
+    "mean": 0.00011431617895141244,
+    "p50": 0.00010301405563950539,
+    "p95": 0.0002447126025799662,
+    "max": 0.00045931804925203323
+  },
+  "random_gaussian_sign_flip_rate": {
+    "mean": 0.004193115048110485,
+    "p50": 0.00390625,
+    "p95": 0.0078125,
+    "max": 0.0166015625
+  },
+  "random_gaussian_sign_reconstruction_relative_difference": {
+    "mean": 0.0001648091565584764,
+    "p50": 0.0,
+    "p95": 0.0,
+    "max": 0.045632489025592804
+  },
+  "interpretation_limits": [
+    "random-Gaussian sign diagnostics are not a substitute for Qwen activation capture",
+    "two-qubit blocks are classically exactly simulable",
+    "entanglement is diagnostic and not evidence of task or computational advantage"
+  ]
+}

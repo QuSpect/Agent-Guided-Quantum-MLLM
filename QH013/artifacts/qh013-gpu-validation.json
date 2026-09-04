@@ -1,0 +1,86 @@
+{
+  "status": "pass",
+  "device": "NVIDIA A800-SXM4-80GB",
+  "config": {
+    "hidden_size": 64,
+    "rank": 8,
+    "n_qubits": 4,
+    "depth": 2,
+    "scale_init": 0.05,
+    "scale_max": 1.0,
+    "gate_strength": 0.5,
+    "local_up_init_std": 0.001,
+    "gate_up_init_std": 0.02,
+    "tokens_per_image": 3
+  },
+  "equal_parameter_count": true,
+  "selected_count_ok": true,
+  "all_gradient_groups_nonzero": true,
+  "finite_difference_ok": true,
+  "cpu_path_rejected": true,
+  "results": [
+    {
+      "kind": "quantum",
+      "parameter_count": 1373,
+      "finite": true,
+      "selected_tokens": 6,
+      "total_tokens": 16,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "raw_scale": 0.0006055834819562733,
+        "local_down.weight": 0.012655219063162804,
+        "local_down.bias": 0.00019846364739350975,
+        "quantum_down.weight": 0.00019710947526618838,
+        "quantum_down.bias": 1.9051183699048124e-05,
+        "core.theta": 9.298452823713887e-06,
+        "gate_up.weight": 0.0005332252476364374,
+        "local_up.weight": 1.5283374786376953
+      },
+      "finite_difference": -6.02740328758955e-06,
+      "analytic_gradient": -6.027607923897449e-06,
+      "finite_difference_absolute_error": 2.0463630789890885e-10
+    },
+    {
+      "kind": "classical",
+      "parameter_count": 1373,
+      "finite": true,
+      "selected_tokens": 6,
+      "total_tokens": 16,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "raw_scale": 0.0007022241479717195,
+        "local_down.weight": 0.0185050331056118,
+        "local_down.bias": 0.0009361209813505411,
+        "quantum_down.weight": 0.0002842352259904146,
+        "quantum_down.bias": 2.3027623683447018e-05,
+        "core.affine": 5.9037087339675054e-05,
+        "gate_up.weight": 0.0013037517201155424,
+        "local_up.weight": 1.7358157634735107
+      },
+      "finite_difference": 2.7910573408007622e-05,
+      "analytic_gradient": 2.7936572223552503e-05,
+      "finite_difference_absolute_error": 2.5998815544880927e-08
+    },
+    {
+      "kind": "no_entanglement",
+      "parameter_count": 1373,
+      "finite": true,
+      "selected_tokens": 6,
+      "total_tokens": 16,
+      "nonzero_gradient_fraction": 1.0,
+      "gradient_norms": {
+        "raw_scale": 0.0006726025021634996,
+        "local_down.weight": 0.01571047119796276,
+        "local_down.bias": 0.001485383021645248,
+        "quantum_down.weight": 0.00033254706067964435,
+        "quantum_down.bias": 4.9800044507719576e-05,
+        "core.theta": 1.9165210687788203e-05,
+        "gate_up.weight": 0.0019192206673324108,
+        "local_up.weight": 1.3359503746032715
+      },
+      "finite_difference": -1.3486715033650398e-05,
+      "analytic_gradient": -1.3492838661477435e-05,
+      "finite_difference_absolute_error": 6.123627827037126e-09
+    }
+  ]
+}

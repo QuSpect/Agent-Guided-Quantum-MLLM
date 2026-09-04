@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "mode": "one-step train-only full-model integration smoke",
+  "candidate": "QH-031 shared-basis two-layer quantum replacement",
+  "model_dir": "./models/Qwen3.8-27B",
+  "source_lock": "./artifacts/qh026-butterfly-lock.json",
+  "source_lock_sha256": "aba5f54bbf9b9b5004a0d246fa7f0a8883ce8668d5dc0176253e4c928930ae7e",
+  "train_tokens_sha256": "a7a63176fe5e6712e8c49b1708f2ae8a8850191595603660adfe08d20f6c6f64",
+  "sequence_length": 256,
+  "train_block_index": 5903,
+  "holdout_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "parameter_audit": {
+    "original_parameters_removed": 10485760,
+    "frozen_replacement_parameters": 7340032,
+    "trainable_parameters": 82,
+    "total_replacement_parameters": 7340114,
+    "net_parameter_reduction": 3145646,
+    "branch": "quantum",
+    "layer_indices": [
+      55,
+      59
+    ],
+    "rank": 1024,
+    "num_qubits": 10,
+    "depth": 2,
+    "entangling_offsets": [
+      1,
+      2,
+      4
+    ],
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27353582914,
+    "observed_net_model_parameter_reduction": 3145646,
+    "observed_trainable_parameter_count": 82,
+    "shared_input_basis": true,
+    "shared_quantum_or_control_core": true,
+    "gpu_exact_statevector_required": true,
+    "teacher_dense_modules_are_deployment_parameters": false
+  },
+  "teacher_hidden_shape": [
+    1,
+    256,
+    5120
+  ],
+  "student_hidden_shape": [
+    1,
+    256,
+    5120
+  ],
+  "relative_final_hidden_mse_before_step": 0.001337714260444045,
+  "gradient_norm_before_clip": 0.0008886410505510867,
+  "theta_gradient_norm": 0.0008886410505510867,
+  "unique_trainable_tensor_count": 3,
+  "unique_trainable_parameter_count": 82,
+  "frozen_gradient_tensor_count": 0,
+  "simulator_calls": 2,
+  "step_seconds": 0.45203259587287903,
+  "gpu_peak_allocated_bytes": [
+    11967952896,
+    14566888448,
+    14567805952,
+    15419980800
+  ],
+  "created_at": "2026-08-29T05:06:07.955625+00:00"
+}

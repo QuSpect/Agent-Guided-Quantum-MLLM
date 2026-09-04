@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "q_dq_max_abs": {
+    "forward": 0.0,
+    "input_grad": 0.0,
+    "theta_grad": 7.152557373046875e-07
+  },
+  "theta_nonzero": 32,
+  "cpu_rejected": true,
+  "parameter_audit": {
+    "original_parameters_removed": 1152,
+    "low_rank_parameters": 256,
+    "frozen_classical_core_parameters": 32,
+    "residual_circuit_or_control_parameters": 32,
+    "residual_alpha_parameters": 8,
+    "trainable_parameters": 40,
+    "total_replacement_parameters": 328,
+    "net_parameter_reduction": 824
+  },
+  "created_at": "2026-08-29T10:02:07.079196+00:00"
+}

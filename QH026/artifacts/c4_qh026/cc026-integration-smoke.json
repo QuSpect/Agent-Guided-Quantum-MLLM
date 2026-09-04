@@ -1,0 +1,97 @@
+{
+  "status": "ok",
+  "mode": "one-step train-only QH026 integration smoke",
+  "candidate": "cc026",
+  "lock_sha256": "aba5f54bbf9b9b5004a0d246fa7f0a8883ce8668d5dc0176253e4c928930ae7e",
+  "training": {
+    "steps": 1,
+    "objective": "relative MSE of final normalized hidden states after all decoder layers",
+    "learning_rate": 0.0003,
+    "loss_first_window_mean": 0.0005057783564552665,
+    "loss_last_window_mean": 0.0005057783564552665,
+    "loss_min": 0.0005057783564552665,
+    "gradient_norm_mean": 0.0007300004945136607,
+    "mean_student_backbone_step_seconds": 0.7566494531929493,
+    "total_student_backbone_step_seconds": 0.7566494531929493,
+    "simulator_calls_during_student_training": 0,
+    "frozen_parameter_grad_tensor_count": 0,
+    "losses": [
+      0.0005057783564552665
+    ]
+  },
+  "injection": {
+    "candidate": "CC-026",
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27354744139,
+    "net_model_parameter_reduction": 1984421,
+    "replacement": {
+      "candidate": "CC-026",
+      "config": {
+        "hidden_size": 5120,
+        "output_size": 1024,
+        "svd_rank": 512,
+        "n_qubits": 10,
+        "depth": 3,
+        "layer_index": 7,
+        "target_projection": "v_proj",
+        "gamma_init": 0.1,
+        "parameter_seed": 20260840
+      },
+      "architecture": "frozen rank-512 SVD backbone + depth-3 parameter-free RMS-normalized data-reuploading log-distance butterfly residual",
+      "original_projection_parameters": 5242880,
+      "deployed_replacement_parameters": 3258459,
+      "removed_projection_parameters": 1984421,
+      "trainable_parameters": 112731,
+      "teacher_is_nonpersistent_training_buffer": true,
+      "original_dense_projection_in_deployed_parameter_set": false,
+      "simulator_calls_per_student_forward": 0,
+      "residual_enabled": true,
+      "inference_simulator_required": false,
+      "statevector_qubits": 0,
+      "claim_limit": "GPU-simulated executable structure; no hardware or speed advantage claim",
+      "data_reuploads": 3,
+      "entanglement_offsets": []
+    },
+    "trainable_parameter_count": 112731,
+    "trainable_tensors": [
+      [
+        "model.language_model.layers.7.self_attn.v_proj.gamma",
+        1
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.down.weight",
+        102400
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.up.weight",
+        10240
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.core.theta",
+        90
+      ]
+    ]
+  },
+  "initialization": {
+    "path": "./artifacts/c4_qh025/c4-cc025-s20260839-replacement.pt",
+    "sha256": "e9cafaaebb4d1232592ccc1b4e8187e8f3fb07fe70bb9b46a0ac156b5121a9fd",
+    "copied": [
+      "gamma",
+      "down.weight",
+      "up.weight",
+      "core.theta[0:2]"
+    ],
+    "new_seeded": [
+      "core.theta[2]"
+    ]
+  },
+  "holdout_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "gpu_peak_allocated_bytes": [
+    12476897792,
+    17178652672,
+    17174528000,
+    16116411904
+  ],
+  "created_at": "2026-08-29T04:12:27.502173+00:00"
+}

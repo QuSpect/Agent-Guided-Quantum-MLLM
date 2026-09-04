@@ -1,0 +1,49 @@
+{
+  "status": "pass",
+  "branch": "classical",
+  "audit": {
+    "original_parameters_removed": 267386880,
+    "low_rank_parameters": 655360,
+    "frozen_classical_core_parameters": 256,
+    "residual_circuit_or_control_parameters": 256,
+    "residual_alpha_parameters": 64,
+    "trainable_parameters": 320,
+    "total_replacement_parameters": 655936,
+    "net_parameter_reduction": 266730944,
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27089997616,
+    "net_model_parameter_reduction": 266730944,
+    "trainable_parameter_count": 320,
+    "branch": "classical",
+    "target_layer": 31,
+    "backbone_candidate": "cc037",
+    "backbone_lock_sha256": "0d61130ef84c5e53e56b59a06639717cb2dcf8f83259501422f7a5007f90f4c9",
+    "backbone_steps": 256
+  },
+  "rows": [
+    {
+      "step": 0,
+      "kl": 0.009118134155869484,
+      "theta_nonzero": 256,
+      "alpha_nonzero": 64,
+      "frozen_gradient_tensor_count": 0,
+      "seconds": 0.42214827612042427
+    },
+    {
+      "step": 1,
+      "kl": 0.007568132132291794,
+      "theta_nonzero": 256,
+      "alpha_nonzero": 64,
+      "frozen_gradient_tensor_count": 0,
+      "seconds": 0.232136532664299
+    }
+  ],
+  "simulator_calls": 0,
+  "peak_vram_bytes": [
+    12238920704,
+    14500180992,
+    15067771392,
+    14508775936
+  ],
+  "created_at": "2026-08-29T08:43:28.314243+00:00"
+}

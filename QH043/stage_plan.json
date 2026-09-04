@@ -1,0 +1,29 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/qh043_harmonic_workflow.py",
+      "--candidate",
+      "base"
+    ],
+    [
+      "code/scripts/qh043_harmonic_workflow.py",
+      "--candidate",
+      "scaffold"
+    ],
+    [
+      "code/scripts/qh043_harmonic_workflow.py",
+      "--candidate",
+      "qh043"
+    ],
+    [
+      "code/scripts/qh043_harmonic_workflow.py",
+      "--candidate",
+      "cc043"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "qh043_harmonic_workflow.py"
+}

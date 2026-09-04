@@ -1,0 +1,10 @@
+{
+  "preprocess": [],
+  "stage": [
+    [
+      "code/scripts/validate_modelscope_snapshot.py"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "validate_modelscope_snapshot.py"
+}

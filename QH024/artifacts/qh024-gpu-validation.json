@@ -1,0 +1,51 @@
+{
+  "status": "ok",
+  "expected_trainable_parameters": 601,
+  "matched_trainable_parameter_counts": {
+    "qh024": 601,
+    "dq024": 601,
+    "cc024": 601,
+    "qh024_noent": 601
+  },
+  "audit": {
+    "candidate": "QH-024",
+    "config": {
+      "hidden_size": 64,
+      "output_size": 16,
+      "svd_rank": 8,
+      "n_qubits": 4,
+      "depth": 2,
+      "layer_index": 7,
+      "target_projection": "v_proj",
+      "gamma_init": 0.1,
+      "parameter_seed": 20260838
+    },
+    "architecture": "frozen rank-r SVD backbone + trainable HyQuT residual",
+    "original_projection_parameters": 1024,
+    "deployed_replacement_parameters": 1241,
+    "removed_projection_parameters": -217,
+    "trainable_parameters": 601,
+    "teacher_is_nonpersistent_training_buffer": false,
+    "original_dense_projection_in_deployed_parameter_set": false,
+    "simulator_calls_per_student_forward": 1,
+    "residual_enabled": true,
+    "inference_simulator_required": true,
+    "statevector_qubits": 4,
+    "claim_limit": "GPU-simulated executable structure; no hardware or speed advantage claim"
+  },
+  "qh_dq_equivalence": {
+    "forward_max_abs_error": 1.4901161193847656e-08,
+    "input_gradient_max_abs_error": 4.656612873077393e-10,
+    "parameter_gradient_max_abs_error": 1.3969838619232178e-09,
+    "exactly_dequantizable_within_tolerance": true
+  },
+  "gradient_groups": {
+    "down": 4.359814738563728e-06,
+    "up": 0.005723101552575827,
+    "theta": 3.1668555493524764e-06,
+    "gamma": 0.0005269394023343921
+  },
+  "teacher_buffer_stripped": true,
+  "cpu_execution_rejected": true,
+  "claim_ceiling": "quantum-executable layer replacement; exactly dequantized on the tested map"
+}

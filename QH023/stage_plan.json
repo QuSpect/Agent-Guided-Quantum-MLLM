@@ -1,0 +1,36 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_editclevr_dev.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/run_editclevr_qh023.py",
+      "--candidate",
+      "base"
+    ],
+    [
+      "code/scripts/run_editclevr_qh023.py",
+      "--candidate",
+      "qh023"
+    ],
+    [
+      "code/scripts/run_editclevr_qh023.py",
+      "--candidate",
+      "dq023"
+    ],
+    [
+      "code/scripts/run_editclevr_qh023.py",
+      "--candidate",
+      "cc023"
+    ],
+    [
+      "code/scripts/run_editclevr_qh023.py",
+      "--candidate",
+      "qh023_noent"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_editclevr_qh023.py"
+  ],
+  "entrypoint": "run_editclevr_qh023.py"
+}

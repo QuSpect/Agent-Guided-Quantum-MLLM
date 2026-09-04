@@ -1,0 +1,149 @@
+{
+  "status": "ok",
+  "run_id": "wikitext-qh022-s20260829-n4-l64",
+  "candidate": "qh022",
+  "seed": 20260829,
+  "model_dir": "./models/Qwen3.8-27B",
+  "base_parameter_count": 27356728560,
+  "timing_context": "shared",
+  "candidate_audit": {
+    "candidate": "QH-022",
+    "parent": "QPA arXiv:2410.09846 adapted to retain simulator inference",
+    "injection_path": "model.model.language_model.layers.7.self_attn.v_proj.input",
+    "execution_scope": "once per prefill forward and once per decode-step forward",
+    "adapter": {
+      "candidate": "QH-022",
+      "config": {
+        "hidden_size": 5120,
+        "rank": 12,
+        "n_qubits": 6,
+        "depth": 2,
+        "layer_index": 7,
+        "target_projection": "v_proj",
+        "gamma_init": 0.05,
+        "basis_seed": 20260829
+      },
+      "core_kind": "quantum",
+      "trainable_parameters": 25,
+      "fixed_basis_parameters": 122880,
+      "simulator_execution": "one 6q complex64 CUDA statevector per model forward",
+      "inference_simulator_required": true,
+      "claim_limit": "classically simulable parameterization; no speedup claim"
+    },
+    "trainable_parameter_count": 25,
+    "trainable_tensors": [
+      [
+        "model.language_model.layers.7.self_attn.v_proj.adapter.gamma",
+        1
+      ],
+      [
+        "model.language_model.layers.7.self_attn.v_proj.adapter.core.theta",
+        24
+      ]
+    ]
+  },
+  "trainable_parameters": 25,
+  "trainable_tensors": [
+    [
+      "model.language_model.layers.7.self_attn.v_proj.adapter.gamma",
+      1
+    ],
+    [
+      "model.language_model.layers.7.self_attn.v_proj.adapter.core.theta",
+      24
+    ]
+  ],
+  "dataset": {
+    "name": "Salesforce/wikitext",
+    "config": "wikitext-2-raw-v1",
+    "source_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+    "license": "CC BY-SA 4.0",
+    "train_token_sha256": "a7a63176fe5e6712e8c49b1708f2ae8a8850191595603660adfe08d20f6c6f64",
+    "validation_token_sha256": "8d111ebb5cd5f7cced54fb455aa6f3e047567e16ee6d1e281e66db8522d7ec31",
+    "train_indices": [
+      28093,
+      31925,
+      3350,
+      23058
+    ],
+    "eval_indices": [
+      3375,
+      1201,
+      2042,
+      1364
+    ],
+    "sequence_length": 64,
+    "test_rows_used_for_training_or_evaluation": 0,
+    "protocol_disclosure": {
+      "initial_datasetdict_load_materialized_test_rows_in_cache": 4358,
+      "test_rows_inspected_or_used_for_fitness": 0,
+      "correction": "current script requests train and validation splits individually"
+    }
+  },
+  "training": {
+    "steps": 4,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "theta_l2": 0.0,
+    "losses": [
+      3.052521228790283,
+      2.5065395832061768,
+      3.658614158630371,
+      3.285837173461914
+    ],
+    "task_loss_first_16_mean": 3.1258780360221863,
+    "task_loss_last_16_mean": 3.1258780360221863,
+    "gradient_norm_mean": 1.2369391470201663e-05,
+    "mean_step_seconds": 0.8316868338733912,
+    "total_step_seconds": 3.3267473354935646,
+    "frozen_parameter_grad_tensor_count": 0
+  },
+  "evaluation_after": {
+    "metrics": {
+      "sequence_count": 4,
+      "predicted_token_count": 252,
+      "mean_token_nll": 3.1064730286598206,
+      "token_perplexity": 22.342105309514615,
+      "mean_sequence_seconds": 0.12096575926989317,
+      "p95_sequence_seconds": 0.12110056038945913
+    },
+    "rows": [
+      {
+        "block_index": 3375,
+        "predicted_tokens": 63,
+        "mean_token_nll": 2.377786159515381,
+        "total_nll": 149.800528049469,
+        "seconds": 0.12111827358603477
+      },
+      {
+        "block_index": 1201,
+        "predicted_tokens": 63,
+        "mean_token_nll": 2.9859917163848877,
+        "total_nll": 188.11747813224792,
+        "seconds": 0.12075264379382133
+      },
+      {
+        "block_index": 2042,
+        "predicted_tokens": 63,
+        "mean_token_nll": 3.451317310333252,
+        "total_nll": 217.43299055099487,
+        "seconds": 0.12099193409085274
+      },
+      {
+        "block_index": 1364,
+        "predicted_tokens": 63,
+        "mean_token_nll": 3.6107969284057617,
+        "total_nll": 227.480206489563,
+        "seconds": 0.12100018560886383
+      }
+    ]
+  },
+  "adapter_checkpoint": "./artifacts/wikitext_stage_a/wikitext-qh022-s20260829-n4-l64-adapter.pt",
+  "gpu_peak_allocated_bytes": [
+    11927337984,
+    14533175296,
+    14533175296,
+    14171144192
+  ],
+  "checked_at": "2026-08-29T01:01:17.502143+00:00"
+}

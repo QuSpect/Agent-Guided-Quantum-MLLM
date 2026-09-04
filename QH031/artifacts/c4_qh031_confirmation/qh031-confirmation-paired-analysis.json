@@ -1,0 +1,120 @@
+{
+  "status": "ok",
+  "analysis": "QH031 frozen-checkpoint disjoint 512-block C4 confirmation",
+  "verdict": "retain_qh031_compression_reject_quantum_specific_confirmation",
+  "metric": "mean token negative log likelihood; lower is better",
+  "lock": "./artifacts/qh031-confirmation-lock.json",
+  "lock_sha256": "13274049eff4ce7e4788d67f65a71f923d2bc468e3bd4eae79b38a78c331d02a",
+  "input_sha256": {
+    "base": "189a32c925edd8c1f859739a22dc9da8a02c5bed77a5c6579dc9e34239c92123",
+    "sharedsvd1024": "bbc0c1af12a345476f71eb864366517a2e253f14f4a58dfc771bfa9ffcb0d19f",
+    "qh031": "64ffac37ef102a9d2e037ed94daa9b90f581bd7af6aa41d32de9493f0f3ffb7e",
+    "cc031": "3befd186ad43401cc6df3b319e72aa539268ad2c8930f98be685a84e2296d26e"
+  },
+  "bootstrap_samples": 20000,
+  "seed": 20260847,
+  "test_rows_inspected_or_used_for_fitness": 0,
+  "point_metrics": {
+    "base": {
+      "mean_token_nll": 2.7106472714804113,
+      "token_perplexity": 15.03900668530222
+    },
+    "sharedsvd1024": {
+      "mean_token_nll": 2.7109861966455355,
+      "token_perplexity": 15.044104646991295
+    },
+    "qh031": {
+      "mean_token_nll": 2.711141753476113,
+      "token_perplexity": 15.046445042256574
+    },
+    "cc031": {
+      "mean_token_nll": 2.711127898073755,
+      "token_perplexity": 15.0462365691507
+    },
+    "qh031_no_ent": {
+      "mean_token_nll": 2.711135553661734,
+      "token_perplexity": 15.04635175737942
+    }
+  },
+  "comparisons": {
+    "sharedsvd1024_minus_base": {
+      "definition": "NLL(sharedsvd1024) - NLL(base); lower is better",
+      "mean_delta_nll": 0.00033892516512423754,
+      "paired_percentile_bootstrap_95_ci": [
+        0.00010909997508861125,
+        0.0005682489485479891
+      ],
+      "paired_sign_flip_two_sided_p": 0.004449777511124443,
+      "block_count": 512
+    },
+    "qh031_minus_base": {
+      "definition": "NLL(qh031) - NLL(base); lower is better",
+      "mean_delta_nll": 0.0004944819957017899,
+      "paired_percentile_bootstrap_95_ci": [
+        0.0002592907869257033,
+        0.0007316300587262958
+      ],
+      "paired_sign_flip_two_sided_p": 4.999750012499375e-05,
+      "block_count": 512
+    },
+    "cc031_minus_base": {
+      "definition": "NLL(cc031) - NLL(base); lower is better",
+      "mean_delta_nll": 0.00048062659334391356,
+      "paired_percentile_bootstrap_95_ci": [
+        0.0002483985008439049,
+        0.0007124524534447113
+      ],
+      "paired_sign_flip_two_sided_p": 4.999750012499375e-05,
+      "block_count": 512
+    },
+    "qh031_active_minus_sharedsvd1024_own_zero": {
+      "definition": "NLL(qh031) - NLL(sharedsvd1024); lower is better",
+      "mean_delta_nll": 0.00015555683057755232,
+      "paired_percentile_bootstrap_95_ci": [
+        1.1628292850218716e-05,
+        0.00029714578704442796
+      ],
+      "paired_sign_flip_two_sided_p": 0.03149842507874606,
+      "block_count": 512
+    },
+    "qh031_minus_cc031": {
+      "definition": "NLL(qh031) - NLL(cc031); lower is better",
+      "mean_delta_nll": 1.38554023578763e-05,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.00013812237593811006,
+        0.00016588892904110205
+      ],
+      "paired_sign_flip_two_sided_p": 0.8607069646517674,
+      "block_count": 512
+    },
+    "qh031_active_minus_no_entanglement": {
+      "definition": "NLL(qh031) - NLL(qh031_no_ent); lower is better",
+      "mean_delta_nll": 6.1998143792152405e-06,
+      "paired_percentile_bootstrap_95_ci": [
+        -0.00013133037136867643,
+        0.00013942843652330332
+      ],
+      "paired_sign_flip_two_sided_p": 0.9298035098245088,
+      "block_count": 512
+    }
+  },
+  "gates": {
+    "compression_noninferior_to_base": true,
+    "active_better_than_own_zero": false,
+    "quantum_better_than_equal_parameter_classical": false,
+    "entanglement_ablation_causally_worse": false,
+    "net_parameter_reduction_positive": true,
+    "all_preregistered_quantum_specific_confirmation_gates": false
+  },
+  "parameter_audit": {
+    "net_model_parameter_reduction": 3145646,
+    "checkpoint_trainable_parameters": 82,
+    "confirmation_trainable_parameters": 0
+  },
+  "claim_limits": [
+    "The architecture and sample size were informed by an earlier 64-block development experiment.",
+    "This disjoint confirmation is not a final external benchmark.",
+    "Exact 10-qubit GPU simulation is classically reproducible and provides no computational quantum advantage."
+  ],
+  "created_at": "2026-08-29T05:51:16.332198+00:00"
+}

@@ -1,0 +1,1303 @@
+{
+  "schema_version": 1,
+  "purpose": "adapter_checkpoint_parameter_utilization_audit",
+  "checkpoint_count": 6,
+  "checkpoints": [
+    {
+      "path": "artifacts/clevr_relations/clevr-relations-qh018-hard-train-image-holdout-s20260829-n256-adapter.pt",
+      "sha256": "2b4831e5f2ef117b9e0861adc71442708dfd331e7f96c96e76f923e1a5bef12a",
+      "tensor_count": 18,
+      "trainable_numel": 823874,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 4,
+          "numel": 4185,
+          "l2_norm": 8.485076362794759
+        },
+        "token_content_path": {
+          "tensor_count": 11,
+          "numel": 819624,
+          "l2_norm": 14.518343467771082
+        },
+        "router_mix": {
+          "tensor_count": 1,
+          "numel": 1,
+          "l2_norm": 0.058431562036275864
+        },
+        "base_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.17464552506098685
+        },
+        "residual_or_quantum_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.15897033285595585
+        }
+      },
+      "scalar_mix_or_scale": {
+        "model.visual.adapter.raw_scale": -2.929360866546631,
+        "model.visual.adapter.router.mix": 0.058431562036275864
+      },
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {
+        "model.visual.adapter.router.mix": 0.008431562036275861
+      },
+      "mix_branch_activity": "moved_from_initialization",
+      "tensors": {
+        "model.visual.adapter.key_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.0019844713680454065,
+          "max_abs": 0.00136566162109375,
+          "mean": 1.33514404296875e-05
+        },
+        "model.visual.adapter.key_down.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "numel": 256,
+          "l2_norm": 2.810807941491503,
+          "max_abs": 0.294921875,
+          "mean": 0.018752217292785645
+        },
+        "model.visual.adapter.object_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.007504354518226352,
+          "max_abs": 0.004302978515625,
+          "mean": 0.0007249265909194946
+        },
+        "model.visual.adapter.object_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.6343453392579965,
+          "max_abs": 0.034423828125,
+          "mean": -7.832510539174109e-05
+        },
+        "model.visual.adapter.pair_content.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.06186112030515962,
+          "max_abs": 0.0167236328125,
+          "mean": 0.0063627660274505615
+        },
+        "model.visual.adapter.pair_content.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096,
+          "l2_norm": 7.962451572022244,
+          "max_abs": 0.216796875,
+          "mean": 0.0021571651013800874
+        },
+        "model.visual.adapter.pair_position": {
+          "shape": [
+            6,
+            4
+          ],
+          "numel": 24,
+          "l2_norm": 0.10442203310881067,
+          "max_abs": 0.04995475336909294,
+          "mean": 0.00525908410751678
+        },
+        "model.visual.adapter.query_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.0042649479783598235,
+          "max_abs": 0.0035858154296875,
+          "mean": -0.0016875267028808594
+        },
+        "model.visual.adapter.query_down.weight": {
+          "shape": [
+            4,
+            16
+          ],
+          "numel": 64,
+          "l2_norm": 2.7200876181644826,
+          "max_abs": 0.5390625,
+          "mean": 0.013624906539916992
+        },
+        "model.visual.adapter.raw_scale": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 2.929360866546631,
+          "max_abs": 2.929360866546631,
+          "mean": -2.929360866546631
+        },
+        "model.visual.adapter.router.base.affine": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.17464552506098685,
+          "max_abs": 0.05425731837749481,
+          "mean": -0.004314137764595216
+        },
+        "model.visual.adapter.router.mix": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.058431562036275864,
+          "max_abs": 0.058431562036275864,
+          "mean": 0.058431562036275864
+        },
+        "model.visual.adapter.router.residual.theta": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.15897033285595585,
+          "max_abs": 0.05359170585870743,
+          "mean": 0.0009435529946131282
+        },
+        "model.visual.adapter.text_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.007009879121787608,
+          "max_abs": 0.0038604736328125,
+          "mean": -0.00036334991455078125
+        },
+        "model.visual.adapter.text_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.659922254496266,
+          "max_abs": 0.034423828125,
+          "mean": 7.915598442309602e-05
+        },
+        "model.visual.adapter.token_down.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.05373534584711565,
+          "max_abs": 0.01422119140625,
+          "mean": 0.005528002977371216
+        },
+        "model.visual.adapter.token_down.weight": {
+          "shape": [
+            64,
+            5120
+          ],
+          "numel": 327680,
+          "l2_norm": 11.361865384836856,
+          "max_abs": 0.035888671875,
+          "mean": 8.514398456895833e-05
+        },
+        "model.visual.adapter.token_up.weight": {
+          "shape": [
+            5120,
+            64
+          ],
+          "numel": 327680,
+          "l2_norm": 1.6146862520534147,
+          "max_abs": 0.01434326171875,
+          "mean": 1.5748966038486854e-05
+        }
+      }
+    },
+    {
+      "path": "artifacts/clevr_relations/clevr-relations-qh018-hard-train-image-holdout-s20260830-n256-adapter.pt",
+      "sha256": "c6c940b39151aeed7f970f31e484b37744839ed24e38dd3b79d1b650a7f49a98",
+      "tensor_count": 18,
+      "trainable_numel": 823874,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 4,
+          "numel": 4185,
+          "l2_norm": 8.496556510107679
+        },
+        "token_content_path": {
+          "tensor_count": 11,
+          "numel": 819624,
+          "l2_norm": 14.616353596013587
+        },
+        "router_mix": {
+          "tensor_count": 1,
+          "numel": 1,
+          "l2_norm": 0.05401147902011871
+        },
+        "base_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.14742700893731334
+        },
+        "residual_or_quantum_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.15406615889415978
+        }
+      },
+      "scalar_mix_or_scale": {
+        "model.visual.adapter.raw_scale": -2.92887282371521,
+        "model.visual.adapter.router.mix": 0.05401147902011871
+      },
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {
+        "model.visual.adapter.router.mix": 0.004011479020118711
+      },
+      "mix_branch_activity": "moved_from_initialization",
+      "tensors": {
+        "model.visual.adapter.key_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.0049926565590793885,
+          "max_abs": 0.00439453125,
+          "mean": 0.0020241737365722656
+        },
+        "model.visual.adapter.key_down.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "numel": 256,
+          "l2_norm": 2.7685099197877516,
+          "max_abs": 0.296875,
+          "mean": -0.011031948029994965
+        },
+        "model.visual.adapter.object_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.011279788196324012,
+          "max_abs": 0.005859375,
+          "mean": 0.00010932981967926025
+        },
+        "model.visual.adapter.object_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.646700536464192,
+          "max_abs": 0.034912109375,
+          "mean": -4.213740742216032e-05
+        },
+        "model.visual.adapter.pair_content.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.05726471439648347,
+          "max_abs": 0.015625,
+          "mean": 0.005848720669746399
+        },
+        "model.visual.adapter.pair_content.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096,
+          "l2_norm": 7.975117506007203,
+          "max_abs": 0.216796875,
+          "mean": 9.336421499028802e-06
+        },
+        "model.visual.adapter.pair_position": {
+          "shape": [
+            6,
+            4
+          ],
+          "numel": 24,
+          "l2_norm": 0.08601180045891325,
+          "max_abs": 0.042239781469106674,
+          "mean": -0.002950134854472708
+        },
+        "model.visual.adapter.query_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.003536395189235767,
+          "max_abs": 0.003204345703125,
+          "mean": -0.0005930345505475998
+        },
+        "model.visual.adapter.query_down.weight": {
+          "shape": [
+            4,
+            16
+          ],
+          "numel": 64,
+          "l2_norm": 2.5271933516749145,
+          "max_abs": 0.52734375,
+          "mean": 0.08564281463623047
+        },
+        "model.visual.adapter.raw_scale": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 2.92887282371521,
+          "max_abs": 2.92887282371521,
+          "mean": -2.92887282371521
+        },
+        "model.visual.adapter.router.base.affine": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.14742700893731334,
+          "max_abs": 0.05013347044587135,
+          "mean": -0.0036828740703640506
+        },
+        "model.visual.adapter.router.mix": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.05401147902011871,
+          "max_abs": 0.05401147902011871,
+          "mean": 0.05401147902011871
+        },
+        "model.visual.adapter.router.residual.theta": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.15406615889415978,
+          "max_abs": 0.05091279000043869,
+          "mean": -0.003290307397833203
+        },
+        "model.visual.adapter.text_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.0078072762114789526,
+          "max_abs": 0.0035858154296875,
+          "mean": -0.0006024837493896484
+        },
+        "model.visual.adapter.text_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.644500334858097,
+          "max_abs": 0.03466796875,
+          "mean": -2.1181586383534068e-05
+        },
+        "model.visual.adapter.token_down.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.0675308438348525,
+          "max_abs": 0.014892578125,
+          "mean": 0.007137119770050049
+        },
+        "model.visual.adapter.token_down.weight": {
+          "shape": [
+            64,
+            5120
+          ],
+          "numel": 327680,
+          "l2_norm": 11.491905396090063,
+          "max_abs": 0.04150390625,
+          "mean": 0.00016163518341727467
+        },
+        "model.visual.adapter.token_up.weight": {
+          "shape": [
+            5120,
+            64
+          ],
+          "numel": 327680,
+          "l2_norm": 1.942202972096657,
+          "max_abs": 0.0177001953125,
+          "mean": -5.769713626690987e-06
+        }
+      }
+    },
+    {
+      "path": "artifacts/clevr_relations/clevr-relations-qh018-hard-train-image-holdout-s20260831-n256-adapter.pt",
+      "sha256": "a19bbfb03cae2cad2da3e2d04965f48d2cd61a2858213c7db9aba6e52078ba94",
+      "tensor_count": 18,
+      "trainable_numel": 823874,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 4,
+          "numel": 4185,
+          "l2_norm": 8.437320561243263
+        },
+        "token_content_path": {
+          "tensor_count": 11,
+          "numel": 819624,
+          "l2_norm": 14.562804774752054
+        },
+        "router_mix": {
+          "tensor_count": 1,
+          "numel": 1,
+          "l2_norm": 0.05960883945226669
+        },
+        "base_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.1630017503966787
+        },
+        "residual_or_quantum_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.14736094419148843
+        }
+      },
+      "scalar_mix_or_scale": {
+        "model.visual.adapter.raw_scale": -2.930276393890381,
+        "model.visual.adapter.router.mix": 0.05960883945226669
+      },
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {
+        "model.visual.adapter.router.mix": 0.00960883945226669
+      },
+      "mix_branch_activity": "moved_from_initialization",
+      "tensors": {
+        "model.visual.adapter.key_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.0013258981728634285,
+          "max_abs": 0.00101470947265625,
+          "mean": 0.0003085136413574219
+        },
+        "model.visual.adapter.key_down.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "numel": 256,
+          "l2_norm": 2.7421654462382303,
+          "max_abs": 0.296875,
+          "mean": 0.010364050045609474
+        },
+        "model.visual.adapter.object_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.009774901235412152,
+          "max_abs": 0.0050048828125,
+          "mean": 0.000312119722366333
+        },
+        "model.visual.adapter.object_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.642528585573849,
+          "max_abs": 0.0341796875,
+          "mean": -3.3888053621922154e-05
+        },
+        "model.visual.adapter.pair_content.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.050812652040624275,
+          "max_abs": 0.0162353515625,
+          "mean": 0.004888860508799553
+        },
+        "model.visual.adapter.pair_content.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096,
+          "l2_norm": 7.91160421760536,
+          "max_abs": 0.216796875,
+          "mean": 0.0006286617717705667
+        },
+        "model.visual.adapter.pair_position": {
+          "shape": [
+            6,
+            4
+          ],
+          "numel": 24,
+          "l2_norm": 0.0761267820729895,
+          "max_abs": 0.034106917679309845,
+          "mean": -0.0048549885347407935
+        },
+        "model.visual.adapter.query_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.005489875882196564,
+          "max_abs": 0.0052490234375,
+          "mean": 0.0013279914855957031
+        },
+        "model.visual.adapter.query_down.weight": {
+          "shape": [
+            4,
+            16
+          ],
+          "numel": 64,
+          "l2_norm": 2.660981085415284,
+          "max_abs": 0.546875,
+          "mean": -0.03426170349121094
+        },
+        "model.visual.adapter.raw_scale": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 2.930276393890381,
+          "max_abs": 2.930276393890381,
+          "mean": -2.930276393890381
+        },
+        "model.visual.adapter.router.base.affine": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.1630017503966787,
+          "max_abs": 0.05429697781801224,
+          "mean": -0.008665842411573976
+        },
+        "model.visual.adapter.router.mix": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.05960883945226669,
+          "max_abs": 0.05960883945226669,
+          "mean": 0.05960883945226669
+        },
+        "model.visual.adapter.router.residual.theta": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.14736094419148843,
+          "max_abs": 0.05321521311998367,
+          "mean": -0.0016236636438407004
+        },
+        "model.visual.adapter.text_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.0038653681235887682,
+          "max_abs": 0.0016937255859375,
+          "mean": 0.00039082765579223633
+        },
+        "model.visual.adapter.text_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.654390764011208,
+          "max_abs": 0.0341796875,
+          "mean": 8.192674681595235e-06
+        },
+        "model.visual.adapter.token_down.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.05782715572305132,
+          "max_abs": 0.013671875,
+          "mean": 0.006306320428848267
+        },
+        "model.visual.adapter.token_down.weight": {
+          "shape": [
+            64,
+            5120
+          ],
+          "numel": 327680,
+          "l2_norm": 11.42330456124859,
+          "max_abs": 0.037841796875,
+          "mean": 0.0001299806306748863
+        },
+        "model.visual.adapter.token_up.weight": {
+          "shape": [
+            5120,
+            64
+          ],
+          "numel": 327680,
+          "l2_norm": 1.780267962812675,
+          "max_abs": 0.01611328125,
+          "mean": 1.6832068332028883e-06
+        }
+      }
+    },
+    {
+      "path": "artifacts/clevr_relations/clevr-relations-qh018_noent-hard-train-image-holdout-s20260829-n256-adapter.pt",
+      "sha256": "25e697e51bd059fc5f389287d6870a67f45cd009bfa0d6d1d075fd6a6776f930",
+      "tensor_count": 18,
+      "trainable_numel": 823874,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 4,
+          "numel": 4185,
+          "l2_norm": 8.484713424500566
+        },
+        "token_content_path": {
+          "tensor_count": 11,
+          "numel": 819624,
+          "l2_norm": 14.65847101069834
+        },
+        "router_mix": {
+          "tensor_count": 1,
+          "numel": 1,
+          "l2_norm": 0.05095338076353073
+        },
+        "base_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.1695141889272142
+        },
+        "residual_or_quantum_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.16598715234503278
+        }
+      },
+      "scalar_mix_or_scale": {
+        "model.visual.adapter.raw_scale": -2.9283931255340576,
+        "model.visual.adapter.router.mix": 0.05095338076353073
+      },
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {
+        "model.visual.adapter.router.mix": 0.0009533807635307284
+      },
+      "mix_branch_activity": "moved_from_initialization",
+      "tensors": {
+        "model.visual.adapter.key_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.0011183326840796509,
+          "max_abs": 0.00075531005859375,
+          "mean": 5.8650970458984375e-05
+        },
+        "model.visual.adapter.key_down.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "numel": 256,
+          "l2_norm": 2.8108389557605533,
+          "max_abs": 0.294921875,
+          "mean": 0.018759071826934814
+        },
+        "model.visual.adapter.object_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.010601553813717562,
+          "max_abs": 0.004974365234375,
+          "mean": 0.0007597208023071289
+        },
+        "model.visual.adapter.object_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.636415079695869,
+          "max_abs": 0.03515625,
+          "mean": -7.639024543095729e-05
+        },
+        "model.visual.adapter.pair_content.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.05998211561528682,
+          "max_abs": 0.01470947265625,
+          "mean": 0.006148502230644226
+        },
+        "model.visual.adapter.pair_content.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096,
+          "l2_norm": 7.962489697395867,
+          "max_abs": 0.216796875,
+          "mean": 0.0021534652914851904
+        },
+        "model.visual.adapter.pair_position": {
+          "shape": [
+            6,
+            4
+          ],
+          "numel": 24,
+          "l2_norm": 0.10017765667042429,
+          "max_abs": 0.05272214487195015,
+          "mean": 0.005351088965350452
+        },
+        "model.visual.adapter.query_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.0019044549568635867,
+          "max_abs": 0.00124359130859375,
+          "mean": -0.00021469593048095703
+        },
+        "model.visual.adapter.query_down.weight": {
+          "shape": [
+            4,
+            16
+          ],
+          "numel": 64,
+          "l2_norm": 2.720055543463031,
+          "max_abs": 0.5390625,
+          "mean": 0.013570785522460938
+        },
+        "model.visual.adapter.raw_scale": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 2.9283931255340576,
+          "max_abs": 2.9283931255340576,
+          "mean": -2.9283931255340576
+        },
+        "model.visual.adapter.router.base.affine": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.1695141889272142,
+          "max_abs": 0.047823116183280945,
+          "mean": -0.0044742961108568124
+        },
+        "model.visual.adapter.router.mix": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.05095338076353073,
+          "max_abs": 0.05095338076353073,
+          "mean": 0.05095338076353073
+        },
+        "model.visual.adapter.router.residual.theta": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.16598715234503278,
+          "max_abs": 0.04914969578385353,
+          "mean": 0.000982405994363944
+        },
+        "model.visual.adapter.text_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.004008104087362797,
+          "max_abs": 0.00179290771484375,
+          "mean": 0.00010274350643157959
+        },
+        "model.visual.adapter.text_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.658094002711526,
+          "max_abs": 0.0341796875,
+          "mean": 7.978674052537827e-05
+        },
+        "model.visual.adapter.token_down.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.06677323220434551,
+          "max_abs": 0.01324462890625,
+          "mean": 0.00679410994052887
+        },
+        "model.visual.adapter.token_down.weight": {
+          "shape": [
+            64,
+            5120
+          ],
+          "numel": 327680,
+          "l2_norm": 11.500527264194677,
+          "max_abs": 0.040771484375,
+          "mean": 0.00011678412488436152
+        },
+        "model.visual.adapter.token_up.weight": {
+          "shape": [
+            5120,
+            64
+          ],
+          "numel": 327680,
+          "l2_norm": 1.8765213902625908,
+          "max_abs": 0.01611328125,
+          "mean": -5.127369564128515e-06
+        }
+      }
+    },
+    {
+      "path": "artifacts/clevr_relations/clevr-relations-qh018_noent-hard-train-image-holdout-s20260830-n256-adapter.pt",
+      "sha256": "adb670875281fffa8517351841c8d0b6bdce8ec7b38f30aad67a98315692869a",
+      "tensor_count": 18,
+      "trainable_numel": 823874,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 4,
+          "numel": 4185,
+          "l2_norm": 8.496328674965877
+        },
+        "token_content_path": {
+          "tensor_count": 11,
+          "numel": 819624,
+          "l2_norm": 14.5742613726985
+        },
+        "router_mix": {
+          "tensor_count": 1,
+          "numel": 1,
+          "l2_norm": 0.05108076333999634
+        },
+        "base_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.14854479964037784
+        },
+        "residual_or_quantum_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.15534286934668734
+        }
+      },
+      "scalar_mix_or_scale": {
+        "model.visual.adapter.raw_scale": -2.928711175918579,
+        "model.visual.adapter.router.mix": 0.05108076333999634
+      },
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {
+        "model.visual.adapter.router.mix": 0.0010807633399963351
+      },
+      "mix_branch_activity": "moved_from_initialization",
+      "tensors": {
+        "model.visual.adapter.key_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.0023944762361769764,
+          "max_abs": 0.002227783203125,
+          "mean": 0.0006642341613769531
+        },
+        "model.visual.adapter.key_down.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "numel": 256,
+          "l2_norm": 2.7685157927151733,
+          "max_abs": 0.296875,
+          "mean": -0.011173754930496216
+        },
+        "model.visual.adapter.object_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.011586511068815131,
+          "max_abs": 0.005218505859375,
+          "mean": 0.0002994537353515625
+        },
+        "model.visual.adapter.object_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.649332832469774,
+          "max_abs": 0.034423828125,
+          "mean": -4.286481008648479e-05
+        },
+        "model.visual.adapter.pair_content.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.045729653006785234,
+          "max_abs": 0.01312255859375,
+          "mean": 0.004312817472964525
+        },
+        "model.visual.adapter.pair_content.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096,
+          "l2_norm": 7.974973135025198,
+          "max_abs": 0.216796875,
+          "mean": -0.00012631627032533288
+        },
+        "model.visual.adapter.pair_position": {
+          "shape": [
+            6,
+            4
+          ],
+          "numel": 24,
+          "l2_norm": 0.08924178146632746,
+          "max_abs": 0.039597976952791214,
+          "mean": -0.003225067147771673
+        },
+        "model.visual.adapter.query_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.0020823111267726643,
+          "max_abs": 0.00148773193359375,
+          "mean": 0.0005693435668945312
+        },
+        "model.visual.adapter.query_down.weight": {
+          "shape": [
+            4,
+            16
+          ],
+          "numel": 64,
+          "l2_norm": 2.5271672182765776,
+          "max_abs": 0.52734375,
+          "mean": 0.08556365966796875
+        },
+        "model.visual.adapter.raw_scale": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 2.928711175918579,
+          "max_abs": 2.928711175918579,
+          "mean": -2.928711175918579
+        },
+        "model.visual.adapter.router.base.affine": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.14854479964037784,
+          "max_abs": 0.05139058828353882,
+          "mean": -0.0037246995416353457
+        },
+        "model.visual.adapter.router.mix": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.05108076333999634,
+          "max_abs": 0.05108076333999634,
+          "mean": 0.05108076333999634
+        },
+        "model.visual.adapter.router.residual.theta": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.15534286934668734,
+          "max_abs": 0.049285802990198135,
+          "mean": -0.0032908851317188237
+        },
+        "model.visual.adapter.text_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.00411258711114855,
+          "max_abs": 0.00153350830078125,
+          "mean": 0.00021576881408691406
+        },
+        "model.visual.adapter.text_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.640943470476265,
+          "max_abs": 0.0341796875,
+          "mean": -1.2451761881493439e-05
+        },
+        "model.visual.adapter.token_down.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.0716673005981115,
+          "max_abs": 0.01513671875,
+          "mean": 0.007610989734530449
+        },
+        "model.visual.adapter.token_down.weight": {
+          "shape": [
+            64,
+            5120
+          ],
+          "numel": 327680,
+          "l2_norm": 11.436495308122707,
+          "max_abs": 0.041259765625,
+          "mean": 0.00015633183719145904
+        },
+        "model.visual.adapter.token_up.weight": {
+          "shape": [
+            5120,
+            64
+          ],
+          "numel": 327680,
+          "l2_norm": 1.9554829741323285,
+          "max_abs": 0.0177001953125,
+          "mean": -9.72243252724686e-06
+        }
+      }
+    },
+    {
+      "path": "artifacts/clevr_relations/clevr-relations-qh018_noent-hard-train-image-holdout-s20260831-n256-adapter.pt",
+      "sha256": "b72e935cbfb31425006c091c75a6b2926c80b2ff0c19461e2b1b347e0445ae41",
+      "tensor_count": 18,
+      "trainable_numel": 823874,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 4,
+          "numel": 4185,
+          "l2_norm": 8.436830937314005
+        },
+        "token_content_path": {
+          "tensor_count": 11,
+          "numel": 819624,
+          "l2_norm": 14.618076835037192
+        },
+        "router_mix": {
+          "tensor_count": 1,
+          "numel": 1,
+          "l2_norm": 0.04889649152755737
+        },
+        "base_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.1639404697499766
+        },
+        "residual_or_quantum_router": {
+          "tensor_count": 1,
+          "numel": 32,
+          "l2_norm": 0.15022716931692218
+        }
+      },
+      "scalar_mix_or_scale": {
+        "model.visual.adapter.raw_scale": -2.928912401199341,
+        "model.visual.adapter.router.mix": 0.04889649152755737
+      },
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {
+        "model.visual.adapter.router.mix": -0.0011035084724426297
+      },
+      "mix_branch_activity": "moved_from_initialization",
+      "tensors": {
+        "model.visual.adapter.key_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.003437924880353506,
+          "max_abs": 0.0030059814453125,
+          "mean": 0.00113677978515625
+        },
+        "model.visual.adapter.key_down.weight": {
+          "shape": [
+            4,
+            64
+          ],
+          "numel": 256,
+          "l2_norm": 2.7421807068371664,
+          "max_abs": 0.296875,
+          "mean": 0.010427102446556091
+        },
+        "model.visual.adapter.object_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.009988088448759957,
+          "max_abs": 0.004638671875,
+          "mean": 0.00029164552688598633
+        },
+        "model.visual.adapter.object_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.64518580795251,
+          "max_abs": 0.035888671875,
+          "mean": -2.8577744251379046e-05
+        },
+        "model.visual.adapter.pair_content.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.04943787491985682,
+          "max_abs": 0.01434326171875,
+          "mean": 0.004506349563598633
+        },
+        "model.visual.adapter.pair_content.weight": {
+          "shape": [
+            64,
+            64
+          ],
+          "numel": 4096,
+          "l2_norm": 7.911555030508435,
+          "max_abs": 0.216796875,
+          "mean": 0.0006533649284392595
+        },
+        "model.visual.adapter.pair_position": {
+          "shape": [
+            6,
+            4
+          ],
+          "numel": 24,
+          "l2_norm": 0.08025775152280117,
+          "max_abs": 0.03278962895274162,
+          "mean": -0.00460628216448337
+        },
+        "model.visual.adapter.query_down.bias": {
+          "shape": [
+            4
+          ],
+          "numel": 4,
+          "l2_norm": 0.002361433182431025,
+          "max_abs": 0.001953125,
+          "mean": -0.0010461807250976562
+        },
+        "model.visual.adapter.query_down.weight": {
+          "shape": [
+            4,
+            16
+          ],
+          "numel": 64,
+          "l2_norm": 2.6609984661452435,
+          "max_abs": 0.546875,
+          "mean": -0.034245967864990234
+        },
+        "model.visual.adapter.raw_scale": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 2.928912401199341,
+          "max_abs": 2.928912401199341,
+          "mean": -2.928912401199341
+        },
+        "model.visual.adapter.router.base.affine": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.1639404697499766,
+          "max_abs": 0.04917012155056,
+          "mean": -0.008911040200473508
+        },
+        "model.visual.adapter.router.mix": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.04889649152755737,
+          "max_abs": 0.04889649152755737,
+          "mean": 0.04889649152755737
+        },
+        "model.visual.adapter.router.residual.theta": {
+          "shape": [
+            2,
+            2,
+            4,
+            2
+          ],
+          "numel": 32,
+          "l2_norm": 0.15022716931692218,
+          "max_abs": 0.049689970910549164,
+          "mean": -0.0013707232392334845
+        },
+        "model.visual.adapter.text_down.bias": {
+          "shape": [
+            16
+          ],
+          "numel": 16,
+          "l2_norm": 0.005771756880044534,
+          "max_abs": 0.002288818359375,
+          "mean": -6.139278411865234e-05
+        },
+        "model.visual.adapter.text_down.weight": {
+          "shape": [
+            16,
+            5120
+          ],
+          "numel": 81920,
+          "l2_norm": 5.654981379966847,
+          "max_abs": 0.035400390625,
+          "mean": 7.066091848173528e-06
+        },
+        "model.visual.adapter.token_down.bias": {
+          "shape": [
+            64
+          ],
+          "numel": 64,
+          "l2_norm": 0.06984442449790838,
+          "max_abs": 0.013671875,
+          "mean": 0.007532001240178943
+        },
+        "model.visual.adapter.token_down.weight": {
+          "shape": [
+            64,
+            5120
+          ],
+          "numel": 327680,
+          "l2_norm": 11.46091740671939,
+          "max_abs": 0.0390625,
+          "mean": 0.00015070157137984098
+        },
+        "model.visual.adapter.token_up.weight": {
+          "shape": [
+            5120,
+            64
+          ],
+          "numel": 327680,
+          "l2_norm": 1.9705605185159905,
+          "max_abs": 0.014892578125,
+          "mean": -1.19637374879078e-06
+        }
+      }
+    }
+  ]
+}

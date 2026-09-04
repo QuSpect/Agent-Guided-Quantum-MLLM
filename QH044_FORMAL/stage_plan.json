@@ -1,0 +1,50 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_c4_validation_shard.py",
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/c4_qh044_formal.py",
+      "run",
+      "--arm",
+      "base"
+    ],
+    [
+      "code/scripts/c4_qh044_formal.py",
+      "run",
+      "--arm",
+      "zero"
+    ],
+    [
+      "code/scripts/c4_qh044_formal.py",
+      "run",
+      "--arm",
+      "qh044"
+    ],
+    [
+      "code/scripts/c4_qh044_formal.py",
+      "run",
+      "--arm",
+      "cc044"
+    ],
+    [
+      "code/scripts/c4_qh044_formal.py",
+      "run",
+      "--arm",
+      "qh044_noent"
+    ],
+    [
+      "code/scripts/c4_qh044_formal.py",
+      "run",
+      "--arm",
+      "qh044_dq"
+    ],
+    [
+      "code/scripts/c4_qh044_formal.py",
+      "analyze"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "c4_qh044_formal.py"
+}

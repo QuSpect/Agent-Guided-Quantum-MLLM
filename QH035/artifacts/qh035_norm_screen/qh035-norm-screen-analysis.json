@@ -1,0 +1,81 @@
+{
+  "status": "ok",
+  "analysis": "QH035 train-only shared-RMSNorm quantum residual screen",
+  "verdict": "reject_or_mutate_before_c4",
+  "point_nll": {
+    "base": 2.418541196733713,
+    "sharednorm": 2.4191976692527533,
+    "qh035": 2.4191727731376886,
+    "cc035": 2.419121766462922
+  },
+  "comparisons": {
+    "shared_minus_base": {
+      "mean_delta_nll": 0.0006564725190401077,
+      "descriptive_95_ci": [
+        0.00013941926881670953,
+        0.0011620211414992809
+      ]
+    },
+    "qh_minus_shared": {
+      "mean_delta_nll": -2.489611506462097e-05,
+      "descriptive_95_ci": [
+        -0.0005133061204105616,
+        0.0004761232528835534
+      ]
+    },
+    "qh_minus_cc": {
+      "mean_delta_nll": 5.100667476654053e-05,
+      "descriptive_95_ci": [
+        -0.00046176365576684476,
+        0.0005757022649049748
+      ]
+    }
+  },
+  "screen_gates": {
+    "qh_point_better_than_own_zero": true,
+    "qh_point_better_than_cc": false,
+    "continue_to_c4": false
+  },
+  "training": {
+    "qh035": {
+      "steps": 256,
+      "kl_first32": 0.0006172582779981894,
+      "kl_last32": 0.0006485613630502485,
+      "kl_min": 0.0004784949996974319,
+      "theta_grad_mean": 0.009919636358290518,
+      "gamma_grad_mean": 7.123846688994462e-05,
+      "mean_student_step_seconds": 0.6795467726478819,
+      "simulator_calls": 1024,
+      "frozen_gradient_tensor_count": 0,
+      "final_theta_norm": 0.056282270699739456,
+      "final_gammas": {
+        "11": 0.9435604214668274,
+        "12": 0.9475526809692383,
+        "13": 0.8980194330215454,
+        "15": 0.9478445649147034
+      }
+    },
+    "cc035": {
+      "steps": 256,
+      "kl_first32": 0.000623784519120818,
+      "kl_last32": 0.0006390511007339228,
+      "kl_min": 0.00041933238389901817,
+      "theta_grad_mean": 0.003858929218722551,
+      "gamma_grad_mean": 3.962024048442814e-05,
+      "mean_student_step_seconds": 0.5249131352757104,
+      "simulator_calls": 0,
+      "frozen_gradient_tensor_count": 0,
+      "final_theta_norm": 0.05079608038067818,
+      "final_gammas": {
+        "11": 1.003005862236023,
+        "12": 0.9870463013648987,
+        "13": 0.9782811403274536,
+        "15": 0.9591461420059204
+      }
+    }
+  },
+  "claim_limit": "Train-only screen; no quality or quantum claim.",
+  "validation_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "created_at": "2026-08-29T07:39:57.785000+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/lock_qh039_frozen_scaffold_screen.py"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_qh039_frozen_scaffold_screen.py"
+  ],
+  "entrypoint": "lock_qh039_frozen_scaffold_screen.py"
+}

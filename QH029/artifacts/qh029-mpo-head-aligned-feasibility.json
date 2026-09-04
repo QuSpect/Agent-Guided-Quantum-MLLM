@@ -1,0 +1,665 @@
+{
+  "status": "ok",
+  "candidate_id": "QH-029-feasibility",
+  "scope": "weight-only; no train, validation, or test data loaded",
+  "model_dir": "./models/Qwen3.8-27B",
+  "layer": 7,
+  "target": "v_proj",
+  "factor_plan": "head_aligned8",
+  "weight_shape": [
+    1024,
+    5120
+  ],
+  "dense_parameter_count": 5242880,
+  "mpo_output_dims": [
+    8,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "mpo_input_dims": [
+    40,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "mpo_physical_dims": [
+    320,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "mpo_rows": [
+    {
+      "bond_cap": 8,
+      "realized_tt_ranks": [
+        1,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 3984,
+      "compression_ratio_dense_over_mpo": 1315.9839357429719,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.999783158322766,
+      "retained_frobenius_energy_fraction": 0.000433636334155052,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            320,
+            16384
+          ],
+          "available_rank": 320,
+          "kept_rank": 8,
+          "leading_singular_value": 2.59991717338562,
+          "discarded_squared_norm": 1256.406119707071
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            32,
+            4096
+          ],
+          "available_rank": 32,
+          "kept_rank": 8,
+          "leading_singular_value": 1.380571961402893,
+          "discarded_squared_norm": 37.695121487552726
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            32,
+            1024
+          ],
+          "available_rank": 32,
+          "kept_rank": 8,
+          "leading_singular_value": 0.7870194911956787,
+          "discarded_squared_norm": 10.108333642955973
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            32,
+            256
+          ],
+          "available_rank": 32,
+          "kept_rank": 8,
+          "leading_singular_value": 0.4928407371044159,
+          "discarded_squared_norm": 2.8003620929812607
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            32,
+            64
+          ],
+          "available_rank": 32,
+          "kept_rank": 8,
+          "leading_singular_value": 0.37240034341812134,
+          "discarded_squared_norm": 0.8389566495143623
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            32,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 8,
+          "leading_singular_value": 0.38415247201919556,
+          "discarded_squared_norm": 0.19143462179006915
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            32,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 0.45711493492126465,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 68161422,
+      "deployment_count_with_generic_real_orthogonals": 34078096,
+      "net_reduction_with_generic_unitaries": -62918542,
+      "net_reduction_with_generic_real_orthogonals": -28835216
+    },
+    {
+      "bond_cap": 16,
+      "realized_tt_ranks": [
+        1,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 10512,
+      "compression_ratio_dense_over_mpo": 498.751902587519,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.9990146423811951,
+      "retained_frobenius_energy_fraction": 0.0019697443079729204,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            320,
+            16384
+          ],
+          "available_rank": 320,
+          "kept_rank": 16,
+          "leading_singular_value": 2.59991717338562,
+          "discarded_squared_norm": 1207.0533371017295
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            64,
+            4096
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 1.4135254621505737,
+          "discarded_squared_norm": 71.94329164181542
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            64,
+            1024
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 0.8455579280853271,
+          "discarded_squared_norm": 19.760699319786852
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            64,
+            256
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 0.5782141089439392,
+          "discarded_squared_norm": 5.646232580022388
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            64,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 16,
+          "leading_singular_value": 0.5011666417121887,
+          "discarded_squared_norm": 1.6266047006320383
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            64,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 0.5713343024253845,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 0.9056385159492493,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 68167950,
+      "deployment_count_with_generic_real_orthogonals": 34084624,
+      "net_reduction_with_generic_unitaries": -62925070,
+      "net_reduction_with_generic_real_orthogonals": -28841744
+    },
+    {
+      "bond_cap": 32,
+      "realized_tt_ranks": [
+        1,
+        32,
+        32,
+        32,
+        32,
+        32,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 28944,
+      "compression_ratio_dense_over_mpo": 181.1387506909895,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.9966659860854447,
+      "retained_frobenius_energy_fraction": 0.006656912180328267,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            320,
+            16384
+          ],
+          "available_rank": 320,
+          "kept_rank": 32,
+          "leading_singular_value": 2.59991717338562,
+          "discarded_squared_norm": 1114.8918102765165
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            128,
+            4096
+          ],
+          "available_rank": 128,
+          "kept_rank": 32,
+          "leading_singular_value": 1.4486058950424194,
+          "discarded_squared_norm": 133.43707550101342
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            128,
+            1024
+          ],
+          "available_rank": 128,
+          "kept_rank": 32,
+          "leading_singular_value": 0.9132470488548279,
+          "discarded_squared_norm": 38.017287497500206
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            128,
+            256
+          ],
+          "available_rank": 128,
+          "kept_rank": 32,
+          "leading_singular_value": 0.6964374780654907,
+          "discarded_squared_norm": 11.173121008276972
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            128,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 32,
+          "leading_singular_value": 0.685174286365509,
+          "discarded_squared_norm": 2.3772066788488804
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            128,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 0.8924493193626404,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 1.586833119392395,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 68186382,
+      "deployment_count_with_generic_real_orthogonals": 34103056,
+      "net_reduction_with_generic_unitaries": -62943502,
+      "net_reduction_with_generic_real_orthogonals": -28860176
+    },
+    {
+      "bond_cap": 64,
+      "realized_tt_ranks": [
+        1,
+        64,
+        64,
+        64,
+        64,
+        64,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 90384,
+      "compression_ratio_dense_over_mpo": 58.0067268543105,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.9878358558882449,
+      "retained_frobenius_energy_fraction": 0.02418032182153873,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            320,
+            16384
+          ],
+          "available_rank": 320,
+          "kept_rank": 64,
+          "leading_singular_value": 2.59991717338562,
+          "discarded_squared_norm": 944.9796681323712
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            256,
+            4096
+          ],
+          "available_rank": 256,
+          "kept_rank": 64,
+          "leading_singular_value": 1.488037347793579,
+          "discarded_squared_norm": 240.94851559857727
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            256,
+            1024
+          ],
+          "available_rank": 256,
+          "kept_rank": 64,
+          "leading_singular_value": 1.0197832584381104,
+          "discarded_squared_norm": 70.84257715015858
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            256,
+            256
+          ],
+          "available_rank": 256,
+          "kept_rank": 64,
+          "leading_singular_value": 0.8731913566589355,
+          "discarded_squared_norm": 20.194469750740065
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            256,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 64,
+          "leading_singular_value": 0.995169997215271,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            256,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 1.5609917640686035,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 2.9008023738861084,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 68247822,
+      "deployment_count_with_generic_real_orthogonals": 34164496,
+      "net_reduction_with_generic_unitaries": -63004942,
+      "net_reduction_with_generic_real_orthogonals": -28921616
+    },
+    {
+      "bond_cap": 128,
+      "realized_tt_ranks": [
+        1,
+        128,
+        128,
+        128,
+        128,
+        64,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 274704,
+      "compression_ratio_dense_over_mpo": 19.085561185858232,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.9623175406889922,
+      "retained_frobenius_energy_fraction": 0.0739449508822898,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            320,
+            16384
+          ],
+          "available_rank": 320,
+          "kept_rank": 128,
+          "leading_singular_value": 2.59991717338562,
+          "discarded_squared_norm": 649.8888445834737
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            512,
+            4096
+          ],
+          "available_rank": 512,
+          "kept_rank": 128,
+          "leading_singular_value": 1.5485275983810425,
+          "discarded_squared_norm": 410.33268338731216
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            512,
+            1024
+          ],
+          "available_rank": 512,
+          "kept_rank": 128,
+          "leading_singular_value": 1.1674981117248535,
+          "discarded_squared_norm": 124.33518249663898
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            512,
+            256
+          ],
+          "available_rank": 256,
+          "kept_rank": 128,
+          "leading_singular_value": 1.1424663066864014,
+          "discarded_squared_norm": 27.286139004316343
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            512,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 64,
+          "leading_singular_value": 1.5456911325454712,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            256,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 2.6062259674072266,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 4.988144874572754,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 68432142,
+      "deployment_count_with_generic_real_orthogonals": 34348816,
+      "net_reduction_with_generic_unitaries": -63189262,
+      "net_reduction_with_generic_real_orthogonals": -29105936
+    },
+    {
+      "bond_cap": 256,
+      "realized_tt_ranks": [
+        1,
+        256,
+        256,
+        256,
+        256,
+        64,
+        16,
+        4,
+        1
+      ],
+      "mpo_parameter_count": 938256,
+      "compression_ratio_dense_over_mpo": 5.5878992513770225,
+      "relative_frobenius_error_upper_exact_ttsvd": 0.8758515440907724,
+      "retained_frobenius_energy_fraction": 0.23288407271380984,
+      "site_svd_diagnostics": [
+        {
+          "site": 0,
+          "unfolding_shape": [
+            320,
+            16384
+          ],
+          "available_rank": 320,
+          "kept_rank": 256,
+          "leading_singular_value": 2.59991717338562,
+          "discarded_squared_norm": 172.64146677570096
+        },
+        {
+          "site": 1,
+          "unfolding_shape": [
+            1024,
+            4096
+          ],
+          "available_rank": 1024,
+          "kept_rank": 256,
+          "leading_singular_value": 1.6163949966430664,
+          "discarded_squared_norm": 640.3788553353841
+        },
+        {
+          "site": 2,
+          "unfolding_shape": [
+            1024,
+            1024
+          ],
+          "available_rank": 1024,
+          "kept_rank": 256,
+          "leading_singular_value": 1.358407735824585,
+          "discarded_squared_norm": 190.8335547003891
+        },
+        {
+          "site": 3,
+          "unfolding_shape": [
+            1024,
+            256
+          ],
+          "available_rank": 256,
+          "kept_rank": 256,
+          "leading_singular_value": 1.5510395765304565,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 4,
+          "unfolding_shape": [
+            1024,
+            64
+          ],
+          "available_rank": 64,
+          "kept_rank": 64,
+          "leading_singular_value": 2.4191477298736572,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 5,
+          "unfolding_shape": [
+            256,
+            16
+          ],
+          "available_rank": 16,
+          "kept_rank": 16,
+          "leading_singular_value": 4.496805191040039,
+          "discarded_squared_norm": 0.0
+        },
+        {
+          "site": 6,
+          "unfolding_shape": [
+            64,
+            4
+          ],
+          "available_rank": 4,
+          "kept_rank": 4,
+          "leading_singular_value": 8.78242301940918,
+          "discarded_squared_norm": 0.0
+        }
+      ],
+      "deployment_count_with_generic_unitaries": 69095694,
+      "deployment_count_with_generic_real_orthogonals": 35012368,
+      "net_reduction_with_generic_unitaries": -63852814,
+      "net_reduction_with_generic_real_orthogonals": -29769488
+    }
+  ],
+  "quantum_circuit_storage_ledger": {
+    "input_qubits_after_padding": 13,
+    "input_padded_amplitudes": 8192,
+    "input_padding_fraction": 0.375,
+    "output_qubits": 10,
+    "output_padded_amplitudes": 1024,
+    "two_generic_complex_unitaries_real_dof": 68157438,
+    "two_generic_real_orthogonals_dof": 34074112,
+    "warning": "These are storage lower-ledgers for generic full gates, not a claim that a shallow VQC needs this many angles. A shallow local-gate circuit uses fewer angles but no longer exactly encodes an arbitrary pretrained matrix."
+  },
+  "decision_rule": "MPO fidelity alone cannot promote QH029. A later local-gate disentangler must jointly beat the original dense parameter count, satisfy an explicit matrix/action fidelity threshold, and pass GPU simulator latency before language fitness.",
+  "claim_limit": "TT-SVD is classical. Generic-unitary degrees of freedom are a conservative accounting bound for exact arbitrary re-expression, not a measured shallow-circuit requirement or a quantum advantage claim.",
+  "created_at": "2026-08-29T04:00:14.086909+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/lock_qh038_shifted_ring_screen.py"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_qh038_shifted_ring_screen.py"
+  ],
+  "entrypoint": "lock_qh038_shifted_ring_screen.py"
+}

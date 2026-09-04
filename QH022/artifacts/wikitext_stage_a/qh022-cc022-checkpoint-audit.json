@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "purpose": "adapter_checkpoint_parameter_utilization_audit",
+  "checkpoint_count": 2,
+  "checkpoints": [
+    {
+      "path": "artifacts/wikitext_stage_a/wikitext-qh022-unused-complement-s20260829-n256-l256-adapter.pt",
+      "sha256": "af1e2f8c37ad2144d48f30c4eceb6345a04ce3dba25f87d0d18bca8e9a33ab46",
+      "tensor_count": 2,
+      "trainable_numel": 25,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 2,
+          "numel": 25,
+          "l2_norm": 0.15832698259343367
+        }
+      },
+      "scalar_mix_or_scale": {},
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {},
+      "mix_branch_activity": "no_mix_parameter_found",
+      "tensors": {
+        "model.language_model.layers.7.self_attn.v_proj.adapter.core.theta": {
+          "shape": [
+            2,
+            6,
+            2
+          ],
+          "numel": 24,
+          "l2_norm": 0.15109706421944227,
+          "max_abs": 0.049082815647125244,
+          "mean": 0.007276766797682892
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.gamma": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.04729810357093811,
+          "max_abs": 0.04729810357093811,
+          "mean": 0.04729810357093811
+        }
+      }
+    },
+    {
+      "path": "artifacts/wikitext_stage_a/wikitext-cc022-unused-complement-s20260829-n256-l256-adapter.pt",
+      "sha256": "3fcae656a1c2a8f6f51dac95366a6525fb330817b4edf030b733fc5ad0ecc24b",
+      "tensor_count": 2,
+      "trainable_numel": 25,
+      "parameter_families": {
+        "other": {
+          "tensor_count": 2,
+          "numel": 25,
+          "l2_norm": 0.1647434352383567
+        }
+      },
+      "scalar_mix_or_scale": {},
+      "mix_initialization": 0.05,
+      "mix_delta_from_initialization": {},
+      "mix_branch_activity": "no_mix_parameter_found",
+      "tensors": {
+        "model.language_model.layers.7.self_attn.v_proj.adapter.core.theta": {
+          "shape": [
+            2,
+            6,
+            2
+          ],
+          "numel": 24,
+          "l2_norm": 0.15427181814502527,
+          "max_abs": 0.05685480311512947,
+          "mean": 0.007360327911252777
+        },
+        "model.language_model.layers.7.self_attn.v_proj.adapter.gamma": {
+          "shape": [],
+          "numel": 1,
+          "l2_norm": 0.05779797211289406,
+          "max_abs": 0.05779797211289406,
+          "mean": 0.05779797211289406
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_c4_validation_shard.py",
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/run_c4_qh033.py",
+      "--candidate",
+      "base"
+    ],
+    [
+      "code/scripts/run_c4_qh033.py",
+      "--candidate",
+      "sharedsvd1024"
+    ],
+    [
+      "code/scripts/run_c4_qh033.py",
+      "--candidate",
+      "qh033"
+    ],
+    [
+      "code/scripts/run_c4_qh033.py",
+      "--candidate",
+      "cc033"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_c4_qh033.py",
+    "code/scripts/analyze_qh033_logit_kl_screen.py"
+  ],
+  "entrypoint": "run_c4_qh033.py"
+}

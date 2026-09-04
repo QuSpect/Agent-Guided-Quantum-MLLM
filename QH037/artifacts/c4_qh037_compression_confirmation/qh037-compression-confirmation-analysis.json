@@ -1,0 +1,35 @@
+{
+  "status": "ok",
+  "analysis": "QH037 fixed scaffold C4-256 compression confirmation",
+  "claim": "compression only, not quantum",
+  "point_nll": {
+    "base": 2.642186034936458,
+    "delete_zero": 2.6498696454800665,
+    "cc037_scaffold": 2.646708040498197
+  },
+  "comparisons": {
+    "scaffold_minus_base": {
+      "mean_delta_nll": 0.004522005561739206,
+      "paired_bootstrap_95_ci": [
+        0.0030750339152291416,
+        0.005963385291397572
+      ]
+    },
+    "scaffold_minus_delete_zero": {
+      "mean_delta_nll": -0.003161604981869459,
+      "paired_bootstrap_95_ci": [
+        -0.0038244018447585403,
+        -0.00249962592497468
+      ]
+    }
+  },
+  "gates": {
+    "compression_noninferiority": false,
+    "restoration_over_delete_zero": true,
+    "strict_quality_improvement_exploratory": false
+  },
+  "verdict": "compression_not_confirmed",
+  "training_steps": 0,
+  "test_rows_inspected": 0,
+  "created_at": "2026-08-29T10:27:46.604437+00:00"
+}

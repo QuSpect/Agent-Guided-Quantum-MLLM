@@ -1,0 +1,109 @@
+{
+  "status": "pass",
+  "candidate": "QH-009",
+  "mutation": "QH-008 plus adjacent ZZ correlation observables",
+  "parameter_counts": {
+    "quantum": 697449,
+    "classical": 697449,
+    "no_entanglement": 697449
+  },
+  "outputs": {
+    "quantum": {
+      "changed_fraction": 0.4433914124965668,
+      "relative_residual_rms": 0.002417499665170908,
+      "finite": true
+    },
+    "classical": {
+      "changed_fraction": 0.4434967041015625,
+      "relative_residual_rms": 0.0024176747538149357,
+      "finite": true
+    },
+    "no_entanglement": {
+      "changed_fraction": 0.44361647963523865,
+      "relative_residual_rms": 0.0024190833792090416,
+      "finite": true
+    }
+  },
+  "gradient_group_norm_sums": {
+    "quantum": {
+      "raw_scale": 3.862381163344253e-06,
+      "local_down": 0.00021702514891330793,
+      "quantum_down": 1.4368794666097529e-05,
+      "core": 1.1310960701393924e-07,
+      "gate_up": 2.4820296857797075e-06,
+      "local_up": 0.00138852559030056
+    },
+    "classical": {
+      "raw_scale": 3.7765501019748626e-06,
+      "local_down": 0.0002169821666484495,
+      "quantum_down": 1.087305241753711e-05,
+      "core": 1.1652319642507791e-07,
+      "gate_up": 3.3338230878143804e-06,
+      "local_up": 0.0013888946268707514
+    },
+    "no_entanglement": {
+      "raw_scale": 3.7765501019748626e-06,
+      "local_down": 0.00021701079435842985,
+      "quantum_down": 1.6769403231364777e-05,
+      "core": 1.4610317577989917e-07,
+      "gate_up": 5.3866588132223114e-06,
+      "local_up": 0.0013894080184400082
+    }
+  },
+  "nonzero_gradient_groups": {
+    "quantum": [
+      "core",
+      "gate_up",
+      "local_down",
+      "local_up",
+      "quantum_down",
+      "raw_scale"
+    ],
+    "classical": [
+      "core",
+      "gate_up",
+      "local_down",
+      "local_up",
+      "quantum_down",
+      "raw_scale"
+    ],
+    "no_entanglement": [
+      "core",
+      "gate_up",
+      "local_down",
+      "local_up",
+      "quantum_down",
+      "raw_scale"
+    ]
+  },
+  "median_forward_backward_ms": {
+    "quantum": 35.482171922922134,
+    "classical": 2.9800906777381897
+  },
+  "peak_allocated_bytes": {
+    "quantum": 90828800,
+    "classical": 69032960
+  },
+  "cpu_quantum_path_rejected": true,
+  "finite_difference": {
+    "theta": {
+      "analytic": 9.626206883694977e-05,
+      "numeric": 9.639188647270203e-05,
+      "relative_error": 0.0006738384142884864
+    },
+    "quantum_down": {
+      "analytic": 0.00047653267392888665,
+      "numeric": 0.00047660432755947113,
+      "relative_error": 7.517663302609033e-05
+    },
+    "gate_up_zz": {
+      "analytic": 4.157098737778142e-05,
+      "numeric": 4.1211023926734924e-05,
+      "relative_error": 0.004348329369799427
+    }
+  },
+  "finite_difference_relative_error_max": 0.02,
+  "device": "NVIDIA A800-SXM4-80GB",
+  "torch": "2.8.0+cu128",
+  "timing_context": "shared"
+}

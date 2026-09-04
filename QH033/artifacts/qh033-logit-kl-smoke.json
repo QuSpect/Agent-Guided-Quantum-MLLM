@@ -1,0 +1,53 @@
+{
+  "status": "pass",
+  "candidate": "QH-033 output-distribution KL stage",
+  "source": "QH032 train-only checkpoint",
+  "train_block_index": 9639,
+  "sequence_length": 256,
+  "teacher_logits_shape": [
+    1,
+    255,
+    248320
+  ],
+  "student_logits_shape": [
+    1,
+    255,
+    248320
+  ],
+  "mean_token_teacher_to_student_kl": 0.000884825421962887,
+  "gradient_norms": {
+    "theta": 2.5797480702749453e-06,
+    "alpha": 0.000125837919767946,
+    "gamma": 7.3046853685809765e-06
+  },
+  "total_gradient_norm": 0.0001260761491721496,
+  "step_seconds": 0.5259596630930901,
+  "frozen_gradient_tensor_count": 0,
+  "parameter_audit": {
+    "original_parameters_removed": 10485760,
+    "frozen_replacement_parameters": 7340032,
+    "trainable_parameters": 82,
+    "total_replacement_parameters": 7340114,
+    "net_parameter_reduction": 3145646,
+    "observable_count": 60,
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27353582914,
+    "net_model_parameter_reduction": 3145646,
+    "trainable_parameter_count": 82,
+    "branch": "quantum",
+    "layer_indices": [
+      55,
+      59
+    ],
+    "rank": 1024,
+    "num_qubits": 10
+  },
+  "validation_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "gpu_peak_allocated_bytes": [
+    13385408512,
+    14566888448,
+    14567805952,
+    15908851200
+  ]
+}

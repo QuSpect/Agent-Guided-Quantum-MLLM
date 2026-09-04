@@ -1,0 +1,312 @@
+{
+  "status": "ok",
+  "run_id": "textvqa-qh011-s20260829-n4",
+  "candidate": "qh011",
+  "seed": 20260829,
+  "model_dir": "./models/Qwen3.8-27B",
+  "base_parameter_count": 27356728560,
+  "timing_context": "exclusive",
+  "candidate_audit": {
+    "candidate": "QH-011",
+    "parent": "QH-010 placement mutation",
+    "injection_path": "model.model.visual.merger.output",
+    "execution_scope": "visual prefill only; no text-only or decode-token invocation",
+    "adapter": {
+      "config": {
+        "hidden_size": 5120,
+        "block_size": 4,
+        "layer_index": 7,
+        "target_projection": "v_proj",
+        "init_std": 0.0
+      },
+      "core_kind": "quantum",
+      "n_two_qubit_blocks": 1280,
+      "parameters_per_block": 6,
+      "trainable_parameters": 7680,
+      "simulator": "exact CUDA statevector; complex64 amplitudes, analytic Cayley SO(4)",
+      "measurement": "amplitude magnitude reconstruction with input sign correction"
+    },
+    "trainable_parameter_count": 7680,
+    "trainable_tensors": [
+      [
+        "model.visual.merger.transform.theta",
+        7680
+      ]
+    ]
+  },
+  "trainable_parameters": 7680,
+  "trainable_tensors": [
+    [
+      "model.visual.merger.transform.theta",
+      7680
+    ]
+  ],
+  "dataset": {
+    "name": "TextVQA pilot shards",
+    "source": "facebook/textvqa refs/convert/parquet",
+    "source_revision": "adeddaaa993f9f09c7ba460762c03628f37aa298",
+    "license": "CC BY 4.0",
+    "train_rows": 1900,
+    "validation_rows": 1800,
+    "eligible_train_rows": 1899,
+    "min_consensus": 2,
+    "train_sha256": "f875ce0efa318d76e394f3e86e96ffed8b97f28fd0def74a6452b66ea8119a14",
+    "validation_sha256": "3f75f0e35b170329406744290fd8abd0732e2fdbe8d7cb2424400a156de13095",
+    "train_indices": [
+      660,
+      1198,
+      1054,
+      1868
+    ],
+    "eval_indices": [
+      595,
+      1548,
+      1094,
+      1264,
+      306,
+      149,
+      531,
+      1502
+    ],
+    "test_rows_read": 0
+  },
+  "training": {
+    "steps": 4,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "losses": [
+      0.35539746284484863,
+      0.17882202565670013,
+      0.3254213035106659,
+      0.008357370272278786
+    ],
+    "loss_first_16_mean": 0.21699954057112336,
+    "loss_last_16_mean": 0.21699954057112336,
+    "gradient_norm_mean": 0.6464168117381632,
+    "mean_step_seconds": 2.1068239295855165,
+    "total_step_seconds": 8.427295718342066,
+    "frozen_parameter_grad_tensor_count": 0
+  },
+  "evaluation_after": {
+    "metrics": {
+      "n": 8,
+      "counterfactual_n": 4,
+      "vqa_soft_accuracy": 0.7124999999999999,
+      "exact_any_accuracy": 0.75,
+      "mean_generation_seconds_per_call": 0.6370635211933404,
+      "counterfactual_original_vqa_soft_accuracy": 0.7,
+      "shuffled_vqa_soft_accuracy": 0.0,
+      "blank_vqa_soft_accuracy": 0.0,
+      "original_minus_shuffled": 0.7,
+      "multimodal_gain_original_minus_blank": 0.7,
+      "mean_positive_visual_rescue": 0.7,
+      "prediction_change_on_blank": 1.0
+    },
+    "predictions": [
+      {
+        "dataset_index": 595,
+        "question_id": 35197,
+        "answers": [
+          "robson",
+          "mr. robson",
+          "mr. rohson",
+          "mr. roheon",
+          "charleston",
+          "mr. robson",
+          "mr. robson",
+          "mr robson",
+          "robson",
+          "unanswerable"
+        ],
+        "original_raw": "mr. robon",
+        "original_normalized": "mr robon",
+        "original_soft_score": 0.0,
+        "original_exact_any": false,
+        "original_seconds": 0.7955846861004829,
+        "shuffled_image_index": 1094,
+        "shuffled_normalized": "6",
+        "shuffled_soft_score": 0.0,
+        "shuffled_seconds": 0.524335652589798,
+        "blank_normalized": "dallas",
+        "blank_soft_score": 0.0,
+        "blank_seconds": 0.6029282808303833
+      },
+      {
+        "dataset_index": 1548,
+        "question_id": 36150,
+        "answers": [
+          "8:42",
+          "8:42",
+          "8:41",
+          "08.42",
+          "8:43",
+          "8:41",
+          "8:42",
+          "8:41",
+          "8:41",
+          "8:41"
+        ],
+        "original_raw": "8:42",
+        "original_normalized": "8:42",
+        "original_soft_score": 0.9,
+        "original_exact_any": true,
+        "original_seconds": 0.8461946956813335,
+        "shuffled_image_index": 1264,
+        "shuffled_normalized": "0",
+        "shuffled_soft_score": 0.0,
+        "shuffled_seconds": 0.5805254057049751,
+        "blank_normalized": "12:00",
+        "blank_soft_score": 0.0,
+        "blank_seconds": 0.9428808800876141
+      },
+      {
+        "dataset_index": 1094,
+        "question_id": 35696,
+        "answers": [
+          "cn",
+          "nc",
+          "cn",
+          "6",
+          "nc",
+          "nc",
+          "nc",
+          "nc",
+          "nc",
+          "cn"
+        ],
+        "original_raw": "nc",
+        "original_normalized": "nc",
+        "original_soft_score": 1.0,
+        "original_exact_any": true,
+        "original_seconds": 0.5036329925060272,
+        "shuffled_image_index": 306,
+        "shuffled_normalized": "stop",
+        "shuffled_soft_score": 0.0,
+        "shuffled_seconds": 0.5533255450427532,
+        "blank_normalized": "ch",
+        "blank_soft_score": 0.0,
+        "blank_seconds": 0.502958357334137
+      },
+      {
+        "dataset_index": 1264,
+        "question_id": 35866,
+        "answers": [
+          "shiner",
+          "shiner bock",
+          "shiner bock",
+          "shiner ",
+          "shiner rock",
+          "shiner bock",
+          "shiner",
+          "shiner",
+          "shiner rock",
+          "shiner"
+        ],
+        "original_raw": "shiner bock",
+        "original_normalized": "shiner bock",
+        "original_soft_score": 0.9,
+        "original_exact_any": true,
+        "original_seconds": 0.8664756789803505,
+        "shuffled_image_index": 149,
+        "shuffled_normalized": "pwm",
+        "shuffled_soft_score": 0.0,
+        "shuffled_seconds": 0.5217774584889412,
+        "blank_normalized": "bud light",
+        "blank_soft_score": 0.0,
+        "blank_seconds": 0.6729859560728073
+      },
+      {
+        "dataset_index": 306,
+        "question_id": 34908,
+        "answers": [
+          "p",
+          "p",
+          "p",
+          "p",
+          "chicago",
+          "p",
+          "p",
+          "p",
+          "p",
+          "p"
+        ],
+        "original_raw": "p",
+        "original_normalized": "p",
+        "original_soft_score": 1.0,
+        "original_exact_any": true,
+        "original_seconds": 0.5788037478923798
+      },
+      {
+        "dataset_index": 149,
+        "question_id": 34751,
+        "answers": [
+          "eyes",
+          "cycle",
+          "cycle",
+          "circle peroid",
+          "cycle",
+          "cycle",
+          "cycle",
+          "cycle ",
+          "cycle",
+          "cycle"
+        ],
+        "original_raw": "cycle",
+        "original_normalized": "cycle",
+        "original_soft_score": 1.0,
+        "original_exact_any": true,
+        "original_seconds": 0.5036463178694248
+      },
+      {
+        "dataset_index": 531,
+        "question_id": 35133,
+        "answers": [
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "original_raw": "no",
+        "original_normalized": "no",
+        "original_soft_score": 0.0,
+        "original_exact_any": false,
+        "original_seconds": 0.5535809881985188
+      },
+      {
+        "dataset_index": 1502,
+        "question_id": 36104,
+        "answers": [
+          "italian",
+          "look beyond",
+          "pepperidge farm ",
+          "sun",
+          "unanswerable",
+          "pepperridge farm",
+          "sara lee",
+          "arnold",
+          "arnold",
+          "arnold"
+        ],
+        "original_raw": "arnold",
+        "original_normalized": "arnold",
+        "original_soft_score": 0.9,
+        "original_exact_any": true,
+        "original_seconds": 0.64337969571352
+      }
+    ]
+  },
+  "adapter_checkpoint": "./artifacts/textvqa_stage_a/textvqa-qh011-s20260829-n4-adapter.pt",
+  "gpu_peak_allocated_bytes": [
+    12704518144,
+    15257028608,
+    15258912768,
+    16514215936
+  ],
+  "checked_at": "2026-08-28T19:18:08.784638+00:00"
+}

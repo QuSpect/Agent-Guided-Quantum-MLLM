@@ -1,0 +1,23 @@
+{
+  "status": "ok",
+  "base_run_id": "wikitext-base-s20260829-n0-l256",
+  "candidate_run_id": "wikitext-cc010-s20260829-n256-l256",
+  "paired_sequences": 64,
+  "mean_token_nll_reduction": {
+    "estimate": 0.00011510960757732391,
+    "ci95": [
+      -0.00045357863418757913,
+      0.0006623681634664535
+    ],
+    "probability_gt_zero": 0.6536,
+    "base": 2.389054674655199,
+    "candidate": 2.3889395650476217
+  },
+  "token_perplexity": {
+    "base": 10.903182015448468,
+    "candidate": 10.901927026677344,
+    "relative_reduction": 0.00011510298272066066
+  },
+  "single_seed_exploratory": true,
+  "confirmatory_claim_allowed": false
+}

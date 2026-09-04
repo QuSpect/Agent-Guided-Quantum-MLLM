@@ -1,0 +1,10 @@
+{
+  "preprocess": [],
+  "stage": [
+    [
+      "code/scripts/preflight_qwen38.py"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "preflight_qwen38.py"
+}

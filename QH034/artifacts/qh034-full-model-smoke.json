@@ -1,0 +1,81 @@
+{
+  "status": "pass",
+  "mode": "two-step already-consumed-train-only full-model integration smoke",
+  "candidate": "QH-034 quantum shared-SVD spectral modulation",
+  "model_dir": "./models/Qwen3.8-27B",
+  "source_lock": "./artifacts/qh031-shared-basis-lock.json",
+  "source_lock_sha256": "7491a0f8f5cb76756840adec62c4624a6595b04295af262a0e0cd4e16955bf14",
+  "train_tokens_sha256": "a7a63176fe5e6712e8c49b1708f2ae8a8850191595603660adfe08d20f6c6f64",
+  "sequence_length": 256,
+  "train_block_indices": [
+    8749,
+    5724
+  ],
+  "holdout_rows_inspected": 0,
+  "test_rows_inspected": 0,
+  "parameter_audit": {
+    "original_parameters_removed": 10485760,
+    "frozen_replacement_parameters": 7340032,
+    "trainable_parameters": 82,
+    "total_replacement_parameters": 7340114,
+    "net_parameter_reduction": 3145646,
+    "spectral_scale_count": 1024,
+    "base_model_parameters": 27356728560,
+    "deployed_model_parameters": 27353582914,
+    "net_model_parameter_reduction": 3145646,
+    "trainable_parameter_count": 82,
+    "branch": "quantum",
+    "layer_indices": [
+      55,
+      59
+    ],
+    "rank": 1024,
+    "num_qubits": 10,
+    "depth": 2,
+    "entangling_offsets": [
+      1,
+      2,
+      4
+    ],
+    "runtime_scale_generation": true,
+    "gpu_exact_statevector_required": true
+  },
+  "steps": [
+    {
+      "step": 1,
+      "train_block_index": 8749,
+      "relative_final_hidden_mse": 0.0007715902174822986,
+      "gradient_norm_before_clip": 0.005764954723417759,
+      "theta_gradient_norm": 0.005764954723417759,
+      "theta_nonzero_gradient_elements": 80,
+      "gamma_gradient_norm": 0.0,
+      "step_seconds": 0.4346054121851921
+    },
+    {
+      "step": 2,
+      "train_block_index": 5724,
+      "relative_final_hidden_mse": 0.0010605854913592339,
+      "gradient_norm_before_clip": 0.0019118321361020207,
+      "theta_gradient_norm": 0.0019118241034448147,
+      "theta_nonzero_gradient_elements": 80,
+      "gamma_gradient_norm": 5.611361757473787e-06,
+      "step_seconds": 0.3138786405324936
+    }
+  ],
+  "final_theta_l2_norm": 0.01332403626292944,
+  "final_gammas": {
+    "55": 0.9992577433586121,
+    "59": 0.9992883801460266
+  },
+  "unique_trainable_tensor_count": 3,
+  "unique_trainable_parameter_count": 82,
+  "frozen_gradient_tensor_count": 0,
+  "simulator_calls": 4,
+  "gpu_peak_allocated_bytes": [
+    11967953920,
+    14566888448,
+    14567805952,
+    15215706624
+  ],
+  "created_at": "2026-08-29T06:51:02.464875+00:00"
+}

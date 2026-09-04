@@ -1,0 +1,16 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_c4_validation_shard.py",
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/lock_qh031_confirmation.py"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_c4_qh031.py",
+    "code/scripts/analyze_c4_qh031_confirmation.py"
+  ],
+  "entrypoint": "lock_qh031_confirmation.py"
+}

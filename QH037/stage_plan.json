@@ -1,0 +1,31 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/c4_qh037_compression_confirmation.py",
+      "run",
+      "--arm",
+      "base"
+    ],
+    [
+      "code/scripts/c4_qh037_compression_confirmation.py",
+      "run",
+      "--arm",
+      "delete_zero"
+    ],
+    [
+      "code/scripts/c4_qh037_compression_confirmation.py",
+      "run",
+      "--arm",
+      "cc037_scaffold"
+    ],
+    [
+      "code/scripts/c4_qh037_compression_confirmation.py",
+      "analyze"
+    ]
+  ],
+  "analysis": [],
+  "entrypoint": "c4_qh037_compression_confirmation.py"
+}

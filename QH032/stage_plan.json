@@ -1,0 +1,14 @@
+{
+  "preprocess": [
+    "code/scripts/prepare_wikitext.py"
+  ],
+  "stage": [
+    [
+      "code/scripts/lock_qh032_train_screen.py"
+    ]
+  ],
+  "analysis": [
+    "code/scripts/analyze_qh032_train_screen.py"
+  ],
+  "entrypoint": "lock_qh032_train_screen.py"
+}

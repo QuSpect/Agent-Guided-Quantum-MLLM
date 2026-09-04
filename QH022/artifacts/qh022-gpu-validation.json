@@ -1,0 +1,54 @@
+{
+  "status": "pass",
+  "candidate": "QH-022",
+  "device": "NVIDIA A800-SXM4-80GB",
+  "equal_parameter_count": true,
+  "cpu_path_rejected": true,
+  "records": {
+    "quantum": {
+      "kind": "quantum",
+      "parameters": 25,
+      "one_generator_call_per_forward": true,
+      "finite": true,
+      "gradient_norms": {
+        "gamma": 0.02079952135682106,
+        "core.theta": 0.027962269261479378
+      },
+      "all_gradient_groups_nonzero": true,
+      "finite_difference_absolute_error": 1.7737038433551788e-06,
+      "coefficient_min": -0.04857699200510979,
+      "coefficient_max": 0.04403886944055557,
+      "branch_off_max_difference": 0.0
+    },
+    "classical": {
+      "kind": "classical",
+      "parameters": 25,
+      "one_generator_call_per_forward": true,
+      "finite": true,
+      "gradient_norms": {
+        "gamma": 0.007605951279401779,
+        "core.theta": 0.009582752361893654
+      },
+      "all_gradient_groups_nonzero": true,
+      "finite_difference_absolute_error": 1.1641532182693481e-09,
+      "coefficient_min": -0.04401710256934166,
+      "coefficient_max": 0.036702726036310196,
+      "branch_off_max_difference": 0.0
+    },
+    "no_entanglement": {
+      "kind": "no_entanglement",
+      "parameters": 25,
+      "one_generator_call_per_forward": true,
+      "finite": true,
+      "gradient_norms": {
+        "gamma": 0.035633884370326996,
+        "core.theta": 0.02342487871646881
+      },
+      "all_gradient_groups_nonzero": true,
+      "finite_difference_absolute_error": 1.5604309737682343e-06,
+      "coefficient_min": -0.033106058835983276,
+      "coefficient_max": 0.08774066716432571,
+      "branch_off_max_difference": 0.0
+    }
+  }
+}

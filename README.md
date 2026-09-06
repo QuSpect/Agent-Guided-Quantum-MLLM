@@ -235,4 +235,23 @@ The Qwen3.8-27B base model, datasets, software dependencies, and derived paramet
 
 ## Citation
 
+If you use this code or build upon our work in your research, please cite the following preprint:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22301614.svg)](https://doi.org/10.5281/zenodo.22301614)
+
+```bibtex
+@misc{quspect2026agentguided,
+  author       = {{QuSpect Technology Co., Ltd., Beijing, China}},
+  title        = {{Agent-Guided Discovery of Quantum Replacements and Parameter-Efficient Adaptation Methods for Multimodal Large Language Models}},
+  year         = {2026},
+  month        = sep,
+  howpublished = {Zenodo},
+  doi          = {10.5281/zenodo.22301614},
+  url          = {https://doi.org/10.5281/zenodo.22301614},
+  note         = {Preprint, version v1}
+}
+```
+
+## Citation
+
 If this project contributes to your research, please acknowledge this repository and **QuSpect Technology Co., Ltd. (量观知元)** in the resulting work. A BibTeX entry will be added here after the formal paper or technical report is made public.

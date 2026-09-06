@@ -239,4 +239,17 @@ Qwen3.8-27B 基座、数据集、软件依赖以及可能涉及第三方权利�
 
 ## 引用
 
-如果本项目对你的研究有帮助，请在成果中标注本仓库及 **量观知元（QuSpect Technology Co., Ltd.）**。正式论文或技术报告公开后，本节将补充对应的 BibTeX 条目。
+如果你在研究中使用本项目代码，或基于我们的工作开展研究，请引用以下预印本：
+
+```bibtex
+@misc{quspect2026agentguided,
+  author       = {{QuSpect Technology Co., Ltd., Beijing, China}},
+  title        = {{Agent-Guided Discovery of Quantum Replacements and Parameter-Efficient Adaptation Methods for Multimodal Large Language Models}},
+  year         = {2026},
+  month        = sep,
+  howpublished = {Zenodo},
+  doi          = {10.5281/zenodo.22301614},
+  url          = {https://doi.org/10.5281/zenodo.22301614},
+  note         = {Preprint, version v1}
+}
+```

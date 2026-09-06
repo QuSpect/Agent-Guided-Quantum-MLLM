@@ -252,6 +252,3 @@ If you use this code or build upon our work in your research, please cite the fo
 }
 ```
 
-## Citation
-
-If this project contributes to your research, please acknowledge this repository and **QuSpect Technology Co., Ltd. (量观知元)** in the resulting work. A BibTeX entry will be added here after the formal paper or technical report is made public.
